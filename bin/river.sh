@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 
+swift test --generate-linuxmain
 swiftformat --swiftversion 5.1 .
 swiftlint lint .
-swift test --generate-linuxmain && swift test --enable-code-coverage
+swift test --enable-code-coverage
