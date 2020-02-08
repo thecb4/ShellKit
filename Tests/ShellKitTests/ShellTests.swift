@@ -100,21 +100,31 @@ final class ShellTests: XCTestCase {
     XCTAssertEqual(result.status, Int32(0))
   }
 
-  func testGitStatusPorcelain() throws {
+  func testGitListFiles() throws {
     // given
 
     // when
-    let result = try Shell.gitStatusPorcelain()
+    let files = Shell.git_ls
 
     // then
-    print(result.out)
+    print(files)
   }
 
-  func testGitUntrackedFiles() throws {
+  func testGitListModifiedFiles() throws {
     // given
 
     // when
-    let files = try Shell.gitUntrackedFiles()
+    let files = Shell.git_ls_modified
+
+    // then
+    print(files)
+  }
+
+  func testGitListUntrackedFiles() throws {
+    // given
+
+    // when
+    let files = Shell.git_ls_untracked
 
     // then
     print(files)
