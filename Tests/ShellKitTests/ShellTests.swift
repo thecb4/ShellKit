@@ -17,9 +17,9 @@ final class ShellTests: XCTestCase {
     // when
 
     // then
-    XCTAssertEqual(name.rawValue, "sh")
-    XCTAssertEqual(name.name, "sh")
-    XCTAssertEqual(name.path, "/bin/sh")
+    XCTAssertEqual(name.rawValue, "bash")
+    XCTAssertEqual(name.name, "bash")
+    XCTAssertEqual(name.path, "/bin/bash")
   }
 
   func testCreateShell() throws {
@@ -30,7 +30,7 @@ final class ShellTests: XCTestCase {
     let shell = Shell(name)
 
     // then
-    XCTAssertEqual(shell.name, .sh)
+    XCTAssertEqual(shell.name, .bash)
     XCTAssertNotNil(shell.outReport)
     XCTAssertNotNil(shell.errReport)
     XCTAssertFalse(shell.debug)
