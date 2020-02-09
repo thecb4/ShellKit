@@ -26,7 +26,7 @@ do {
   // git add . && git commit -m "$1"
 
   try Shell.git(arguments: ["add", "."])
-  try Shell.git(arguments: ["commit", "-F", "commit.yml"])
+  try Shell.git(arguments: ["commit", "-F", "commit.yml", "--author", "TheCB4 <cavelle@thecb4.io>"])
 } catch {
   print("exiting early")
   print(error)
