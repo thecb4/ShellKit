@@ -12,7 +12,7 @@ import XCTest
 final class ShellTests: XCTestCase {
   func testShellName() {
     // given
-    let name: Shell.Name = .sh
+    let name: Shell.Name = .bash
 
     // when
 
@@ -24,7 +24,7 @@ final class ShellTests: XCTestCase {
 
   func testCreateShell() throws {
     // given
-    let name: Shell.Name = .sh
+    let name: Shell.Name = .bash
 
     // when
     let shell = Shell(name)
@@ -38,7 +38,7 @@ final class ShellTests: XCTestCase {
 
   func testExecute() throws {
     // given
-    let name: Shell.Name = .sh
+    let name: Shell.Name = .bash
 
     // when
     let sh = Shell(name)
