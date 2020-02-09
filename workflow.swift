@@ -1,12 +1,15 @@
 #!/usr/bin/swift sh
 
-import ShellKit // ./ == ed44814
+import ShellKit // ./ == 22b8a9c
 // https://gitlab.com/thecb4/shellkit.git == a32f572
 
 // do {
 //   let modified = Shell.git_ls_modified
 //   print(modified)
 // }
+
+Shell.outLog = true
+
 do {
   print(Shell.git_ls_modified)
   // precondition(!Shell.git_ls_untracked.contains("commit.yml"), "You need to track commit file")

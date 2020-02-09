@@ -9,7 +9,6 @@ import Foundation
 
 @available(macOS 10.13, *)
 public class Shell {
-
   public static var outLog: Bool = false
 
   var name: Shell.Name

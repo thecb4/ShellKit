@@ -18,5 +18,4 @@ extension Shell {
   public static func copy(using name: Shell.Name = .sh, source: String, destination: String, at path: String = Shell.Path.cwd) throws -> Shell.Result {
     try Shell.execute(using: name, command: "cp", arguments: [source, destination], at: path)
   }
-
 }

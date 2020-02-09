@@ -8,7 +8,6 @@
 // swift commands
 @available(macOS 10.13, *)
 extension Shell {
-
   public static func swiftBuild(using name: Shell.Name = .sh, arguments: Command.Arguments = [], environment: Command.Environment = [:], at path: String = Shell.Path.cwd) throws -> Shell.Result {
     let _arguments = ["build"] + arguments
     return try Shell.execute(using: name, command: "swift", arguments: _arguments, environment: environment, at: path)
