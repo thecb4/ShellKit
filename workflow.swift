@@ -8,7 +8,7 @@ import ShellKit // ./ == 3ecae72
 //   print(modified)
 // }
 
-Shell.outLog = true
+Shell.outLog = false
 
 do {
   print(Shell.git_ls_modified)
