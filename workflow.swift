@@ -1,6 +1,6 @@
 #!/usr/bin/swift sh
 
-import ShellKit // ./ == 2fbb8af
+import ShellKit // ./ == 9c36635
 // https://gitlab.com/thecb4/shellkit.git == 2fbb8af
 
 // do {
@@ -12,10 +12,10 @@ do {
   // precondition(!Shell.git_ls_untracked.contains("commit.yml"), "You need to track commit file")
   // precondition(Shell.git_ls_modified.contains("commit.yml"), "You need to update your commit file")
 
-  try Shell.swiftTest(arguments: ["--generate-linuxmain"])
+  try Shell.swiftTest(using: .zsh, arguments: ["--generate-linuxmain"])
   // try Shell.swiftFormat(arguments: ["--swiftversion", "5.1", "."])
   // try Shell.swiftLint(arguments: ["."])
-  try Shell.swiftTest(arguments: ["--enable-code-coverage"])
+  //try Shell.swiftTest(using: .zsh, arguments: ["--enable-code-coverage"])
 
   // swift test --generate-linuxmain && \
   // swiftformat --swiftversion 5.1 . && \
