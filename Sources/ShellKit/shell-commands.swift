@@ -19,11 +19,4 @@ extension Shell {
     try Shell.execute(using: name, command: "cp", arguments: [source, destination], at: path)
   }
 
-  public static var USER_PATH: String {
-    guard let result = try? Shell.echo("\"$PATH\"") else {
-      return ""
-    }
-
-    return result.status == 0 ? result.out : ""
-  }
 }

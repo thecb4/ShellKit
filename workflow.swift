@@ -1,7 +1,7 @@
 #!/usr/bin/swift sh
 
 import ShellKit // ./ == ed44814
-// https://gitlab.com/thecb4/shellkit.git == 2fbb8af
+// https://gitlab.com/thecb4/shellkit.git == a32f572
 
 // do {
 //   let modified = Shell.git_ls_modified
@@ -11,8 +11,7 @@ do {
   print(Shell.git_ls_modified)
   // precondition(!Shell.git_ls_untracked.contains("commit.yml"), "You need to track commit file")
   // precondition(Shell.git_ls_modified.contains("commit.yml"), "You need to update your commit file")
-  print(["PATH": Shell.USER_PATH])
-  try Shell.swiftTest(using: .zsh, arguments: ["--generate-linuxmain"], environment: ["PATH": Shell.USER_PATH])
+  try Shell.swiftTest(using: .zsh, arguments: ["--generate-linuxmain"], environment: ["PATH": "/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"])
   // try Shell.swiftFormat(arguments: ["--swiftversion", "5.1", "."])
   // try Shell.swiftLint(arguments: ["."])
   // try Shell.swiftTest(using: .zsh, arguments: ["--enable-code-coverage"])
