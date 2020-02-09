@@ -1,6 +1,6 @@
 #!/usr/bin/swift sh
 
-import ShellKit // ./ == 9c36635
+import ShellKit // ./ == 8dae1b2
 // https://gitlab.com/thecb4/shellkit.git == 2fbb8af
 
 // do {
@@ -15,7 +15,7 @@ do {
   try Shell.swiftTest(using: .zsh, arguments: ["--generate-linuxmain"])
   // try Shell.swiftFormat(arguments: ["--swiftversion", "5.1", "."])
   // try Shell.swiftLint(arguments: ["."])
-  //try Shell.swiftTest(using: .zsh, arguments: ["--enable-code-coverage"])
+  // try Shell.swiftTest(using: .zsh, arguments: ["--enable-code-coverage"])
 
   // swift test --generate-linuxmain && \
   // swiftformat --swiftversion 5.1 . && \

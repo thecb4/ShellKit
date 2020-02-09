@@ -60,6 +60,11 @@ public class Shell {
 
     process.currentDirectoryURL = URL(fileURLWithPath: pwd)
 
+    print("executableURL = \(String(describing: process.executableURL))")
+    print("arguments = \(String(describing: process.arguments))")
+    print("env = \(String(describing: process.environment))")
+    print("currentDirectoryURL = \(String(describing: process.currentDirectoryURL))")
+
     try process.run()
 
     process.waitUntilExit()
