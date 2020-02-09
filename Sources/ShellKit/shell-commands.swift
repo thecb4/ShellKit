@@ -20,7 +20,7 @@ extension Shell {
   }
 
   public static var USER_PATH: String {
-    guard let result = try? Shell.echo("$PATH") else {
+    guard let result = try? Shell.echo("\"$PATH\"") else {
       return ""
     }
 
