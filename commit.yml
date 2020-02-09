@@ -1,8 +1,8 @@
 summary: Switch from Precondition to Validation
 added:
-  - USER_PATH to shell commands
+  - Shell level logging option
 changed:
-  - Shell commands to separate file
+  - Reporter to include logging option on prepare
 deprecated: []
 removed: []
 fixed: []

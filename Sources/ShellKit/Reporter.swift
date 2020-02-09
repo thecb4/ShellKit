@@ -22,7 +22,8 @@ extension Shell {
       self.glyph = glyph
     }
 
-    public func prepare() {
+    public func prepare(log: Bool = false) {
+      self.log = log
       data = Data()
       pipe = Pipe()
 
