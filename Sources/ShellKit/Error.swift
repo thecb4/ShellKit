@@ -9,5 +9,6 @@
 extension Shell {
   public enum Error: Swift.Error {
     case nonZeroExit(String)
+    case validationError(String)
   }
 }
