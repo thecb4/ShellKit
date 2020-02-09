@@ -17,6 +17,7 @@ spm_514_xenial:
     entrypoint: [""]
   stage: build-test
   script:
+    - sed -i -e 's/mesg n .*true/tty -s \&\& mesg n/g'
     - swift package update
     - swift test --enable-code-coverage
     # - swift build --build-tests -c debug
