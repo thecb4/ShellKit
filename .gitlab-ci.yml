@@ -18,6 +18,7 @@ spm_514_xenial:
     entrypoint: [""]
   stage: build-test
   script:
+    - which bash
     - swift package update
     - swift test --enable-code-coverage
     # - swift build --build-tests -c debug
