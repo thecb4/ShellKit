@@ -18,19 +18,19 @@ public struct Command {
 
 @available(macOS 10.13, *)
 extension Shell {
-  static func echo(using name: Shell.Name = .bash, _ words: @autoclosure () -> String) throws -> Shell.Result {
+  static func echo(using name: Shell.Name = .sh, _ words: @autoclosure () -> String) throws -> Shell.Result {
     try Shell.execute(using: name, command: "echo", arguments: [words()])
   }
 
-  static func rm(using name: Shell.Name = .bash, resource: String, at path: String = Shell.Path.cwd) throws -> Shell.Result {
+  static func rm(using name: Shell.Name = .sh, resource: String, at path: String = Shell.Path.cwd) throws -> Shell.Result {
     try Shell.execute(using: name, command: "rm", arguments: [resource], at: path)
   }
 
-  static func copy(using name: Shell.Name = .bash, source: String, destination: String, at path: String = Shell.Path.cwd) throws -> Shell.Result {
+  static func copy(using name: Shell.Name = .sh, source: String, destination: String, at path: String = Shell.Path.cwd) throws -> Shell.Result {
     try Shell.execute(using: name, command: "cp", arguments: [source, destination], at: path)
   }
 
-  static func git(using name: Shell.Name = .bash, arguments: Command.Arguments = [], environment: Command.Environment = [:], at path: String = Shell.Path.cwd) throws -> Shell.Result {
+  static func git(using name: Shell.Name = .sh, arguments: Command.Arguments = [], environment: Command.Environment = [:], at path: String = Shell.Path.cwd) throws -> Shell.Result {
     try Shell.execute(using: name, command: "git", arguments: arguments, environment: environment, at: path)
   }
 
@@ -77,12 +77,12 @@ extension Shell {
   }
 
   //
-  // static func gitStatusPorcelain(using name: Shell.Name = .bash) throws -> Shell.Result {
+  // static func gitStatusPorcelain(using name: Shell.Name = .sh) throws -> Shell.Result {
   //   let arguments = ["status", "--porcelain"]
   //   return try Shell.execute(using: name, command: "git", arguments: arguments)
   // }
   //
-  // static func gitUntrackedFiles(using name: Shell.Name = .bash) throws -> [String] {
+  // static func gitUntrackedFiles(using name: Shell.Name = .sh) throws -> [String] {
   //   let result = try Shell.gitStatusPorcelain()
   //   if result.status == 0 {
   //     let files = result.out.components(separatedBy: .newlines)
@@ -92,7 +92,7 @@ extension Shell {
   //   }
   // }
   //
-  // static func gitCurrentBranch(using name: Shell.Name = .bash) throws -> String {
+  // static func gitCurrentBranch(using name: Shell.Name = .sh) throws -> String {
   //   let arguments = ["rev-parse", "--abbrev-ref", "HEAD"]
   //   if result.status == 0 {
   //     return results.out

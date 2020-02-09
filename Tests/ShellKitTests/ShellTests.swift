@@ -12,25 +12,25 @@ import XCTest
 final class ShellTests: XCTestCase {
   func testShellName() {
     // given
-    let name: Shell.Name = .bash
+    let name: Shell.Name = .sh
 
     // when
 
     // then
-    XCTAssertEqual(name.rawValue, "bash")
-    XCTAssertEqual(name.name, "bash")
-    XCTAssertEqual(name.path, "/bin/bash")
+    XCTAssertEqual(name.rawValue, "sh")
+    XCTAssertEqual(name.name, "sh")
+    XCTAssertEqual(name.path, "/bin/sh")
   }
 
   func testCreateShell() throws {
     // given
-    let name: Shell.Name = .bash
+    let name: Shell.Name = .sh
 
     // when
     let shell = Shell(name)
 
     // then
-    XCTAssertEqual(shell.name, .bash)
+    XCTAssertEqual(shell.name, .sh)
     XCTAssertNotNil(shell.outReport)
     XCTAssertNotNil(shell.errReport)
     XCTAssertFalse(shell.debug)
@@ -38,13 +38,13 @@ final class ShellTests: XCTestCase {
 
   func testExecute() throws {
     // given
-    let name: Shell.Name = .bash
+    let name: Shell.Name = .sh
 
     // when
     let sh = Shell(name)
 
     // then
-    let result = try sh.execute(sh.name.path, arguments: ["-l", "-c", "which echo"])
+    let result = try sh.execute(sh.name.path, arguments: ["-c", "which echo"])
 
     XCTAssertEqual(result.out, "/bin/echo")
     XCTAssertEqual(result.err, "")

@@ -83,15 +83,15 @@ public class Shell {
     try execute(name.path, arguments: arguments, environment: environment, at: pwd)
   }
 
-  static func lookup(_ command: String, using name: Shell.Name = .bash) throws -> Shell.Result {
-    let arguments = ["-l", "-c", "which \(command)"]
+  static func lookup(_ command: String, using name: Shell.Name = .sh) throws -> Shell.Result {
+    let arguments = ["-c", "which \(command)"]
 
     let shell = Shell(name)
 
     return try shell.execute(with: arguments)
   }
 
-  public static func execute(using name: Shell.Name = .bash, command: String, arguments: Command.Arguments, environment: Command.Environment? = nil, at pwd: String = Shell.Path.cwd) throws -> Shell.Result {
+  public static func execute(using name: Shell.Name = .sh, command: String, arguments: Command.Arguments, environment: Command.Environment? = nil, at pwd: String = Shell.Path.cwd) throws -> Shell.Result {
     let whichCommand = try Shell.lookup(command)
     let shell = Shell(name)
     return try shell.execute(whichCommand.out, arguments: arguments, environment: environment, at: pwd)
