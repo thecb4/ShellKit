@@ -6,3 +6,4 @@ swiftformat --swiftversion 5.1 . && \
 swiftlint lint . && \
 swift test --enable-code-coverage && \
 git commit -F commit.yml
+git rev-parse --short HEAD

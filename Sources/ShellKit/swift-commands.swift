@@ -19,6 +19,7 @@ extension Shell {
 
   public static func swiftTest(using name: Shell.Name = .sh, arguments: Command.Arguments = [], environment: Command.Environment = [:], at path: String = Shell.Path.cwd) throws -> Shell.Result {
     let _arguments = ["test"] + arguments
+    print(_arguments)
     return try Shell.execute(using: name, command: "swift", arguments: _arguments, environment: environment, at: path)
   }
 }
