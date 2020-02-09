@@ -10,6 +10,7 @@ import Foundation
 @available(macOS 10.13, *)
 public class Shell {
   public static var outLog: Bool = false
+  public static var errLog: Bool = false
 
   var name: Shell.Name
   var outReport: Shell.Reporter
@@ -35,7 +36,7 @@ public class Shell {
     process = Process()
 
     outReport.prepare(log: Shell.outLog)
-    errReport.prepare()
+    errReport.prepare(log: Shell.errLog)
 
     process.standardOutput = outReport.pipe
     process.standardError = errReport.pipe

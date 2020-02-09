@@ -9,6 +9,7 @@ import ShellKit // ./ == 3ecae72
 // }
 
 Shell.outLog = false
+Shell.errLog = true
 
 do {
   print(Shell.git_ls_modified)
