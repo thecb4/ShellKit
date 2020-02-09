@@ -60,11 +60,6 @@ public class Shell {
 
     process.currentDirectoryURL = URL(fileURLWithPath: pwd)
 
-    print("executableURL = \(String(describing: process.executableURL))")
-    print("arguments = \(String(describing: process.arguments))")
-    print("env = \(String(describing: process.environment))")
-    print("currentDirectoryURL = \(String(describing: process.currentDirectoryURL))")
-
     try process.run()
 
     process.waitUntilExit()
@@ -98,10 +93,10 @@ public class Shell {
 
   public static func execute(using name: Shell.Name = .sh, command: String, arguments: Command.Arguments, environment: Command.Environment? = nil, at pwd: String = Shell.Path.cwd) throws -> Shell.Result {
     let whichCommand = (try Shell.lookup(command)).out
-    //let _command = whichCommand.out
+    // let _command = whichCommand.out
     let shell = Shell(name)
-    //let _arguments = ["-c"] + [([command] + arguments).joined(separator: " ")]
-    //print(_arguments)
+    // let _arguments = ["-c"] + [([command] + arguments).joined(separator: " ")]
+    // print(_arguments)
     return try shell.execute(whichCommand, arguments: arguments, environment: environment, at: pwd)
   }
 }

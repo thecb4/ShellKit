@@ -1,9 +1,8 @@
 summary: Switch from Precondition to Validation
 added:
-  - Validation function to use instead of precondition
-  - git 'add' step in workflow
-  - git 'commit' step in workflow, using commit.yml for message
-changed: []
+  - USER_PATH to shell commands
+changed:
+  - Shell commands to separate file
 deprecated: []
 removed: []
 fixed: []
