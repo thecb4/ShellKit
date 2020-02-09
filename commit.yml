@@ -1,9 +1,10 @@
-summary: Switch from Precondition to Validation
-added:
-  - Shell level logging option
-changed:
-  - Reporter to include logging option on prepare
+summary: Clean up
+
+
+added: []
+changed: []
 deprecated: []
-removed: []
+removed:
+  - Commented lined
 fixed: []
 security: []

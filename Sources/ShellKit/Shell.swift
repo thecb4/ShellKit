@@ -95,10 +95,7 @@ public class Shell {
 
   public static func execute(using name: Shell.Name = .sh, command: String, arguments: Command.Arguments, environment: Command.Environment? = nil, at pwd: String = Shell.Path.cwd) throws -> Shell.Result {
     let whichCommand = (try Shell.lookup(command)).out
-    // let _command = whichCommand.out
     let shell = Shell(name)
-    // let _arguments = ["-c"] + [([command] + arguments).joined(separator: " ")]
-    // print(_arguments)
     return try shell.execute(whichCommand, arguments: arguments, environment: environment, at: pwd)
   }
 }
