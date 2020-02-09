@@ -52,7 +52,10 @@ extension Shell {
           if log { print(glyphed) }
 
         } else {
-          if log { print(trimmed) }
+          if log {
+            print("logging turned on")
+            print(trimmed)
+          }
         }
 
         guard let output = trimmed.data(using: .utf8) else {
