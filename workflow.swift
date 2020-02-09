@@ -8,7 +8,7 @@ import ShellKit // ./ == 3ecae72
 //   print(modified)
 // }
 
-Shell.outLog = false
+Shell.outLog = true
 Shell.errLog = true
 
 do {
