@@ -14,7 +14,7 @@ do {
   print(Shell.git_ls_modified)
   // precondition(!Shell.git_ls_untracked.contains("commit.yml"), "You need to track commit file")
   // precondition(Shell.git_ls_modified.contains("commit.yml"), "You need to update your commit file")
-  try Shell.swiftTest(using: .zsh, arguments: ["--generate-linuxmain"], environment: ["PATH": "/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"])
+  try Shell.swiftTest(arguments: ["--generate-linuxmain"], environment: ["PATH": "/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"])
   // try Shell.swiftFormat(arguments: ["--swiftversion", "5.1", "."])
   // try Shell.swiftLint(arguments: ["."])
   // try Shell.swiftTest(using: .zsh, arguments: ["--enable-code-coverage"])
