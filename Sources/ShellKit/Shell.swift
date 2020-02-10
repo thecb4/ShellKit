@@ -59,10 +59,10 @@ public class Shell {
 
     process.currentDirectoryURL = URL(fileURLWithPath: command.workingDirectory)
 
-    print("executableURL = \(String(describing: process.executableURL))")
-    print("arguments = \(String(describing: process.arguments))")
-    print("env = \(String(describing: process.environment))")
-    print("currentDirectoryURL = \(String(describing: process.currentDirectoryURL))")
+    // print("executableURL = \(String(describing: process.executableURL))")
+    // print("arguments = \(String(describing: process.arguments))")
+    // print("env = \(String(describing: process.environment))")
+    // print("currentDirectoryURL = \(String(describing: process.currentDirectoryURL))")
 
     try process.run()
 
