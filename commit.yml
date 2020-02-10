@@ -3,7 +3,7 @@ summary: Shell Log Level
 
 added: []
 changed:
-  - Reporter to accept a shell log level and a command log level
+  - Shell Log Level off = 7
 deprecated: []
 removed: []
 fixed: []
