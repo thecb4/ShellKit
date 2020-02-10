@@ -1,9 +1,9 @@
-summary: Changed Command
+summary: Fixed swiftFormat
 
 
 added: []
 changed:
-  - Command runs off of 'shell' -c command
+  - swiftformat command to accept float instead of string
 deprecated: []
 removed: []
 fixed: []
