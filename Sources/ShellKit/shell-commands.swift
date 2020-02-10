@@ -7,15 +7,16 @@
 
 @available(macOS 10.13, *)
 extension Shell {
-  public static func echo(using name: Shell.Name = .sh, _ words: @autoclosure () -> String) throws -> Shell.Result {
-    try Shell.execute(using: name, command: "echo", arguments: [words()])
+  public static func echo(_ words: @autoclosure () -> String) throws -> Shell.Result {
+    try Shell.execute( Command(name: "echo", arguments: [words()]) )
   }
 
-  public static func rm(using name: Shell.Name = .sh, resource: String, at path: String = Shell.Path.cwd) throws -> Shell.Result {
-    try Shell.execute(using: name, command: "rm", arguments: [resource], at: path)
+  public static func rm(_ resource: String, from workingDirectory: String = Shell.Path.cwd) throws -> Shell.Result {
+    try Shell.execute( Command(name: "rm", arguments: [resource], workingDirectory: workingDirectory) )
   }
 
-  public static func copy(using name: Shell.Name = .sh, source: String, destination: String, at path: String = Shell.Path.cwd) throws -> Shell.Result {
-    try Shell.execute(using: name, command: "cp", arguments: [source, destination], at: path)
+  public static func copy(source: String, destination: String, at workingDirectory: String = Shell.Path.cwd) throws -> Shell.Result {
+    try Shell.execute( Command(name: "cp", arguments: [source, destination], workingDirectory: workingDirectory) )
   }
+
 }

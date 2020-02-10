@@ -11,8 +11,9 @@ import Foundation
 public class Shell {
   public static var outLog: Bool = false
   public static var errLog: Bool = false
+  public static var name: Shell.Name = .bash
 
-  var name: Shell.Name
+  //var name: Shell.Name
   var outReport: Shell.Reporter
   var errReport: Shell.Reporter
   var debug: Bool
@@ -21,12 +22,10 @@ public class Shell {
   // swiftlint:enable implicitly_unwrapped_optional
 
   public init(
-    _ name: Shell.Name,
     outReport: Shell.Reporter = Shell.Reporter(),
     errReport: Shell.Reporter = Shell.Reporter(),
     debug: Bool = false
   ) {
-    self.name = name
     self.outReport = outReport
     self.errReport = errReport
     self.debug = debug
@@ -41,8 +40,6 @@ public class Shell {
     process.standardOutput = outReport.pipe
     process.standardError = errReport.pipe
 
-    // outPipe.fileHandleForReading.readabilityHandler = handleOutput
-    // errPipe.fileHandleForReading.readabilityHandler = handleError
   }
 
   func halt() {
@@ -51,17 +48,22 @@ public class Shell {
     errReport.halt()
   }
 
-  public func execute(_ executable: String, arguments: Command.Arguments, environment: Command.Environment? = nil, at pwd: String = Shell.Path.cwd) throws -> Shell.Result {
+  public func execute(_ command: Command) throws -> Shell.Result {
     prepare()
 
-    process.executableURL = URL(fileURLWithPath: executable)
-    process.arguments = arguments
+    process.executableURL = URL(fileURLWithPath: Shell.name.path)
+    process.arguments = ["-c"] + [command.nameAndArguments]
 
-    if let env = environment {
-      process.environment = env
+    if !command.environment.isEmpty {
+      process.environment = command.environment
     }
 
-    process.currentDirectoryURL = URL(fileURLWithPath: pwd)
+    process.currentDirectoryURL = URL(fileURLWithPath: command.workingDirectory)
+
+    print("executableURL = \(String(describing: process.executableURL))")
+    print("arguments = \(String(describing: process.arguments))")
+    print("env = \(String(describing: process.environment))")
+    print("currentDirectoryURL = \(String(describing: process.currentDirectoryURL))")
 
     try process.run()
 
@@ -82,23 +84,10 @@ public class Shell {
     return result
   }
 
-  public func execute(with arguments: Command.Arguments, environment: Command.Environment? = nil, at pwd: String = Shell.Path.cwd) throws -> Shell.Result {
-    try execute(name.path, arguments: arguments, environment: environment, at: pwd)
+  public static func execute(_ command: Command) throws -> Shell.Result {
+    return try Shell().execute(command)
   }
 
-  static func lookup(_ command: String, using name: Shell.Name = .sh) throws -> Shell.Result {
-    let arguments = ["-c", "which \(command)"]
-
-    let shell = Shell(name)
-
-    return try shell.execute(with: arguments)
-  }
-
-  public static func execute(using name: Shell.Name = .sh, command: String, arguments: Command.Arguments, environment: Command.Environment? = nil, at pwd: String = Shell.Path.cwd) throws -> Shell.Result {
-    let whichCommand = (try Shell.lookup(command)).out
-    let shell = Shell(name)
-    return try shell.execute(whichCommand, arguments: arguments, environment: environment, at: pwd)
-  }
 }
 
 @available(macOS 10.13, *)
@@ -118,7 +107,71 @@ extension Shell {
     }
   }
 
+  /// The log level.
+  ///
+  /// Log levels are ordered by their severity, with `.trace` being the least severe and
+  /// `.critical` being the most severe.
+  public enum LogLevel: String, Codable, CaseIterable {
+      /// Appropriate for messages that contain information only when debugging a program.
+      case trace
+
+      /// Appropriate for messages that contain information normally of use only when
+      /// debugging a program.
+      case debug
+
+      /// Appropriate for informational messages.
+      case info
+
+      /// Appropriate for conditions that are not error conditions, but that may require
+      /// special handling.
+      case notice
+
+      /// Appropriate for messages that are not error conditions, but more severe than
+      /// `.notice`.
+      case warning
+
+      /// Appropriate for error conditions.
+      case error
+
+      /// Appropriate for critical error conditions that usually require immediate
+      /// attention.
+      ///
+      /// When a `critical` message is logged, the logging backend (`LogHandler`) is free to perform
+      /// more heavy-weight operations to capture system state (such as capturing stack traces) to facilitate
+      /// debugging.
+      case critical
+  }
+
   public struct Path {
     public static let cwd = FileManager.default.currentDirectoryPath
   }
+}
+
+@available(macOS 10.13, *)
+extension Shell.LogLevel {
+    internal var naturalIntegralValue: Int {
+        switch self {
+        case .trace:
+            return 0
+        case .debug:
+            return 1
+        case .info:
+            return 2
+        case .notice:
+            return 3
+        case .warning:
+            return 4
+        case .error:
+            return 5
+        case .critical:
+            return 6
+        }
+    }
+}
+
+@available(macOS 10.13, *)
+extension Shell.LogLevel: Comparable {
+    public static func < (lhs: Shell.LogLevel, rhs: Shell.LogLevel) -> Bool {
+        return lhs.naturalIntegralValue < rhs.naturalIntegralValue
+    }
 }

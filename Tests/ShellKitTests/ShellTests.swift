@@ -27,10 +27,11 @@ final class ShellTests: XCTestCase {
     let name: Shell.Name = .sh
 
     // when
-    let shell = Shell(name)
+    Shell.name = name
+    let shell = Shell()
 
     // then
-    XCTAssertEqual(shell.name, .sh)
+    XCTAssertEqual(Shell.name, .sh)
     XCTAssertNotNil(shell.outReport)
     XCTAssertNotNil(shell.errReport)
     XCTAssertFalse(shell.debug)
@@ -39,26 +40,18 @@ final class ShellTests: XCTestCase {
   func testExecute() throws {
     // given
     let name: Shell.Name = .sh
+    let command = Command(
+      name: "which",
+      arguments: ["echo"]
+    )
 
     // when
-    let sh = Shell(name)
+    Shell.name = name
+    let shell = Shell()
 
     // then
-    let result = try sh.execute(sh.name.path, arguments: ["-c", "which echo"])
+    let result = try shell.execute(command)
 
-    XCTAssertEqual(result.out, "/bin/echo")
-    XCTAssertEqual(result.err, "")
-    XCTAssertEqual(result.status, Int32(0))
-  }
-
-  func testLookup() throws {
-    // given
-    let command = "echo"
-
-    // when
-    let result = try Shell.lookup(command)
-
-    // then
     XCTAssertEqual(result.out, "/bin/echo")
     XCTAssertEqual(result.err, "")
     XCTAssertEqual(result.status, Int32(0))
@@ -94,7 +87,7 @@ final class ShellTests: XCTestCase {
     let resource = "Tests/ShellKitTests/fixtures/destination.txt"
 
     // when
-    let result = try Shell.rm(resource: resource)
+    let result = try Shell.rm(resource)
 
     // then
     XCTAssertEqual(result.status, Int32(0))
@@ -129,4 +122,5 @@ final class ShellTests: XCTestCase {
     // then
     print(files)
   }
+
 }

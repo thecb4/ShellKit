@@ -7,8 +7,11 @@
 
 @available(macOS 10.13, *)
 extension Shell {
-  public static func git(using name: Shell.Name = .sh, arguments: Command.Arguments = [], environment: Command.Environment = [:], at path: String = Shell.Path.cwd) throws -> Shell.Result {
-    try Shell.execute(using: name, command: "git", arguments: arguments, environment: environment, at: path)
+  public static func git(using name: Shell.Name = .sh, arguments: Command.Arguments = [], environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd) throws -> Shell.Result {
+    
+    try Shell.execute( Command(name: "git", arguments: arguments, environment: environment, workingDirectory: workingDirectory) )
+
+    //try Shell.execute(using: name, command: "git", arguments: arguments, environment: environment, at: path)
   }
 
   public static var git_ls: [String] {

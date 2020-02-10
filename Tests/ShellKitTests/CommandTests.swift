@@ -8,25 +8,24 @@
 import XCTest
 @testable import ShellKit
 
+@available(macOS 10.13, *)
 final class CommandTests: XCTestCase {
-  // func testCreateCommand() {
-  //   // given
-  //
-  //   // when
-  //   let command = Command(
-  //     name: "echo",
-  //     arguments:
-  //     ["Hello, World!"],
-  //     environment: [:],
-  //     echoString: nil,
-  //     directory: "."
-  //   )
-  //
-  //   // then
-  //   XCTAssertEqual(command.name, "echo")
-  //   XCTAssertEqual(command.arguments, ["Hello, World!"])
-  //   XCTAssertEqual(command.environment, [:])
-  //   XCTAssertNil(command.echoString)
-  //   XCTAssertEqual(command.directory, ".")
-  // }
+  func testCreateCommand() {
+    // given
+
+    // when
+    let command = Command(
+      name: "echo",
+      arguments:
+      ["Hello, World!"],
+      environment: [:],
+      workingDirectory: "."
+    )
+
+    // then
+    XCTAssertEqual(command.name, "echo")
+    XCTAssertEqual(command.arguments, ["Hello, World!"])
+    XCTAssertEqual(command.environment, [:])
+    XCTAssertEqual(command.workingDirectory, ".")
+  }
 }
