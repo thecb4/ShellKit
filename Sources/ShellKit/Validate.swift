@@ -6,7 +6,7 @@
 //
 
 @available(macOS 10.13, *)
-func validate(_ condition: Bool, _ message: String) throws {
+public func validate(_ condition: Bool, _ message: String) throws {
   if !condition {
     throw Shell.Error.validationError(message)
   }
