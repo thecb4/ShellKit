@@ -53,7 +53,7 @@ extension Shell {
       if !trimmed.isEmpty {
         if let glyph = glyph {
           let glyphed = trimmed.components(separatedBy: .newlines).map { "\(glyph) | " + $0 }.joined(separator: "\n")
-          if commandLogLevel <= shellLogLevel { print(glyphed) }
+          if commandLogLevel >= shellLogLevel { print(glyphed) }
 
         } else {
           if commandLogLevel > shellLogLevel {
