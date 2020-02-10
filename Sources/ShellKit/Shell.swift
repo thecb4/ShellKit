@@ -153,7 +153,7 @@ extension Shell {
 extension Shell.LogLevel {
   internal var naturalIntegralValue: Int {
     switch self {
-    case .off:
+      case .off:
         return -1
       case .trace:
         return 0

@@ -62,7 +62,7 @@ final class ShellTests: XCTestCase {
     let words = "Hello, World!"
 
     // when
-    let result = try Shell.echo(words)
+    let result = try Shell.echo(words, logLevel: .off)
 
     // then
     XCTAssertEqual(result.out, words)
@@ -100,7 +100,7 @@ final class ShellTests: XCTestCase {
     let files = Shell.git_ls
 
     // then
-    print(files)
+    XCTAssertTrue(!files.isEmpty)
   }
 
   func testGitListModifiedFiles() throws {
@@ -110,7 +110,7 @@ final class ShellTests: XCTestCase {
     let files = Shell.git_ls_modified
 
     // then
-    print(files)
+    XCTAssertTrue(!files.isEmpty)
   }
 
   func testGitListUntrackedFiles() throws {
