@@ -20,7 +20,7 @@ extension Shell {
     try Shell.execute(Command(name: "swift", arguments: ["test", "--generate-linuxmain"], environment: environment, workingDirectory: workingDirectory))
   }
 
-  public static func swiftFormat(version: String, environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd) throws -> Shell.Result {
-    try Shell.execute(Command(name: "swiftformat", arguments: ["--swiftversion", version], environment: environment, workingDirectory: workingDirectory))
+  public static func swiftFormat(version: Double, environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd) throws -> Shell.Result {
+    try Shell.execute(Command(name: "swiftformat", arguments: ["--swiftversion \(version)"], environment: environment, workingDirectory: workingDirectory))
   }
 }

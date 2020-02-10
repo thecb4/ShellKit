@@ -1,7 +1,7 @@
 #!/usr/bin/swift sh
 
 import ShellKit // ./ == dded6c5
-// https://gitlab.com/thecb4/shellkit.git == 740cec1
+// https://gitlab.com/thecb4/shellkit.git == 9cbac4f
 
 // do {
 //   let modified = Shell.git_ls_modified
@@ -9,16 +9,16 @@ import ShellKit // ./ == dded6c5
 // }
 
 Shell.outLog = true
-Shell.errLog = false
+Shell.errLog = true
+let swiftEnv = ["PATH": "/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"]
 
 do {
-  validate(!Shell.git_ls_untracked.contains("commit.yml"), "You need to track commit file")
-  validate(Shell.git_ls_modified.contains("commit.yml"), "You need to update your commit file")
-  let swiftEnv = ["PATH": "/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"]
-  // precondition(!Shell.git_ls_untracked.contains("commit.yml"), "You need to track commit file")
-  // precondition(Shell.git_ls_modified.contains("commit.yml"), "You need to update your commit file")
+  try validate(!Shell.git_ls_untracked.contains("commit.yml"), "You need to track commit file")
+  try validate(Shell.git_ls_modified.contains("commit.yml"), "You need to update your commit file")
+
   try Shell.swiftTestGenerateLinuxMain(environment: swiftEnv)
   try Shell.swiftFormat(version: "5.1", environment: swiftEnv)
+  try Shell.swiftTest(arguments: ["--enable-code-coverage"], environment: swiftEnv)
   // try Shell.swiftFormat(arguments: ["--swiftversion", "5.1", "."])
   // try Shell.swiftLint(arguments: ["."])
   // try Shell.swiftTest(using: .zsh, arguments: ["--enable-code-coverage"])

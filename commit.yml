@@ -1,10 +1,10 @@
-summary: Clean up
+summary: Changed Command
 
 
 added: []
-changed: []
+changed:
+  - Command runs off of 'shell' -c command
 deprecated: []
-removed:
-  - Commented lined
+removed: []
 fixed: []
 security: []
