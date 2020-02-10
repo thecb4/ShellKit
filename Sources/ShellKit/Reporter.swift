@@ -76,7 +76,6 @@ extension Shell {
 
 @available(macOS 10.13, *)
 extension Shell.Reporter {
-
   public enum Glyph: String {
     case unicorn = "🦄"
   }

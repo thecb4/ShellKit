@@ -3,7 +3,7 @@ summary: Shell Log Level
 
 added: []
 changed:
-  - Shell Tests to turn off logging
+  - git_ls_untracked test to check for empty array
 deprecated: []
 removed: []
 fixed: []

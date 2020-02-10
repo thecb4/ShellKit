@@ -1,7 +1,7 @@
 #!/usr/bin/swift sh
 
 import ShellKit // ./ == fd54aff
-// https://gitlab.com/thecb4/shellkit.git == 26f9bab
+// https://gitlab.com/thecb4/shellkit.git == 9dde7f0
 
 // do {
 //   let modified = Shell.git_ls_modified

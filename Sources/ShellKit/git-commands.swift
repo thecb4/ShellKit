@@ -10,7 +10,10 @@ extension Shell {
   public static func git(using name: Shell.Name = .sh, arguments: Command.Arguments = [], environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .info) throws -> Shell.Result {
     try Shell.execute(Command(name: "git", arguments: arguments, environment: environment, workingDirectory: workingDirectory, logLevel: logLevel))
 
-    // try Shell.execute(using: name, command: "git", arguments: arguments, environment: environment, at: path)
+  }
+
+  static func gitAddAll(environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .info) throws -> Shell.Result {
+    try Shell.execute(Command(name: "git", arguments: ["add", "-A"], environment: environment, workingDirectory: workingDirectory, logLevel: logLevel))
   }
 
   public static var git_ls: [String] {

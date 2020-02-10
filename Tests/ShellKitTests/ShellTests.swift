@@ -120,6 +120,6 @@ final class ShellTests: XCTestCase {
     let files = Shell.git_ls_untracked
 
     // then
-    print(files)
+    XCTAssertTrue(!files.isEmpty)
   }
 }
