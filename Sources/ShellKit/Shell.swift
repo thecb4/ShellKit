@@ -13,7 +13,7 @@ public class Shell {
   public static var errLog: Bool = false
   public static var name: Shell.Name = .bash
 
-  //var name: Shell.Name
+  // var name: Shell.Name
   var outReport: Shell.Reporter
   var errReport: Shell.Reporter
   var debug: Bool
@@ -39,7 +39,6 @@ public class Shell {
 
     process.standardOutput = outReport.pipe
     process.standardError = errReport.pipe
-
   }
 
   func halt() {
@@ -85,9 +84,8 @@ public class Shell {
   }
 
   public static func execute(_ command: Command) throws -> Shell.Result {
-    return try Shell().execute(command)
+    try Shell().execute(command)
   }
-
 }
 
 @available(macOS 10.13, *)
@@ -113,25 +111,25 @@ extension Shell {
   /// `.critical` being the most severe.
   public enum LogLevel: String, Codable, CaseIterable {
       /// Appropriate for messages that contain information only when debugging a program.
-      case trace
+    case trace
 
       /// Appropriate for messages that contain information normally of use only when
       /// debugging a program.
-      case debug
+    case debug
 
       /// Appropriate for informational messages.
-      case info
+    case info
 
       /// Appropriate for conditions that are not error conditions, but that may require
       /// special handling.
-      case notice
+    case notice
 
       /// Appropriate for messages that are not error conditions, but more severe than
       /// `.notice`.
-      case warning
+    case warning
 
       /// Appropriate for error conditions.
-      case error
+    case error
 
       /// Appropriate for critical error conditions that usually require immediate
       /// attention.
@@ -139,7 +137,7 @@ extension Shell {
       /// When a `critical` message is logged, the logging backend (`LogHandler`) is free to perform
       /// more heavy-weight operations to capture system state (such as capturing stack traces) to facilitate
       /// debugging.
-      case critical
+    case critical
   }
 
   public struct Path {
@@ -149,29 +147,29 @@ extension Shell {
 
 @available(macOS 10.13, *)
 extension Shell.LogLevel {
-    internal var naturalIntegralValue: Int {
-        switch self {
-        case .trace:
-            return 0
-        case .debug:
-            return 1
-        case .info:
-            return 2
-        case .notice:
-            return 3
-        case .warning:
-            return 4
-        case .error:
-            return 5
-        case .critical:
-            return 6
-        }
+  internal var naturalIntegralValue: Int {
+    switch self {
+      case .trace:
+        return 0
+      case .debug:
+        return 1
+      case .info:
+        return 2
+      case .notice:
+        return 3
+      case .warning:
+        return 4
+      case .error:
+        return 5
+      case .critical:
+        return 6
     }
+  }
 }
 
 @available(macOS 10.13, *)
 extension Shell.LogLevel: Comparable {
-    public static func < (lhs: Shell.LogLevel, rhs: Shell.LogLevel) -> Bool {
-        return lhs.naturalIntegralValue < rhs.naturalIntegralValue
-    }
+  public static func < (lhs: Shell.LogLevel, rhs: Shell.LogLevel) -> Bool {
+    lhs.naturalIntegralValue < rhs.naturalIntegralValue
+  }
 }

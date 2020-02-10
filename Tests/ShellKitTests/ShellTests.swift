@@ -122,5 +122,4 @@ final class ShellTests: XCTestCase {
     // then
     print(files)
   }
-
 }

@@ -8,15 +8,14 @@
 @available(macOS 10.13, *)
 extension Shell {
   public static func echo(_ words: @autoclosure () -> String) throws -> Shell.Result {
-    try Shell.execute( Command(name: "echo", arguments: [words()]) )
+    try Shell.execute(Command(name: "echo", arguments: [words()]))
   }
 
   public static func rm(_ resource: String, from workingDirectory: String = Shell.Path.cwd) throws -> Shell.Result {
-    try Shell.execute( Command(name: "rm", arguments: [resource], workingDirectory: workingDirectory) )
+    try Shell.execute(Command(name: "rm", arguments: [resource], workingDirectory: workingDirectory))
   }
 
   public static func copy(source: String, destination: String, at workingDirectory: String = Shell.Path.cwd) throws -> Shell.Result {
-    try Shell.execute( Command(name: "cp", arguments: [source, destination], workingDirectory: workingDirectory) )
+    try Shell.execute(Command(name: "cp", arguments: [source, destination], workingDirectory: workingDirectory))
   }
-
 }

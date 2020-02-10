@@ -53,7 +53,6 @@ extension Shell {
 
         } else {
           if log {
-            print("logging turned on")
             print(trimmed)
           }
         }

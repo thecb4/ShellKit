@@ -34,7 +34,6 @@ public struct Command {
   }
 
   var nameAndArguments: String {
-    ([self.name] + self.arguments).joined(separator: " ")
+    ([name] + arguments).joined(separator: " ")
   }
-
 }
