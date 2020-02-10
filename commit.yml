@@ -3,7 +3,8 @@ summary: Fixed swiftFormat
 
 added: []
 changed:
-  - swiftformat command to accept float instead of string
+  - swiftformat command back to string for swiftversion
+  - swiftformat command to include working directory in arguments
 deprecated: []
 removed: []
 fixed: []

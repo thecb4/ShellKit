@@ -21,6 +21,6 @@ extension Shell {
   }
 
   public static func swiftFormat(version: String, environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd) throws -> Shell.Result {
-    try Shell.execute(Command(name: "swiftformat", arguments: ["--swiftversion", workingDirectory], environment: environment, workingDirectory: workingDirectory))
+    try Shell.execute(Command(name: "swiftformat", arguments: ["--swiftversion", version, workingDirectory], environment: environment, workingDirectory: workingDirectory))
   }
 }
