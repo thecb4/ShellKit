@@ -111,7 +111,6 @@ extension Shell {
   /// Log levels are ordered by their severity, with `.trace` being the least severe and
   /// `.critical` being the most severe.
   public enum LogLevel: String, Codable, CaseIterable {
-
     /// logging off
     case off
 
