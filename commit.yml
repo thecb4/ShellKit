@@ -3,7 +3,7 @@ summary: Shell Log Level
 
 added: []
 changed:
-  - Shell Log Level off = 7
+  - Shell Log Level off = 7 (1)
 deprecated: []
 removed: []
 fixed: []
