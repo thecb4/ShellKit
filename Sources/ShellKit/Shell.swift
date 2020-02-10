@@ -12,6 +12,7 @@ public class Shell {
   public static var outLog: Bool = false
   public static var errLog: Bool = false
   public static var name: Shell.Name = .bash
+  public static var logLevel: Shell.LogLevel = .info
 
   // var name: Shell.Name
   var outReport: Shell.Reporter
@@ -31,11 +32,11 @@ public class Shell {
     self.debug = debug
   }
 
-  func prepare() {
+  func prepare(commandLogLevel: Shell.LogLevel) {
     process = Process()
 
-    outReport.prepare(log: Shell.outLog)
-    errReport.prepare(log: Shell.errLog)
+    outReport.prepare(log: Shell.outLog, shellLogLevel: Shell.logLevel, commandLogLevel: commandLogLevel)
+    errReport.prepare(log: Shell.errLog, shellLogLevel: Shell.logLevel, commandLogLevel: commandLogLevel)
 
     process.standardOutput = outReport.pipe
     process.standardError = errReport.pipe
@@ -48,7 +49,7 @@ public class Shell {
   }
 
   public func execute(_ command: Command) throws -> Shell.Result {
-    prepare()
+    prepare(commandLogLevel: command.logLevel)
 
     process.executableURL = URL(fileURLWithPath: Shell.name.path)
     process.arguments = ["-c"] + [command.nameAndArguments]
@@ -110,6 +111,10 @@ extension Shell {
   /// Log levels are ordered by their severity, with `.trace` being the least severe and
   /// `.critical` being the most severe.
   public enum LogLevel: String, Codable, CaseIterable {
+
+    /// logging off
+    case off
+
       /// Appropriate for messages that contain information only when debugging a program.
     case trace
 
@@ -149,6 +154,8 @@ extension Shell {
 extension Shell.LogLevel {
   internal var naturalIntegralValue: Int {
     switch self {
+      case .off:
+        return -1
       case .trace:
         return 0
       case .debug:

@@ -11,6 +11,8 @@ import Foundation
 extension Shell {
   public class Reporter {
     public var log: Bool
+    public var shellLogLevel: Shell.LogLevel = .off
+    public var commandLogLevel: Shell.LogLevel = .off
     // swiftlint:disable implicitly_unwrapped_optional
     public var data: Data!
     public var pipe: Pipe!
@@ -22,8 +24,10 @@ extension Shell {
       self.glyph = glyph
     }
 
-    public func prepare(log: Bool = false) {
+    public func prepare(log: Bool = false, shellLogLevel: Shell.LogLevel, commandLogLevel: Shell.LogLevel) {
       self.log = log
+      self.shellLogLevel = shellLogLevel
+      self.commandLogLevel = commandLogLevel
       data = Data()
       pipe = Pipe()
 
@@ -49,10 +53,10 @@ extension Shell {
       if !trimmed.isEmpty {
         if let glyph = glyph {
           let glyphed = trimmed.components(separatedBy: .newlines).map { "\(glyph) | " + $0 }.joined(separator: "\n")
-          if log { print(glyphed) }
+          if commandLogLevel <= shellLogLevel { print(glyphed) }
 
         } else {
-          if log {
+          if commandLogLevel <= shellLogLevel {
             print(trimmed)
           }
         }

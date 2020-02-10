@@ -7,5 +7,6 @@ changed:
   - swiftformat command to include working directory in arguments
 deprecated: []
 removed: []
-fixed: []
+fixed:
+  - swiftFormat command to include vesion in arguments
 security: []
