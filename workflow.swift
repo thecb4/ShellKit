@@ -1,6 +1,6 @@
 #!/usr/bin/swift sh
 
-import ShellKit // ./ == 6a84776
+import ShellKit // ./ == 947fac6
 // https://gitlab.com/thecb4/shellkit.git == 1a64d32
 
 // do {

@@ -56,7 +56,7 @@ extension Shell {
           if commandLogLevel >= shellLogLevel { print(glyphed) }
 
         } else {
-          if commandLogLevel > shellLogLevel {
+          if commandLogLevel >= shellLogLevel {
             print(trimmed)
           }
         }

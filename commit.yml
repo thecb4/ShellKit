@@ -1,12 +1,10 @@
-summary: Fixed swiftFormat
+summary: Shell Log Level
 
 
 added: []
 changed:
-  - swiftformat command back to string for swiftversion
-  - swiftformat command to include working directory in arguments
+  - Reporter to accept a shell log level and a command log level
 deprecated: []
 removed: []
-fixed:
-  - swiftFormat command to include vesion in arguments
+fixed: []
 security: []
