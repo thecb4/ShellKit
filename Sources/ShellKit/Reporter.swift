@@ -8,11 +8,14 @@
 import Foundation
 
 @available(macOS 10.13, *)
+public typealias LogLevel = Shell.Reporter.Level
+
+@available(macOS 10.13, *)
 extension Shell {
   public class Reporter {
     public var log: Bool
-    public var shellLogLevel: Shell.LogLevel = .off
-    public var commandLogLevel: Shell.LogLevel = .off
+    public var shellLogLevel: LogLevel = .off
+    public var commandLogLevel: LogLevel = .off
     // swiftlint:disable implicitly_unwrapped_optional
     public var data: Data!
     public var pipe: Pipe!
@@ -24,7 +27,7 @@ extension Shell {
       self.glyph = glyph
     }
 
-    public func prepare(log: Bool = false, shellLogLevel: Shell.LogLevel, commandLogLevel: Shell.LogLevel) {
+    public func prepare(log: Bool = false, shellLogLevel: LogLevel, commandLogLevel: LogLevel) {
       self.log = log
       self.shellLogLevel = shellLogLevel
       self.commandLogLevel = commandLogLevel
@@ -73,7 +76,77 @@ extension Shell {
 
 @available(macOS 10.13, *)
 extension Shell.Reporter {
+
   public enum Glyph: String {
     case unicorn = "🦄"
+  }
+
+  /// The log level.
+  ///
+  /// Log levels are ordered by their severity, with `.trace` being the least severe and
+  /// `.critical` being the most severe.
+  public enum Level: String, Codable, CaseIterable {
+    /// logging off
+    case off
+
+      /// Appropriate for messages that contain information only when debugging a program.
+    case trace
+
+      /// Appropriate for messages that contain information normally of use only when
+      /// debugging a program.
+    case debug
+
+      /// Appropriate for informational messages.
+    case info
+
+      /// Appropriate for conditions that are not error conditions, but that may require
+      /// special handling.
+    case notice
+
+      /// Appropriate for messages that are not error conditions, but more severe than
+      /// `.notice`.
+    case warning
+
+      /// Appropriate for error conditions.
+    case error
+
+      /// Appropriate for critical error conditions that usually require immediate
+      /// attention.
+      ///
+      /// When a `critical` message is logged, the logging backend (`LogHandler`) is free to perform
+      /// more heavy-weight operations to capture system state (such as capturing stack traces) to facilitate
+      /// debugging.
+    case critical
+  }
+}
+
+@available(macOS 10.13, *)
+extension Shell.Reporter.Level {
+  internal var naturalIntegralValue: Int {
+    switch self {
+      case .off:
+        return -1
+      case .trace:
+        return 0
+      case .debug:
+        return 1
+      case .info:
+        return 2
+      case .notice:
+        return 3
+      case .warning:
+        return 4
+      case .error:
+        return 5
+      case .critical:
+        return 6
+    }
+  }
+}
+
+@available(macOS 10.13, *)
+extension Shell.Reporter.Level: Comparable {
+  public static func < (lhs: LogLevel, rhs: LogLevel) -> Bool {
+    lhs.naturalIntegralValue < rhs.naturalIntegralValue
   }
 }

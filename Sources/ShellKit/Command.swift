@@ -16,7 +16,7 @@ public struct Command {
   public let workingDirectory: String
   public let outLog: Bool
   public let errLog: Bool
-  public let logLevel: Shell.LogLevel
+  public let logLevel: LogLevel
 
   init(
     name: String,
@@ -25,7 +25,7 @@ public struct Command {
     workingDirectory: String = Shell.Path.cwd,
     outLog: Bool = true,
     errLog: Bool = true,
-    logLevel: Shell.LogLevel = .off
+    logLevel: LogLevel = .off
   ) {
     self.name = name
     self.arguments = arguments

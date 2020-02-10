@@ -12,7 +12,7 @@ public class Shell {
   public static var outLog: Bool = false
   public static var errLog: Bool = false
   public static var name: Shell.Name = .bash
-  public static var logLevel: Shell.LogLevel = .info
+  public static var logLevel: LogLevel = .info
 
   // var name: Shell.Name
   var outReport: Shell.Reporter
@@ -32,7 +32,7 @@ public class Shell {
     self.debug = debug
   }
 
-  func prepare(commandLogLevel: Shell.LogLevel) {
+  func prepare(commandLogLevel: LogLevel) {
     process = Process()
 
     outReport.prepare(log: Shell.outLog, shellLogLevel: Shell.logLevel, commandLogLevel: commandLogLevel)
@@ -106,76 +106,38 @@ extension Shell {
     }
   }
 
-  /// The log level.
-  ///
-  /// Log levels are ordered by their severity, with `.trace` being the least severe and
-  /// `.critical` being the most severe.
-  public enum LogLevel: String, Codable, CaseIterable {
-    /// logging off
-    case off
-
-      /// Appropriate for messages that contain information only when debugging a program.
-    case trace
-
-      /// Appropriate for messages that contain information normally of use only when
-      /// debugging a program.
-    case debug
-
-      /// Appropriate for informational messages.
-    case info
-
-      /// Appropriate for conditions that are not error conditions, but that may require
-      /// special handling.
-    case notice
-
-      /// Appropriate for messages that are not error conditions, but more severe than
-      /// `.notice`.
-    case warning
-
-      /// Appropriate for error conditions.
-    case error
-
-      /// Appropriate for critical error conditions that usually require immediate
-      /// attention.
-      ///
-      /// When a `critical` message is logged, the logging backend (`LogHandler`) is free to perform
-      /// more heavy-weight operations to capture system state (such as capturing stack traces) to facilitate
-      /// debugging.
-    case critical
-  }
-
   public struct Path {
     public static let cwd = FileManager.default.currentDirectoryPath
   }
 }
 
-@available(macOS 10.13, *)
-extension Shell.LogLevel {
-  internal var naturalIntegralValue: Int {
-    switch self {
-      case .off:
-        return -1
-      case .trace:
-        return 0
-      case .debug:
-        return 1
-      case .info:
-        return 2
-      case .notice:
-        return 3
-      case .warning:
-        return 4
-      case .error:
-        return 5
-      case .critical:
-        return 6
-    }
-  }
-}
-
-@available(macOS 10.13, *)
-extension Shell.LogLevel: Comparable {
-  public static func < (lhs: Shell.LogLevel, rhs: Shell.LogLevel) -> Bool {
-    lhs.naturalIntegralValue < rhs.naturalIntegralValue
-  }
-}
+// @available(macOS 10.13, *)
+// extension LogLevel {
+//   internal var naturalIntegralValue: Int {
+//     switch self {
+//       case .off:
+//         return -1
+//       case .trace:
+//         return 0
+//       case .debug:
+//         return 1
+//       case .info:
+//         return 2
+//       case .notice:
+//         return 3
+//       case .warning:
+//         return 4
+//       case .error:
+//         return 5
+//       case .critical:
+//         return 6
+//     }
+//   }
+// }
+//
+// @available(macOS 10.13, *)
+// extension LogLevel: Comparable {
+//   public static func < (lhs: LogLevel, rhs: LogLevel) -> Bool {
+//     lhs.naturalIntegralValue < rhs.naturalIntegralValue
+//   }
+// }

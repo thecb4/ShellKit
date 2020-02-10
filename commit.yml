@@ -3,7 +3,7 @@ summary: Shell Log Level
 
 added: []
 changed:
-  - off Log Level = 0
+  - Shell Tests to turn off logging
 deprecated: []
 removed: []
 fixed: []

@@ -19,7 +19,8 @@ final class CommandTests: XCTestCase {
       arguments:
       ["Hello, World!"],
       environment: [:],
-      workingDirectory: "."
+      workingDirectory: ".",
+      logLevel: .info
     )
 
     // then
@@ -27,5 +28,6 @@ final class CommandTests: XCTestCase {
     XCTAssertEqual(command.arguments, ["Hello, World!"])
     XCTAssertEqual(command.environment, [:])
     XCTAssertEqual(command.workingDirectory, ".")
+    XCTAssertEqual(command.logLevel, .info)
   }
 }
