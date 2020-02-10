@@ -153,6 +153,8 @@ extension Shell {
 extension Shell.LogLevel {
   internal var naturalIntegralValue: Int {
     switch self {
+    case .off:
+        return -1
       case .trace:
         return 0
       case .debug:
@@ -167,8 +169,6 @@ extension Shell.LogLevel {
         return 5
       case .critical:
         return 6
-      case .off:
-        return 7
     }
   }
 }
