@@ -1,0 +1,516 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Command.swift",
+      "line": 9,
+      "symbol": "Command",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Command.swift",
+      "line": 10,
+      "symbol": "Command.Arguments",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Command.swift",
+      "line": 11,
+      "symbol": "Command.Environment",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Command.swift",
+      "line": 13,
+      "symbol": "Command.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Command.swift",
+      "line": 14,
+      "symbol": "Command.arguments",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Command.swift",
+      "line": 15,
+      "symbol": "Command.environment",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Command.swift",
+      "line": 16,
+      "symbol": "Command.workingDirectory",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Command.swift",
+      "line": 17,
+      "symbol": "Command.outLog",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Command.swift",
+      "line": 18,
+      "symbol": "Command.errLog",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Command.swift",
+      "line": 19,
+      "symbol": "Command.logLevel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Error.swift",
+      "line": 10,
+      "symbol": "Shell.Error",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Error.swift",
+      "line": 11,
+      "symbol": "Shell.Error.nonZeroExit(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Error.swift",
+      "line": 12,
+      "symbol": "Shell.Error.validationError(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/File.swift",
+      "line": 9,
+      "symbol": "String.isAbsolute",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Process.swift",
+      "line": 13,
+      "symbol": "Process.process(for:using:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Reporter.swift",
+      "line": 11,
+      "symbol": "LogLevel",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Reporter.swift",
+      "line": 15,
+      "symbol": "Shell.Reporter",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Reporter.swift",
+      "line": 16,
+      "symbol": "Shell.Reporter.log",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Reporter.swift",
+      "line": 17,
+      "symbol": "Shell.Reporter.shellLogLevel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Reporter.swift",
+      "line": 18,
+      "symbol": "Shell.Reporter.commandLogLevel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Reporter.swift",
+      "line": 20,
+      "symbol": "Shell.Reporter.data",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Reporter.swift",
+      "line": 21,
+      "symbol": "Shell.Reporter.pipe",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Reporter.swift",
+      "line": 23,
+      "symbol": "Shell.Reporter.glyph",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Reporter.swift",
+      "line": 25,
+      "symbol": "Shell.Reporter.init(glyph:log:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Reporter.swift",
+      "line": 30,
+      "symbol": "Shell.Reporter.prepare(log:shellLogLevel:commandLogLevel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Reporter.swift",
+      "line": 40,
+      "symbol": "Shell.Reporter.halt()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Reporter.swift",
+      "line": 47,
+      "symbol": "Shell.Reporter.report(file:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Reporter.swift",
+      "line": 79,
+      "symbol": "Shell.Reporter",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Reporter.swift",
+      "line": 80,
+      "symbol": "Shell.Reporter.Glyph",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Reporter.swift",
+      "line": 81,
+      "symbol": "Shell.Reporter.Glyph.unicorn",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Result.swift",
+      "line": 28,
+      "symbol": "Shell.Result",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Result.swift",
+      "line": 29,
+      "symbol": "Shell.Result.out",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Result.swift",
+      "line": 30,
+      "symbol": "Shell.Result.err",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Result.swift",
+      "line": 31,
+      "symbol": "Shell.Result.status",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Shell.swift",
+      "line": 9,
+      "symbol": "Shell",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Shell.swift",
+      "line": 9,
+      "symbol": "Shell",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Shell.swift",
+      "line": 11,
+      "symbol": "Shell",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Shell.swift",
+      "line": 11,
+      "symbol": "Shell",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Shell.swift",
+      "line": 12,
+      "symbol": "Shell",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Shell.swift",
+      "line": 12,
+      "symbol": "Shell.outLog",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Shell.swift",
+      "line": 13,
+      "symbol": "Shell.errLog",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Shell.swift",
+      "line": 14,
+      "symbol": "Shell",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Shell.swift",
+      "line": 14,
+      "symbol": "Shell.name",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Shell.swift",
+      "line": 15,
+      "symbol": "Shell.logLevel",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Shell.swift",
+      "line": 25,
+      "symbol": "Shell.init(outReport:errReport:debug:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Shell.swift",
+      "line": 27,
+      "symbol": "Shell",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Shell.swift",
+      "line": 40,
+      "symbol": "Shell",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Shell.swift",
+      "line": 51,
+      "symbol": "Shell.execute(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Shell.swift",
+      "line": 89,
+      "symbol": "Shell.execute(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Shell.swift",
+      "line": 95,
+      "symbol": "Shell",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Shell.swift",
+      "line": 96,
+      "symbol": "Shell.Name",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Shell.swift",
+      "line": 97,
+      "symbol": "Shell.Name.sh",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Shell.swift",
+      "line": 98,
+      "symbol": "Shell.Name.bash",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Shell.swift",
+      "line": 99,
+      "symbol": "Shell.Name.zsh",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Shell.swift",
+      "line": 100,
+      "symbol": "Shell.Name.fish",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Validate.swift",
+      "line": 9,
+      "symbol": "validate(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/git-commands.swift",
+      "line": 12,
+      "symbol": "Shell.git(using:arguments:environment:workingDirectory:logLevel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/git-commands.swift",
+      "line": 21,
+      "symbol": "Shell.git_ls",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/git-commands.swift",
+      "line": 35,
+      "symbol": "Shell.git_ls_modified",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/git-commands.swift",
+      "line": 49,
+      "symbol": "Shell.git_ls_untracked",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/shell-commands.swift",
+      "line": 12,
+      "symbol": "Shell.Path",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/shell-commands.swift",
+      "line": 13,
+      "symbol": "Shell.Path.cwd",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/shell-commands.swift",
+      "line": 15,
+      "symbol": "Shell.Path.shellKitSourcePath",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/shell-commands.swift",
+      "line": 28,
+      "symbol": "URL.withoutScheme()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/shell-commands.swift",
+      "line": 43,
+      "symbol": "Shell.echo(_:logLevel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/shell-commands.swift",
+      "line": 48,
+      "symbol": "Shell.exists(at:with:logLevel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/shell-commands.swift",
+      "line": 55,
+      "symbol": "Shell.rm(_:from:logLevel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/shell-commands.swift",
+      "line": 60,
+      "symbol": "Shell.copy(source:destination:at:logLevel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/swift-commands.swift",
+      "line": 15,
+      "symbol": "Shell.swiftBuild(using:arguments:environment:workingDirectory:logLevel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/swift-commands.swift",
+      "line": 20,
+      "symbol": "Shell.swiftTest(using:arguments:environment:workingDirectory:logLevel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/swift-commands.swift",
+      "line": 25,
+      "symbol": "Shell.swiftTestGenerateLinuxMain(environment:workingDirectory:logLevel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/swift-commands.swift",
+      "line": 30,
+      "symbol": "Shell.swiftFormat(version:environment:workingDirectory:logLevel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/swift-commands.swift",
+      "line": 35,
+      "symbol": "Shell.sourceKittenSPM(destination:environment:workingDirectory:logLevel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/cavellebenjamin/Development/toolbox/ShellKit"
+}

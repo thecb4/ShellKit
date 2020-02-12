@@ -1,5 +1,7 @@
 # ShellKit
 
+[![pipeline status](https://gitlab.com/thecb4/shellkit/badges/master/pipeline.svg)](https://gitlab.com/thecb4/shellkit/-/commits/master)
+
 ShellKit gives you a powerful way to interface to the command line with a set of standard command or you can extend to create your own.
 
 ## License

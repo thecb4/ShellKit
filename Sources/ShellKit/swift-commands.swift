@@ -61,4 +61,11 @@ extension Shell {
     return result
 
   }
+  
+  @discardableResult
+  public static func jazzy(environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result {
+
+    try Shell.execute( Command(name: "jazzy", environment: environment, workingDirectory: workingDirectory, logLevel: logLevel) )
+    
+  }
 }

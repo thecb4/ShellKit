@@ -1,5 +1,5 @@
 #!/usr/bin/env beak --path
-// beak: https://gitlab.com/thecb4/shellkit.git  ShellKit @ branch:master
+// beak: https://gitlab.com/thecb4/shellkit.git  ShellKit @ revision:c9ef3697
 
 import ShellKit
 import Foundation
@@ -8,6 +8,7 @@ let env = ["PATH": "/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 /// Check for updated commit file
 public func hygene() throws {
+  try validate(Shell.exists(at: "commit.yml"), "You need to add a commit.yml file")
   try validate(!Shell.git_ls_untracked.contains("commit.yml"), "You need to track commit file")
   try validate(Shell.git_ls_modified.contains("commit.yml"), "You need to update your commit file")
 }
@@ -33,4 +34,9 @@ public func test() throws {
 
   // try Shell.git(arguments: ["add", "."])
   // try Shell.git(arguments: ["commit", "-F", "commit.yml"])
+}
+
+// Document the project
+public func docs() throws {
+  try Shell.sourceKittenSPM(destination: "docs/docs.json")
 }

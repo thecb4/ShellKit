@@ -78,7 +78,7 @@ public class Shell {
     )
 
     if result.status != 0 {
-      throw Shell.Error.nonZeroExit(result.err)
+      throw Shell.Error.nonZeroExit(result.out + "/n" + result.err)
     }
 
     halt()

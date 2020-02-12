@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ShellKit  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="ShellKit  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          ShellKit Docs
+        </a>
+         (15% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://gitlab.com/thecb4/shellkit">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">ShellKit Reference</a>
+      <img class="carat" src="img/carat.png" />
+      ShellKit  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Shell.html">Shell</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Shell/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Shell/Reporter.html">– Reporter</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Shell/Result.html">– Result</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Shell/Name.html">– Name</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Shell/Path.html">– Path</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Process.html">Process</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/URL.html">URL</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Functions.html#/s:8ShellKit8validateyySb_SStKF">validate(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/Command.html">Command</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:8ShellKit8LogLevela">LogLevel</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            
+            <h1 id='shellkit' class='heading'>ShellKit</h1>
+
+<p><a href="https://gitlab.com/thecb4/shellkit/-/commits/master"><img src="https://gitlab.com/thecb4/shellkit/badges/master/pipeline.svg" alt="pipeline status"></a></p>
+
+<p>ShellKit gives you a powerful way to interface to the command line with a set of standard command or you can extend to create your own.</p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>This project is licensed under the MIT License - see the <a href="LICENSE.md">LICENSE.md</a> file for details</p>
+<h2 id='getting-started' class='heading'>Getting Started</h2>
+
+<p>These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.</p>
+<h2 id='built-with' class='heading'>Built With</h2>
+
+<p>From scratch&hellip; like biscuits</p>
+<h3 id='prerequisites' class='heading'>Prerequisites</h3>
+
+<ul>
+<li>macOS 10.13 or later</li>
+</ul>
+<pre class="highlight plaintext"><code>@available(macOS 10.13, *)
+</code></pre>
+<h3 id='installing' class='heading'>Installing</h3>
+
+<p>Package Manager</p>
+<pre class="highlight plaintext"><code>dependencies: [
+  .package(url: "https://gitlab.com/thecb4/shellkit.git", .branch("master")),
+],
+</code></pre>
+<h2 id='using' class='heading'>Using</h2>
+
+<p>ShellKit is used by importing the library and easily leveraging the existing commands</p>
+<pre class="highlight plaintext"><code>import ShellKit
+
+try Shell.swiftTestGenerateLinuxMain()
+</code></pre>
+<h3 id='testing' class='heading'>Testing</h3>
+
+<p>ShellKit does come with tests</p>
+<pre class="highlight plaintext"><code>swift test
+</code></pre>
+<h2 id='roadmap-and-contributing' class='heading'>Roadmap and Contributing</h2>
+<h3 id='versioning' class='heading'>Versioning</h3>
+
+<p>We use <a href="http://semver.org/">SemVer</a> for versioning. For the versions available, see the <a href="https://github.com/your/project/tags">tags on this repository</a>.</p>
+<h3 id='roadmap' class='heading'>Roadmap</h3>
+
+<p>Please read <a href="ROADMAP.md">ROADMAP</a> for an outline of how we would like to evolve the library.</p>
+<h3 id='contributing' class='heading'>Contributing</h3>
+
+<p>Please read <a href="CONTRIBUTING.md">CONTRIBUTING.md</a> for details on our code of conduct, and the process for changes to us.</p>
+<h3 id='changes' class='heading'>Changes</h3>
+
+<p>Please read <a href="CHANGELOG.md">CHANGELOG</a> for details on changes to the library.</p>
+<h2 id='authors' class='heading'>Authors</h2>
+
+<ul>
+<li><strong>&lsquo;Cavelle Benjamin&rsquo;</strong> - <em>Initial work</em> - <a href="https://your-website.io">thecb4</a></li>
+</ul>
+
+<p>See also the list of <a href="https://github.com/your/project/contributors">contributors</a> who participated in this project.</p>
+<h2 id='acknowledgments' class='heading'>Acknowledgments</h2>
+
+<ul>
+<li>Hat tip to anyone whose code was used</li>
+<li>Inspiration</li>
+<li>etc</li>
+</ul>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>© Copyright (c) 2020 Cavelle Benjamin (thecb4)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

@@ -1,9 +1,12 @@
-summary: Shell Log Level
+summary: New Shell Commands
 
 
-added: []
+added:
+  - mkdir
+  - jazzy
 changed:
-  - git_ls_untracked test to check for empty array
+  - rm to include directory deletion
+  - tests so that the proper error is show if tests fail
 deprecated: []
 removed: []
 fixed: []

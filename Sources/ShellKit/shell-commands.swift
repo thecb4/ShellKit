@@ -50,10 +50,23 @@ extension Shell {
     print(fullPath)
     return FileManager.default.fileExists(atPath: fullPath)
   }
+  
+  @discardableResult
+  public static func mkdir(at path: String, from workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result {
+    try Shell.execute(Command(name: "mkdir", arguments: [path], workingDirectory: workingDirectory))
+  }
 
   @discardableResult
-  public static func rm(_ resource: String, from workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result {
-    try Shell.execute(Command(name: "rm", arguments: [resource], workingDirectory: workingDirectory))
+  public static func rm(_ resource: String, directory: Bool = false, force: Bool = false, from workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result {
+    
+    var args: [String] = []
+    
+    if directory { args += ["-r"] }
+    if force { args += ["-f"] }
+    
+    args += [resource]
+    
+    return try Shell.execute(Command(name: "rm", arguments: args, workingDirectory: workingDirectory))
   }
 
   @discardableResult

@@ -10,6 +10,18 @@ import XCTest
 
 @available(macOS 10.13, *)
 final class ShellTests: XCTestCase {
+  
+  
+  func scenario( _ test: () throws -> Void ) {
+    do {
+      try test()
+    } catch Shell.Error.nonZeroExit(let message) {
+      XCTFail(message)
+    } catch {
+      XCTFail(error.localizedDescription)
+    }
+  }
+  
   func testShellName() {
     // given
     let name: Shell.Name = .sh
@@ -170,6 +182,42 @@ final class ShellTests: XCTestCase {
     // then
     XCTAssertEqual(result.status, Int32(0))
   }
+  
+  func testCreateDirectory() {
+    scenario {
+      // given
+      Shell.name = .sh
+      Shell.logLevel = .debug
+      Shell.Path.cwd = Shell.Path.shellKitSourcePath
+      let resource = "Tests/ShellKitTests/fixtures/test-create-directory"
+      try Shell.rm(resource, directory: true, force: true)
+      
+      // when
+      try Shell.mkdir(at: resource)
+      
+      // then
+      XCTAssertTrue( Shell.exists(at: resource) )
+    }
+  }
+  
+  func testDeleteDirectory() {
+    
+    scenario {
+      // given
+      Shell.name = .sh
+      Shell.logLevel = .debug
+      Shell.Path.cwd = Shell.Path.shellKitSourcePath
+      let resource = "Tests/ShellKitTests/fixtures/test-delete-directory"
+      try Shell.mkdir(at: resource)
+      
+      // when
+      try Shell.rm(resource, directory: true, force: true)
+      
+      // then
+      XCTAssertFalse( Shell.exists(at: resource) )
+    }
+    
+  }
 
   func testGitListFiles() throws {
     // given
@@ -216,7 +264,6 @@ final class ShellTests: XCTestCase {
     Shell.name = .sh
     Shell.logLevel = .debug
     Shell.Path.cwd = Shell.Path.shellKitSourcePath
-    print(Shell.Path.cwd)
     let json = "Tests/ShellKitTests/fixtures/docs.json"
     let env = ["PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"]
         
@@ -229,6 +276,29 @@ final class ShellTests: XCTestCase {
     // then
     print(Shell.git_ls_untracked)
     XCTAssertTrue( Shell.git_ls_untracked.contains(json) )
+  }
+  
+  func testJazzy() {
+    
+    scenario {
+      // given
+      Shell.name = .sh
+      Shell.logLevel = .debug
+      Shell.Path.cwd = Shell.Path.shellKitSourcePath
+      let env = ["PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"]
+      let apiPath = "docs/api"
+      let apiIndexHtml = "docs/api/index.html"
+      try Shell.rm(apiPath, directory: true, force: true)
+      
+      // when
+      if Shell.exists(at: apiPath) { try Shell.rm(apiPath, from: Shell.Path.cwd) }
+      try Shell.jazzy(environment: env)
+      
+      // then
+      XCTAssertTrue(Shell.exists(at: apiPath))
+      XCTAssertTrue(Shell.exists(at: apiIndexHtml))
+    }
+
   }
   
   func testDirectoryPath() {
