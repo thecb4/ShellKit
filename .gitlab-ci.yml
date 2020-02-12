@@ -6,7 +6,7 @@ variables:
 
 stages:
   - build-test
-  # - docs
+  - docs
   # - release
 
 spm_514_xenial:
