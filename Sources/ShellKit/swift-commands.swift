@@ -24,6 +24,11 @@ extension Shell {
   public static func swiftTestGenerateLinuxMain(environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .info) throws -> Shell.Result {
     try Shell.execute(Command(name: "swift", arguments: ["test", "--generate-linuxmain"], environment: environment, workingDirectory: workingDirectory, logLevel: logLevel))
   }
+  
+  @discardableResult
+  public static func swiftlint(environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result {
+    try Shell.execute(Command(name: "swiftlint", arguments: ["lint"], environment: environment, workingDirectory: workingDirectory, logLevel: logLevel))
+  }
 
   @discardableResult
   public static func swiftFormat(version: String, environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .info) throws -> Shell.Result {

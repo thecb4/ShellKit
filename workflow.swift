@@ -1,5 +1,5 @@
 #!/usr/bin/env beak --path
-// beak: https://gitlab.com/thecb4/shellkit.git  ShellKit @ revision:f6e9a3c1
+// beak: https://gitlab.com/thecb4/shellkit.git  ShellKit @ revision:62584cf9
 
 import ShellKit
 import Foundation
@@ -32,8 +32,8 @@ public func test() throws {
   // swift test --enable-code-coverage && \
   // git add . && git commit -m "$1"
 
-  // try Shell.git(arguments: ["add", "."])
-  // try Shell.git(arguments: ["commit", "-F", "commit.yml"])
+   try Shell.git(arguments: ["add", "."])
+   try Shell.git(arguments: ["commit", "-F", "commit.yml"])
 }
 
 /// Document the product

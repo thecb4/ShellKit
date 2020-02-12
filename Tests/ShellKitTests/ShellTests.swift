@@ -277,6 +277,23 @@ final class ShellTests: XCTestCase {
     }
   }
   
+  func testSwiftlintMacOS() {
+    scenario {
+      // given
+      // given
+      Shell.name = .sh
+      Shell.logLevel = .debug
+      Shell.Path.cwd = Shell.Path.shellKitSourcePath
+      let env = ["PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"]
+      
+      // when
+      let result = try Shell.swiftlint(environment: env)
+      
+      // then
+      XCTAssertTrue(result.out != "")
+    }
+  }
+  
   func testSourceKittenSPMMacOS() {
     scenario {
       // given
@@ -285,13 +302,14 @@ final class ShellTests: XCTestCase {
       Shell.Path.cwd = Shell.Path.shellKitSourcePath
       let json = "Tests/ShellKitTests/fixtures/docs.json"
       let env = ["PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"]
+      try Shell.rm(json)
 
       // when
       if Shell.exists(at: json) { try Shell.rm(json, from: Shell.Path.cwd) }
       try Shell.sourceKittenSPM(destination: json, environment: env, logLevel: .debug)
 
       // then
-      XCTAssertTrue(Shell.git_ls_untracked.contains(json))
+      XCTAssertTrue(Shell.exists(at: json))
     }
   }
   
