@@ -16,7 +16,7 @@ spm_514_xenial:
   stage: build-test
   script:
     - swift package update
-    - swift test --enable-code-coverage --filter -*MacOS*
+    - swift test --enable-code-coverage --filter (?!MacOS)bw+
     # - swift build --build-tests -c debug
     # - swift test -c debug
     # - swift build -c release
