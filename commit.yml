@@ -2,10 +2,10 @@ summary: New Shell Commands
 
 
 added:
-  - mkdir
-  - jazzy
+  - mkdir, closes #3
+  - jazzy, closes #1
 changed:
-  - rm to include directory deletion
+  - rm to include directory deletion, closes #2
   - tests so that the proper error is show if tests fail
 deprecated: []
 removed: []
