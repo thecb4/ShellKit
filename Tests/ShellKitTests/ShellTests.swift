@@ -277,6 +277,11 @@ final class ShellTests: XCTestCase {
     }
   }
 
+
+  
+  // Platform specific capability
+  #if os(macOS)
+  
   func testSourceKittenSPM() {
     scenario {
       // given
@@ -294,41 +299,39 @@ final class ShellTests: XCTestCase {
       XCTAssertTrue(Shell.git_ls_untracked.contains(json))
     }
   }
-
+  
   func testJazzy() {
     
-    if #available(macOS 10.13, *) {
-      scenario {
-        // given
-        Shell.name = .sh
-        Shell.logLevel = .debug
-        Shell.Path.cwd = Shell.Path.shellKitSourcePath
-        let env = ["PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"]
-        let apiPath = "docs/api"
-        let apiIndexHtml = "docs/api/index.html"
-        try Shell.rm(apiPath, directory: true, force: true)
+    scenario {
+      // given
+      Shell.name = .sh
+      Shell.logLevel = .debug
+      Shell.Path.cwd = Shell.Path.shellKitSourcePath
+      let env = ["PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"]
+      let apiPath = "docs/api"
+      let apiIndexHtml = "docs/api/index.html"
+      try Shell.rm(apiPath, directory: true, force: true)
 
-        // when
-        if Shell.exists(at: apiPath) { try Shell.rm(apiPath, from: Shell.Path.cwd) }
-        try Shell.jazzy(environment: env)
+      // when
+      if Shell.exists(at: apiPath) { try Shell.rm(apiPath, from: Shell.Path.cwd) }
+      try Shell.jazzy(environment: env)
 
-        // then
-        XCTAssertTrue(Shell.exists(at: apiPath))
-        XCTAssertTrue(Shell.exists(at: apiIndexHtml))
-      }
+      // then
+      XCTAssertTrue(Shell.exists(at: apiPath))
+      XCTAssertTrue(Shell.exists(at: apiIndexHtml))
     }
 
   }
 
+  #endif
+
   func testDirectoryPath() {
     
-    if #available(macOS 10.13, *) {
-      scenario {
-        print("FileManager.default.CurrentDirectoryPath: \(FileManager.default.currentDirectoryPath)")
-        print("Shell Source Path: \(Shell.Path.shellKitSourcePath)")
-        print("Environment PWD: \(ProcessInfo.processInfo.environment["PWD"])")
-        print("Environment: \(ProcessInfo.processInfo.environment["HOME"])")
-      }
+    scenario {
+      print("FileManager.default.CurrentDirectoryPath: \(FileManager.default.currentDirectoryPath)")
+      print("Shell Source Path: \(Shell.Path.shellKitSourcePath)")
+      print("Environment PWD: \(ProcessInfo.processInfo.environment["PWD"])")
+      print("Environment: \(ProcessInfo.processInfo.environment["HOME"])")
     }
     
   }
