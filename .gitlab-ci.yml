@@ -1,9 +1,6 @@
 # Author: Cavelle Benjamin
 
 variables:
-  # LC_ALL: "en_US.UTF-8"
-  # LANG: "en_US.UTF-8"
-  CI: ""
   DOMAIN: "thecb4.io"
   EMAIL: "cavelle@thecb4.io"
 
@@ -18,7 +15,6 @@ spm_514_xenial:
     entrypoint: [""]
   stage: build-test
   script:
-    - which bash
     - swift package update
     - swift test --enable-code-coverage
     # - swift build --build-tests -c debug
@@ -51,18 +47,18 @@ spm_514_xenial:
 #     - xcode_7-2
 #     - osx_10-11
 
-# pages:
-#   image:
-#     name: alpine:latest
-#   stage: docs
-#   dependencies:
-#     - spm_514_xenial
-#     # - spm_501_bonic
-#   script:
-#     - mkdir public
-#     - cp -a docs/api/. public/
-#   artifacts:
-#     paths:
-#     - public
-#   only:
-#     - master
+pages:
+  image:
+    name: alpine:latest
+  stage: docs
+  dependencies:
+    - spm_514_xenial
+    # - spm_501_bonic
+  script:
+    - mkdir public
+    - cp -a docs/api/. public/
+  artifacts:
+    paths:
+    - public
+  only:
+    - master
