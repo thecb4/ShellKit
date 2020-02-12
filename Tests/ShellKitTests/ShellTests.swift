@@ -288,7 +288,7 @@ final class ShellTests: XCTestCase {
 
       // when
       if Shell.exists(at: json) { try Shell.rm(json, from: Shell.Path.cwd) }
-      let result = try Shell.sourceKittenSPM(destination: json, environment: env, logLevel: .debug)
+      try Shell.sourceKittenSPM(destination: json, environment: env, logLevel: .debug)
 
       // then
       XCTAssertTrue(Shell.git_ls_untracked.contains(json))
@@ -323,8 +323,8 @@ final class ShellTests: XCTestCase {
     scenario {
       print("FileManager.default.CurrentDirectoryPath: \(FileManager.default.currentDirectoryPath)")
       print("Shell Source Path: \(Shell.Path.shellKitSourcePath)")
-      print("Environment PWD: \(ProcessInfo.processInfo.environment["PWD"])")
-      print("Environment: \(ProcessInfo.processInfo.environment["HOME"])")
+      print("Environment PWD: \(ProcessInfo.processInfo.environment["PWD"] ?? "")")
+      print("Environment: \(ProcessInfo.processInfo.environment["HOME"] ?? "")")
     }
     
   }
