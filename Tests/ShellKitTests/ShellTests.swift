@@ -296,32 +296,40 @@ final class ShellTests: XCTestCase {
   }
 
   func testJazzy() {
-    scenario {
-      // given
-      Shell.name = .sh
-      Shell.logLevel = .debug
-      Shell.Path.cwd = Shell.Path.shellKitSourcePath
-      let env = ["PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"]
-      let apiPath = "docs/api"
-      let apiIndexHtml = "docs/api/index.html"
-      try Shell.rm(apiPath, directory: true, force: true)
+    
+    if #available(macOS 10.13, *) {
+      scenario {
+        // given
+        Shell.name = .sh
+        Shell.logLevel = .debug
+        Shell.Path.cwd = Shell.Path.shellKitSourcePath
+        let env = ["PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"]
+        let apiPath = "docs/api"
+        let apiIndexHtml = "docs/api/index.html"
+        try Shell.rm(apiPath, directory: true, force: true)
 
-      // when
-      if Shell.exists(at: apiPath) { try Shell.rm(apiPath, from: Shell.Path.cwd) }
-      try Shell.jazzy(environment: env)
+        // when
+        if Shell.exists(at: apiPath) { try Shell.rm(apiPath, from: Shell.Path.cwd) }
+        try Shell.jazzy(environment: env)
 
-      // then
-      XCTAssertTrue(Shell.exists(at: apiPath))
-      XCTAssertTrue(Shell.exists(at: apiIndexHtml))
+        // then
+        XCTAssertTrue(Shell.exists(at: apiPath))
+        XCTAssertTrue(Shell.exists(at: apiIndexHtml))
+      }
     }
+
   }
 
   func testDirectoryPath() {
-    scenario {
-      print("FileManager.default.CurrentDirectoryPath: \(FileManager.default.currentDirectoryPath)")
-      print("Shell Source Path: \(Shell.Path.shellKitSourcePath)")
-      print("Environment PWD: \(ProcessInfo.processInfo.environment["PWD"])")
-      print("Environment: \(ProcessInfo.processInfo.environment["HOME"])")
+    
+    if #available(macOS 10.13, *) {
+      scenario {
+        print("FileManager.default.CurrentDirectoryPath: \(FileManager.default.currentDirectoryPath)")
+        print("Shell Source Path: \(Shell.Path.shellKitSourcePath)")
+        print("Environment PWD: \(ProcessInfo.processInfo.environment["PWD"])")
+        print("Environment: \(ProcessInfo.processInfo.environment["HOME"])")
+      }
     }
+    
   }
 }
