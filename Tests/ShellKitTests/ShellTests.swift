@@ -276,13 +276,8 @@ final class ShellTests: XCTestCase {
       XCTAssertTrue(!files.isEmpty)
     }
   }
-
-
   
-  // Platform specific capability
-  #if os(macOS)
-  
-  func testSourceKittenSPM() {
+  func testSourceKittenSPMMacOS() {
     scenario {
       // given
       Shell.name = .sh
@@ -300,7 +295,7 @@ final class ShellTests: XCTestCase {
     }
   }
   
-  func testJazzy() {
+  func testJazzyMacOS() {
     
     scenario {
       // given
@@ -322,8 +317,6 @@ final class ShellTests: XCTestCase {
     }
 
   }
-
-  #endif
 
   func testDirectoryPath() {
     
