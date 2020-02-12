@@ -7,7 +7,6 @@
 
 @available(macOS 10.13, *)
 extension Shell {
-  
   @discardableResult
   public static func git(using name: Shell.Name = .sh, arguments: Command.Arguments = [], environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .info) throws -> Shell.Result {
     try Shell.execute(Command(name: "git", arguments: arguments, environment: environment, workingDirectory: workingDirectory, logLevel: logLevel))

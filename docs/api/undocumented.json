@@ -465,13 +465,20 @@
     {
       "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/shell-commands.swift",
       "line": 55,
-      "symbol": "Shell.rm(_:from:logLevel:)",
+      "symbol": "Shell.mkdir(at:from:logLevel:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/shell-commands.swift",
       "line": 60,
+      "symbol": "Shell.rm(_:directory:force:from:logLevel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/shell-commands.swift",
+      "line": 73,
       "symbol": "Shell.copy(source:destination:at:logLevel:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
@@ -508,6 +515,13 @@
       "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/swift-commands.swift",
       "line": 35,
       "symbol": "Shell.sourceKittenSPM(destination:environment:workingDirectory:logLevel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/swift-commands.swift",
+      "line": 66,
+      "symbol": "Shell.jazzy(environment:workingDirectory:logLevel:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     }

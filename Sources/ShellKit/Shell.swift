@@ -49,10 +49,9 @@ public class Shell {
   }
 
   public func execute(_ command: Command) throws -> Shell.Result {
-    
     // new process
     process = Process.process(for: command, using: Shell.name)
-    
+
     // reporting
     outReport.prepare(log: Shell.outLog, shellLogLevel: Shell.logLevel, commandLogLevel: command.logLevel)
     errReport.prepare(log: Shell.errLog, shellLogLevel: Shell.logLevel, commandLogLevel: command.logLevel)
@@ -68,9 +67,9 @@ public class Shell {
     }
 
     try process.run()
-    
+
     process.waitUntilExit()
-    
+
     let result = Shell.Result(
       out: outReport.data?.string ?? "",
       err: errReport.data?.string ?? "",
@@ -87,7 +86,7 @@ public class Shell {
   }
 
   public static func execute(_ command: Command) throws -> Shell.Result {
-    return try Shell().execute(command)
+    try Shell().execute(command)
   }
 }
 
@@ -107,5 +106,4 @@ extension Shell {
       "/bin/" + rawValue
     }
   }
-
 }

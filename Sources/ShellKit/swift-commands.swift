@@ -10,7 +10,6 @@ import Foundation
 // swift commands
 @available(macOS 10.13, *)
 extension Shell {
-  
   @discardableResult
   public static func swiftBuild(using name: Shell.Name = .sh, arguments: Command.Arguments = [], environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .info) throws -> Shell.Result {
     try Shell.execute(Command(name: "swift", arguments: ["build"] + arguments, environment: environment, workingDirectory: workingDirectory, logLevel: logLevel))
@@ -33,7 +32,6 @@ extension Shell {
 
   @discardableResult
   public static func sourceKittenSPM(destination: String, environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result {
-
     let command = Command(
       name: "sourcekitten",
       arguments: ["doc", "--spm"],
@@ -41,31 +39,20 @@ extension Shell {
       workingDirectory: workingDirectory,
       logLevel: logLevel
     )
-    
-    print(command)
-    
+
     let result = try Shell.execute(command)
-    
-    print(result.out)
-    print(result.err)
-    print(result.status)
-    
+
     let path = destination.isAbsolute ? destination : workingDirectory + "/\(destination)"
-    
-    print(path)
-    
+
     let url = URL(fileURLWithPath: path)
-    
+
     try result.out.write(to: url, atomically: false, encoding: .utf8)
 
     return result
-
   }
-  
+
   @discardableResult
   public static func jazzy(environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result {
-
-    try Shell.execute( Command(name: "jazzy", environment: environment, workingDirectory: workingDirectory, logLevel: logLevel) )
-    
+    try Shell.execute(Command(name: "jazzy", environment: environment, workingDirectory: workingDirectory, logLevel: logLevel))
   }
 }

@@ -1,12 +1,12 @@
 #!/usr/bin/env beak --path
-// beak: https://gitlab.com/thecb4/shellkit.git  ShellKit @ revision:c9ef3697
+// beak: https://gitlab.com/thecb4/shellkit.git  ShellKit @ revision:f6e9a3c1
 
 import ShellKit
 import Foundation
 
 let env = ["PATH": "/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"]
 
-/// Check for updated commit file
+/// Hygene before any real work begins
 public func hygene() throws {
   try validate(Shell.exists(at: "commit.yml"), "You need to add a commit.yml file")
   try validate(!Shell.git_ls_untracked.contains("commit.yml"), "You need to track commit file")
@@ -21,7 +21,7 @@ public func test() throws {
   try Shell.swiftFormat(version: "5.1", environment: env)
   try Shell.swiftTest(arguments: ["--enable-code-coverage"], environment: env)
 
-  //try Shell.git
+  // try Shell.git
   // try Shell.swiftFormat(arguments: ["--swiftversion", "5.1", "."])
   // try Shell.swiftLint(arguments: ["."])
   // try Shell.swiftTest(using: .zsh, arguments: ["--enable-code-coverage"])
@@ -36,7 +36,8 @@ public func test() throws {
   // try Shell.git(arguments: ["commit", "-F", "commit.yml"])
 }
 
-// Document the project
+/// Document the product
 public func docs() throws {
   try Shell.sourceKittenSPM(destination: "docs/docs.json")
+  try Shell.jazzy()
 }

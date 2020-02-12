@@ -16,14 +16,23 @@
     // to regenerate.
     static let __allTests__ShellTests = [
       ("testCopy", testCopy),
+      ("testCreateDirectory", testCreateDirectory),
+      ("testCreateProcess", testCreateProcess),
       ("testCreateShell", testCreateShell),
+      ("testDeleteDirectory", testDeleteDirectory),
+      ("testDirectoryPath", testDirectoryPath),
       ("testEcho", testEcho),
       ("testExecute", testExecute),
+      ("testExists", testExists),
       ("testGitListFiles", testGitListFiles),
       ("testGitListModifiedFiles", testGitListModifiedFiles),
       ("testGitListUntrackedFiles", testGitListUntrackedFiles),
+      ("testJazzy", testJazzy),
+      ("testNotExists", testNotExists),
       ("testRm", testRm),
-      ("testShellName", testShellName)
+      ("testShellName", testShellName),
+      ("testShellPrepare", testShellPrepare),
+      ("testSourceKittenSPM", testSourceKittenSPM)
     ]
   }
 

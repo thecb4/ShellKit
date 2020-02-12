@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           ShellKit Docs
         </a>
-         (15% documented)
+         (14% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -634,9 +634,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:8ShellKit0A0C2rm_4from8logLevelAC6ResultVSS_SSAC8ReporterC0F0OtKFZ"></a>
-                    <a name="//apple_ref/swift/Method/rm(_:from:logLevel:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:8ShellKit0A0C2rm_4from8logLevelAC6ResultVSS_SSAC8ReporterC0F0OtKFZ">rm(_:from:logLevel:)</a>
+                    <a name="/s:8ShellKit0A0C5mkdir2at4from8logLevelAC6ResultVSS_SSAC8ReporterC0G0OtKFZ"></a>
+                    <a name="//apple_ref/swift/Method/mkdir(at:from:logLevel:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8ShellKit0A0C5mkdir2at4from8logLevelAC6ResultVSS_SSAC8ReporterC0G0OtKFZ">mkdir(at:from:logLevel:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -652,7 +652,35 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">rm</span><span class="p">(</span><span class="n">_</span> <span class="nv">resource</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">from</span> <span class="nv">workingDirectory</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kt">Shell</span><span class="o">.</span><span class="kt"><a href="../Classes/Shell/Path.html">Path</a></span><span class="o">.</span><span class="n">cwd</span><span class="p">,</span> <span class="nv">logLevel</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:8ShellKit8LogLevela">LogLevel</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">off</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Shell</span><span class="o">.</span><span class="kt"><a href="../Classes/Shell/Result.html">Result</a></span></code></pre>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">mkdir</span><span class="p">(</span><span class="n">at</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">from</span> <span class="nv">workingDirectory</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kt">Shell</span><span class="o">.</span><span class="kt"><a href="../Classes/Shell/Path.html">Path</a></span><span class="o">.</span><span class="n">cwd</span><span class="p">,</span> <span class="nv">logLevel</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:8ShellKit8LogLevela">LogLevel</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">off</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Shell</span><span class="o">.</span><span class="kt"><a href="../Classes/Shell/Result.html">Result</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8ShellKit0A0C2rm_9directory5force4from8logLevelAC6ResultVSS_S2bSSAC8ReporterC0H0OtKFZ"></a>
+                    <a name="//apple_ref/swift/Method/rm(_:directory:force:from:logLevel:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8ShellKit0A0C2rm_9directory5force4from8logLevelAC6ResultVSS_S2bSSAC8ReporterC0H0OtKFZ">rm(_:directory:force:from:logLevel:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">rm</span><span class="p">(</span><span class="n">_</span> <span class="nv">resource</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">directory</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">force</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="n">from</span> <span class="nv">workingDirectory</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kt">Shell</span><span class="o">.</span><span class="kt"><a href="../Classes/Shell/Path.html">Path</a></span><span class="o">.</span><span class="n">cwd</span><span class="p">,</span> <span class="nv">logLevel</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:8ShellKit8LogLevela">LogLevel</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">off</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Shell</span><span class="o">.</span><span class="kt"><a href="../Classes/Shell/Result.html">Result</a></span></code></pre>
 
                         </div>
                       </div>
@@ -821,6 +849,34 @@
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
 <span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">sourceKittenSPM</span><span class="p">(</span><span class="nv">destination</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">environment</span><span class="p">:</span> <span class="kt"><a href="../Structs/Command.html">Command</a></span><span class="o">.</span><span class="kt">Environment</span> <span class="o">=</span> <span class="p">[:],</span> <span class="nv">workingDirectory</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kt">Shell</span><span class="o">.</span><span class="kt"><a href="../Classes/Shell/Path.html">Path</a></span><span class="o">.</span><span class="n">cwd</span><span class="p">,</span> <span class="nv">logLevel</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:8ShellKit8LogLevela">LogLevel</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">off</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Shell</span><span class="o">.</span><span class="kt"><a href="../Classes/Shell/Result.html">Result</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8ShellKit0A0C5jazzy11environment16workingDirectory8logLevelAC6ResultVSDyS2SG_SSAC8ReporterC0H0OtKFZ"></a>
+                    <a name="//apple_ref/swift/Method/jazzy(environment:workingDirectory:logLevel:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8ShellKit0A0C5jazzy11environment16workingDirectory8logLevelAC6ResultVSDyS2SG_SSAC8ReporterC0H0OtKFZ">jazzy(environment:workingDirectory:logLevel:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">jazzy</span><span class="p">(</span><span class="nv">environment</span><span class="p">:</span> <span class="kt"><a href="../Structs/Command.html">Command</a></span><span class="o">.</span><span class="kt">Environment</span> <span class="o">=</span> <span class="p">[:],</span> <span class="nv">workingDirectory</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="kt">Shell</span><span class="o">.</span><span class="kt"><a href="../Classes/Shell/Path.html">Path</a></span><span class="o">.</span><span class="n">cwd</span><span class="p">,</span> <span class="nv">logLevel</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:8ShellKit8LogLevela">LogLevel</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">off</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Shell</span><span class="o">.</span><span class="kt"><a href="../Classes/Shell/Result.html">Result</a></span></code></pre>
 
                         </div>
                       </div>
