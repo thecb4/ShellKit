@@ -49,29 +49,31 @@ public class Shell {
   }
 
   public func execute(_ command: Command) throws -> Shell.Result {
-    prepare(commandLogLevel: command.logLevel)
+    
+    // new process
+    process = Process.process(for: command, using: Shell.name)
+    
+    // reporting
+    outReport.prepare(log: Shell.outLog, shellLogLevel: Shell.logLevel, commandLogLevel: command.logLevel)
+    errReport.prepare(log: Shell.errLog, shellLogLevel: Shell.logLevel, commandLogLevel: command.logLevel)
 
-    process.executableURL = URL(fileURLWithPath: Shell.name.path)
-    process.arguments = ["-c"] + [command.nameAndArguments]
+    process.standardOutput = outReport.pipe
+    process.standardError = errReport.pipe
 
-    if !command.environment.isEmpty {
-      process.environment = command.environment
+    if Shell.logLevel == .debug {
+      print("executableURL = \(String(describing: process.executableURL))")
+      print("arguments = \(String(describing: process.arguments))")
+      print("env = \(String(describing: process.environment))")
+      print("currentDirectoryURL = \(String(describing: process.currentDirectoryURL))")
     }
 
-    process.currentDirectoryURL = URL(fileURLWithPath: command.workingDirectory)
-
-    // print("executableURL = \(String(describing: process.executableURL))")
-    // print("arguments = \(String(describing: process.arguments))")
-    // print("env = \(String(describing: process.environment))")
-    // print("currentDirectoryURL = \(String(describing: process.currentDirectoryURL))")
-
     try process.run()
-
+    
     process.waitUntilExit()
-
+    
     let result = Shell.Result(
-      out: outReport.data.string,
-      err: errReport.data.string,
+      out: outReport.data?.string ?? "",
+      err: errReport.data?.string ?? "",
       status: process.terminationStatus
     )
 
@@ -85,7 +87,7 @@ public class Shell {
   }
 
   public static func execute(_ command: Command) throws -> Shell.Result {
-    try Shell().execute(command)
+    return try Shell().execute(command)
   }
 }
 
@@ -106,38 +108,4 @@ extension Shell {
     }
   }
 
-  public struct Path {
-    public static let cwd = FileManager.default.currentDirectoryPath
-  }
 }
-
-// @available(macOS 10.13, *)
-// extension LogLevel {
-//   internal var naturalIntegralValue: Int {
-//     switch self {
-//       case .off:
-//         return -1
-//       case .trace:
-//         return 0
-//       case .debug:
-//         return 1
-//       case .info:
-//         return 2
-//       case .notice:
-//         return 3
-//       case .warning:
-//         return 4
-//       case .error:
-//         return 5
-//       case .critical:
-//         return 6
-//     }
-//   }
-// }
-//
-// @available(macOS 10.13, *)
-// extension LogLevel: Comparable {
-//   public static func < (lhs: LogLevel, rhs: LogLevel) -> Bool {
-//     lhs.naturalIntegralValue < rhs.naturalIntegralValue
-//   }
-// }

@@ -1,24 +1,26 @@
-#!/usr/bin/swift sh
+#!/usr/bin/env beak --path
+// beak: https://gitlab.com/thecb4/shellkit.git  ShellKit @ branch:master
 
-import ShellKit // ./ == fd54aff
-// https://gitlab.com/thecb4/shellkit.git == 9dde7f0
+import ShellKit
+import Foundation
 
-// do {
-//   let modified = Shell.git_ls_modified
-//   print(modified)
-// }
+let env = ["PATH": "/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"]
 
-Shell.outLog = true
-Shell.errLog = true
-let swiftEnv = ["PATH": "/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"]
-
-do {
+/// Check for updated commit file
+public func hygene() throws {
   try validate(!Shell.git_ls_untracked.contains("commit.yml"), "You need to track commit file")
   try validate(Shell.git_ls_modified.contains("commit.yml"), "You need to update your commit file")
+}
 
-  try Shell.swiftTestGenerateLinuxMain(environment: swiftEnv)
-  try Shell.swiftFormat(version: "5.1", environment: swiftEnv)
-  try Shell.swiftTest(arguments: ["--enable-code-coverage"], environment: swiftEnv)
+/// Releases the product
+/// - Parameters:
+///   - version: the version to release
+public func test() throws {
+  try Shell.swiftTestGenerateLinuxMain(environment: env)
+  try Shell.swiftFormat(version: "5.1", environment: env)
+  try Shell.swiftTest(arguments: ["--enable-code-coverage"], environment: env)
+
+  //try Shell.git
   // try Shell.swiftFormat(arguments: ["--swiftversion", "5.1", "."])
   // try Shell.swiftLint(arguments: ["."])
   // try Shell.swiftTest(using: .zsh, arguments: ["--enable-code-coverage"])
@@ -31,8 +33,4 @@ do {
 
   // try Shell.git(arguments: ["add", "."])
   // try Shell.git(arguments: ["commit", "-F", "commit.yml"])
-} catch {
-  print("exiting early")
-  print(error)
-  // exit(0)
 }

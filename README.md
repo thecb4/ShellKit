@@ -1,6 +1,6 @@
 # ShellKit
 
-One Paragraph of project description goes here
+ShellKit gives you a powerful way to interface to the command line with a set of standard command or you can extend to create your own.
 
 ## License
 
@@ -12,16 +12,14 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+From scratch... like biscuits
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+* macOS 10.13 or later
 
 ```
-Give examples
+@available(macOS 10.13, *)
 ```
 
 ### Installing
@@ -29,26 +27,34 @@ Give examples
 Package Manager
 
 ```
-code steps for package manager
+dependencies: [
+  .package(url: "https://gitlab.com/thecb4/shellkit.git", .branch("master")),
+],
 ```
 
 ## Using
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+ShellKit is used by importing the library and easily leveraging the existing commands
 
 ```
-Give an example
+import ShellKit
+
+try Shell.swiftTestGenerateLinuxMain()
+```
+
+### Testing
+
+ShellKit does come with tests
+
+```
+swift test
 ```
 
 ## Roadmap and Contributing
 
 ### Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
 
 
@@ -62,7 +68,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 ### Changes
 
-Please read [CHANGELOG](CHANGELOG.md) for details on changes to the library. 
+Please read [CHANGELOG](CHANGELOG.md) for details on changes to the library.
 
 
 ## Authors

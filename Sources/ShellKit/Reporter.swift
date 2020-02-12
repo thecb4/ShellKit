@@ -17,8 +17,8 @@ extension Shell {
     public var shellLogLevel: LogLevel = .off
     public var commandLogLevel: LogLevel = .off
     // swiftlint:disable implicitly_unwrapped_optional
-    public var data: Data!
-    public var pipe: Pipe!
+    public var data: Data?
+    public var pipe: Pipe?
     // swiftlint:enable implicitly_unwrapped_optional
     public var glyph: Reporter.Glyph?
 
@@ -34,12 +34,13 @@ extension Shell {
       data = Data()
       pipe = Pipe()
 
-      pipe.fileHandleForReading.readabilityHandler = report
+      pipe?.fileHandleForReading.readabilityHandler = report
     }
 
     public func halt() {
+      pipe?.fileHandleForReading.closeFile()
       data = nil
-      pipe.fileHandleForReading.readabilityHandler = nil
+      pipe?.fileHandleForReading.readabilityHandler = nil
       pipe = nil
     }
 
@@ -68,7 +69,7 @@ extension Shell {
           return
         }
 
-        data.append(output)
+        data?.append(output)
       }
     }
   }

@@ -36,9 +36,50 @@ final class ShellTests: XCTestCase {
     XCTAssertNotNil(shell.errReport)
     XCTAssertFalse(shell.debug)
   }
+  
+  func testShellPrepare() {
+    // given
+    Shell.name = .sh
+    Shell.logLevel = .debug
+    Shell.Path.cwd = Shell.Path.shellKitSourcePath
+    let name: Shell.Name = .sh
+
+    // when
+    Shell.name = name
+    let shell = Shell()
+    shell.prepare(commandLogLevel: .info)
+
+    // then
+    XCTAssertEqual(Shell.name, .sh)
+    XCTAssertNotNil(shell.outReport)
+    XCTAssertNotNil(shell.errReport)
+    XCTAssertFalse(shell.debug)
+    XCTAssertEqual(shell.outReport.commandLogLevel, .info)
+    XCTAssertEqual(shell.errReport.commandLogLevel, .info)
+  }
+  
+  func testCreateProcess() {
+    // given
+    let wd = "/Users/cavellebenjamin/Development/toolbox/Shellkit"
+    let command = Command(
+      name: "which",
+      arguments: ["echo"],
+      workingDirectory: wd
+    )
+    
+    // when
+    let process = Process.process(for: command, using: .sh)
+    
+    // then
+    XCTAssertEqual(process.executableURL?.absoluteString, "file:///bin/sh")
+    XCTAssertEqual(process.arguments!, ["-c", "which echo"])
+    XCTAssertEqual(process.currentDirectoryPath, wd)
+  }
 
   func testExecute() throws {
     // given
+    Shell.logLevel = .debug
+    Shell.Path.cwd = Shell.Path.shellKitSourcePath
     let name: Shell.Name = .sh
     let command = Command(
       name: "which",
@@ -59,6 +100,9 @@ final class ShellTests: XCTestCase {
 
   func testEcho() throws {
     // given
+    Shell.name = .sh
+    Shell.logLevel = .debug
+    Shell.Path.cwd = Shell.Path.shellKitSourcePath
     let words = "Hello, World!"
 
     // when
@@ -72,6 +116,9 @@ final class ShellTests: XCTestCase {
 
   func testCopy() throws {
     // given
+    Shell.name = .sh
+    Shell.logLevel = .debug
+    Shell.Path.cwd = Shell.Path.shellKitSourcePath
     let source = "Tests/ShellKitTests/fixtures/source.txt"
     let destination = "Tests/ShellKitTests/fixtures/destination.txt"
 
@@ -81,9 +128,40 @@ final class ShellTests: XCTestCase {
     // then
     XCTAssertEqual(result.status, Int32(0))
   }
+  
+  func testExists() throws {
+    // given
+    Shell.name = .sh
+    Shell.logLevel = .debug
+    Shell.Path.cwd = Shell.Path.shellKitSourcePath
+    let path = "Tests/ShellKitTests/fixtures/exists.txt"
+    
+    // when
+    let result = Shell.exists(at: path)
+    
+    // then
+    XCTAssertTrue(result)
+  }
+  
+  func testNotExists() throws {
+    // given
+    Shell.name = .sh
+    Shell.logLevel = .debug
+    Shell.Path.cwd = Shell.Path.shellKitSourcePath
+    let path = "Tests/ShellKitTests/fixtures/non-existant-file.txt"
+    
+    // when
+    let result = Shell.exists(at: path)
+    
+    // then
+    XCTAssertFalse(result)
+  }
 
   func testRm() throws {
     // given
+    Shell.name = .sh
+    Shell.logLevel = .debug
+    Shell.Path.cwd = Shell.Path.shellKitSourcePath
     let resource = "Tests/ShellKitTests/fixtures/destination.txt"
 
     // when
@@ -95,6 +173,9 @@ final class ShellTests: XCTestCase {
 
   func testGitListFiles() throws {
     // given
+    Shell.name = .sh
+    Shell.logLevel = .debug
+    Shell.Path.cwd = Shell.Path.shellKitSourcePath
 
     // when
     let files = Shell.git_ls
@@ -105,6 +186,9 @@ final class ShellTests: XCTestCase {
 
   func testGitListModifiedFiles() throws {
     // given
+    Shell.name = .sh
+    Shell.logLevel = .debug
+    Shell.Path.cwd = Shell.Path.shellKitSourcePath
 
     // when
     let files = Shell.git_ls_modified
@@ -115,11 +199,42 @@ final class ShellTests: XCTestCase {
 
   func testGitListUntrackedFiles() throws {
     // given
+    Shell.name = .sh
+    Shell.logLevel = .debug
+    Shell.Path.cwd = Shell.Path.shellKitSourcePath
 
     // when
     let files = Shell.git_ls_untracked
 
     // then
     XCTAssertTrue(!files.isEmpty)
+  }
+
+  func testSourceKittenSPM() throws {
+
+    // given
+    Shell.name = .sh
+    Shell.logLevel = .debug
+    Shell.Path.cwd = Shell.Path.shellKitSourcePath
+    print(Shell.Path.cwd)
+    let json = "Tests/ShellKitTests/fixtures/docs.json"
+    let env = ["PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"]
+        
+    // when
+    if Shell.exists(at: json) { try Shell.rm(json, from: Shell.Path.cwd) }
+    let result = try Shell.sourceKittenSPM(destination: json, environment: env, logLevel: .debug)
+    print(result.out)
+    print(result.err)
+    
+    // then
+    print(Shell.git_ls_untracked)
+    XCTAssertTrue( Shell.git_ls_untracked.contains(json) )
+  }
+  
+  func testDirectoryPath() {
+    print("FileManager.default.CurrentDirectoryPath: \(FileManager.default.currentDirectoryPath)")
+    print("Shell Source Path: \(Shell.Path.shellKitSourcePath)")
+    print("Environment PWD: \(ProcessInfo.processInfo.environment["PWD"])")
+    print("Environment: \(ProcessInfo.processInfo.environment["HOME"])")
   }
 }
