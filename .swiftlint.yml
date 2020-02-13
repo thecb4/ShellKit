@@ -1,3 +1,5 @@
+reporter: json
+
 opt_in_rules: # some rules are only opt-in
   - empty_count
   - redundant_nil_coalescing
@@ -32,4 +34,3 @@ line_length:
 function_body_length:
   warning: 50
   error: 75
-

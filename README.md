@@ -77,7 +77,7 @@ Please read [CHANGELOG](CHANGELOG.md) for details on changes to the library.
 
 ## Authors
 
-* **'Cavelle Benjamin'** - *Initial work* - [thecb4](https://your-website.io)
+* **'Cavelle Benjamin'** - [thecb4](https://your-website.io)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 

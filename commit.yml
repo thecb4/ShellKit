@@ -1,9 +1,9 @@
-summary: swiftlint
+summary: 0.2.0
 
 
-added:
-  - swiftlint, closes #5
-changed: []
+added: []
+changed:
+ - CHANGELOG for 0.1.0, 0.2.0
 deprecated: []
 removed: []
 fixed: []
