@@ -15,6 +15,11 @@ spm_514_xenial:
     entrypoint: [""]
   stage: build-test
   script:
+    - export WORKDIR=$PWD
+    - git clone https://github.com/yonaskolb/Mint.git /tmp/Mint
+    - cd /tmp/Mint
+    - swift run mint install yonaskolb/mint
+    - cd $WORKDIR
     - swift package update
     - swift test --enable-code-coverage --filter "^(?!.*MacOS).*$"
     # - swift build --build-tests -c debug
