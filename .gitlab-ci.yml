@@ -22,6 +22,7 @@ spm_514_xenial:
     - cd $WORKDIR
     - swift package update
     - swift test --enable-code-coverage --filter "^(?!.*MacOS).*$"
+    - mint run thecb4/swift-doc@master swift-doc ./Sources --type html --output Documentation
     # - swift build --build-tests -c debug
     # - swift test -c debug
     # - swift build -c release
@@ -61,7 +62,7 @@ pages:
     # - spm_501_bonic
   script:
     - mkdir public
-    - cp -a docs/api/. public/
+    - cp -a Documentation public/
   artifacts:
     paths:
     - public
