@@ -49,7 +49,7 @@ spm_514_xenial:
 
 pages:
   image:
-    name: alpine:latest
+    name: swift:5.1.4-xenial
   stage: docs
   dependencies:
     - spm_514_xenial
