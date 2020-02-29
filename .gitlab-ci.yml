@@ -15,14 +15,8 @@ spm_514_xenial:
     entrypoint: [""]
   stage: build-test
   script:
-    - export WORKDIR=$PWD
-    - git clone https://github.com/yonaskolb/Mint.git /tmp/Mint
-    - cd /tmp/Mint
-    - swift run mint install yonaskolb/mint
-    - cd $WORKDIR
     - swift package update
     - swift test --enable-code-coverage --filter "^(?!.*MacOS).*$"
-    - mint run thecb4/swift-doc@master swift-doc ./Sources --type html --output Documentation
     # - swift build --build-tests -c debug
     # - swift test -c debug
     # - swift build -c release
@@ -61,6 +55,12 @@ pages:
     - spm_514_xenial
     # - spm_501_bonic
   script:
+    - export WORKDIR=$PWD
+    - git clone https://github.com/yonaskolb/Mint.git /tmp/Mint
+    - cd /tmp/Mint
+    - swift run mint install yonaskolb/mint
+    - cd $WORKDIR
+    - mint run thecb4/swift-doc@master swift-doc ./Sources --type html --output Documentation
     - mkdir public
     - cp -a Documentation public/
   artifacts:
