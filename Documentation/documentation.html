@@ -1,0 +1,1516 @@
+
+<html lang="en-US">
+	<!-- Generated on: 2020-02-29 14:25:30 +0000 -->
+	<head>
+		<title>
+			Documentation
+		</title>
+		<meta charset="utf-8" content="text/html" http-equiv="Content-Type"/>
+		<meta content="Documentation" name="description"/>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+		<meta content="Cavelle Benjamin (@_thecb4)" name="author"/>
+		<meta content="swift,html,dsl" name="keywords"/>
+		<style>
+			/* https://css-tricks.com/sticky-smooth-active-nav/ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  font-family: system-ui, sans-serif;
+  
+  /* this breaks position sticky in Firefox */
+  /* overflow-x: hidden; */
+}
+
+.heading {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  background: #139ed8;
+}
+
+nav {
+  white-space: nowrap;
+  background: #37474F;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Only stick if you can fit */
+@media (min-height: 300px) {
+  nav ul {
+    position: sticky;
+    top: 0;
+  }
+}
+
+nav ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a.current {
+  background: black;
+}
+
+main {
+  padding-bottom: 40rem;
+}
+
+section {
+  padding: 2rem;
+  margin: 0 0 2rem 0;
+}
+
+footer {
+  grid-column: 1 / 4;
+  background: #607D8B;
+  padding: 2rem 1rem;
+}
+
+		</style>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/default.min.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li>
+					<h1>
+						Global Functions
+					</h1>
+					<ul>
+						<li>
+							<a href="#validate(_:_:)">validate(_:_:)</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<h1>
+						Global Typealiases
+					</h1>
+					<ul>
+						<li>
+							<a href="#LogLevel">LogLevel</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<h1>
+						Types
+					</h1>
+					<ul>
+						<li>
+							<a href="#Command">Command</a>
+						</li>
+						<li>
+							<a href="#Shell.Error">Shell.Error</a>
+						</li>
+						<li>
+							<a href="#Shell.Reporter.Shell.Reporter.Glyph">Shell.Reporter.Shell.Reporter.Glyph</a>
+						</li>
+						<li>
+							<a href="#Shell.Reporter.Shell.Reporter.Glyph.Level">Shell.Reporter.Shell.Reporter.Glyph.Level</a>
+						</li>
+						<li>
+							<a href="#Shell.Shell.Name">Shell.Shell.Name</a>
+						</li>
+						<li>
+							<a href="#Shell.Path">Shell.Path</a>
+						</li>
+						<li>
+							<a href="#Shell.Reporter">Shell.Reporter</a>
+						</li>
+						<li>
+							<a href="#Data.Shell.Result">Data.Shell.Result</a>
+						</li>
+						<li>
+							<a href="#Shell">Shell</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<main>
+			<section id="validate(_:_:)">
+				<h1>
+					validate(_:_:)
+				</h1>
+				<div>
+					
+					<pre>
+						<code class="swift">@available(macOS 10.13, *) public func validate(_ condition: Bool, _ message: String) throws</code>
+					</pre>
+					
+					
+				</div>
+				<section>
+					<header>
+						<h2>
+							Inheritance
+						</h2>
+					</header>
+					<p>
+						
+					</p>
+				</section>
+				<div>
+				</div>
+			</section>
+			<section id="LogLevel">
+				<h1>
+					LogLevel
+				</h1>
+				<div>
+					
+					<pre>
+						<code class="swift">@available(macOS 10.13, *) public typealias LogLevel = Shell.Reporter.Level</code>
+					</pre>
+					
+					
+				</div>
+				<section>
+					<header>
+						<h2>
+							Inheritance
+						</h2>
+					</header>
+					<p>
+						
+					</p>
+				</section>
+				<div>
+				</div>
+			</section>
+			<section id="Command">
+				<h1>
+					Command
+				</h1>
+				<div>
+					
+					<pre>
+						<code class="swift">@available(macOS 10.13, *) public struct Command</code>
+					</pre>
+					
+					
+				</div>
+				<section>
+					<header>
+						<h2>
+							Inheritance
+						</h2>
+					</header>
+					<p>
+						
+					</p>
+				</section>
+				<section>
+					<header>
+						<h2>
+							Nested Types
+						</h2>
+					</header>
+					<p>
+						
+					</p>
+				</section>
+				<div>
+					<section>
+						<header>
+							<h2>
+								Nested Type Aliases
+							</h2>
+						</header>
+						<div>
+							
+							<pre>
+								<code class="swift">public typealias Arguments = [String]</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">public typealias Environment = [String: String]</code>
+							</pre>
+							
+							
+						</div>
+					</section>
+					<section>
+						<header>
+							<h2>
+								Properties
+							</h2>
+						</header>
+						<div>
+							
+							<pre>
+								<code class="swift">let outLog: Bool</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">let errLog: Bool</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">let arguments: Command.Arguments</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">let name: String</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">let logLevel: LogLevel</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">let workingDirectory: String</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">let environment: Command.Environment</code>
+							</pre>
+							
+							
+						</div>
+					</section>
+				</div>
+			</section>
+			<section id="Shell.Error">
+				<h1>
+					Shell.Error
+				</h1>
+				<div>
+					
+					<pre>
+						<code class="swift">public enum Error</code>
+					</pre>
+					
+					
+				</div>
+				<section>
+					<header>
+						<h2>
+							Inheritance
+						</h2>
+					</header>
+					<p>
+						`Swift.Error`
+					</p>
+				</section>
+				<section>
+					<header>
+						<h2>
+							Nested Types
+						</h2>
+					</header>
+					<p>
+						
+					</p>
+				</section>
+				<div>
+					<section>
+						<header>
+							<h2>
+								Enumeration Cases
+							</h2>
+						</header>
+						<div>
+							
+							<pre>
+								<code class="swift">case nonZeroExit(: String)</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">case validationError(: String)</code>
+							</pre>
+							
+							
+						</div>
+					</section>
+				</div>
+			</section>
+			<section id="Shell.Reporter.Shell.Reporter.Glyph">
+				<h1>
+					Shell.Reporter.Shell.Reporter.Glyph
+				</h1>
+				<div>
+					
+					<pre>
+						<code class="swift">public enum Glyph</code>
+					</pre>
+					
+					
+				</div>
+				<section>
+					<header>
+						<h2>
+							Inheritance
+						</h2>
+					</header>
+					<p>
+						`String`
+					</p>
+				</section>
+				<section>
+					<header>
+						<h2>
+							Nested Types
+						</h2>
+					</header>
+					<p>
+						`Shell.Reporter.Shell.Reporter.Glyph.Level`
+					</p>
+				</section>
+				<div>
+					<section>
+						<header>
+							<h2>
+								Enumeration Cases
+							</h2>
+						</header>
+						<div>
+							
+							<pre>
+								<code class="swift">case unicorn</code>
+							</pre>
+							
+							
+						</div>
+					</section>
+				</div>
+			</section>
+			<section id="Shell.Reporter.Shell.Reporter.Glyph.Level">
+				<h1>
+					Shell.Reporter.Shell.Reporter.Glyph.Level
+				</h1>
+				<div>
+					<p>
+						The log level.
+					</p>
+					<pre>
+						<code class="swift">public enum Level</code>
+					</pre>
+					<p>
+						Log levels are ordered by their severity, with `.trace` being the least severe and
+`.critical` being the most severe.
+
+					</p>
+					
+					
+				</div>
+				<section>
+					<header>
+						<h2>
+							Inheritance
+						</h2>
+					</header>
+					<p>
+						`CaseIterable`, `Codable`, `String`
+					</p>
+				</section>
+				<section>
+					<header>
+						<h2>
+							Nested Types
+						</h2>
+					</header>
+					<p>
+						
+					</p>
+				</section>
+				<div>
+					<section>
+						<header>
+							<h2>
+								Enumeration Cases
+							</h2>
+						</header>
+						<div>
+							<p>
+								Appropriate for messages that contain information normally of use only when
+debugging a program.
+							</p>
+							<pre>
+								<code class="swift">case debug</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							<p>
+								Appropriate for messages that contain information only when debugging a program.
+							</p>
+							<pre>
+								<code class="swift">case trace</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							<p>
+								Appropriate for messages that are not error conditions, but more severe than
+`.notice`.
+							</p>
+							<pre>
+								<code class="swift">case warning</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							<p>
+								Appropriate for informational messages.
+							</p>
+							<pre>
+								<code class="swift">case info</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							<p>
+								Appropriate for critical error conditions that usually require immediate
+attention.
+							</p>
+							<pre>
+								<code class="swift">case critical</code>
+							</pre>
+							<p>
+								When a `critical` message is logged, the logging backend (`LogHandler`) is free to perform
+more heavy-weight operations to capture system state (such as capturing stack traces) to facilitate
+debugging.
+
+							</p>
+							
+							
+						</div>
+						<div>
+							<p>
+								Appropriate for error conditions.
+							</p>
+							<pre>
+								<code class="swift">case error</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							<p>
+								Appropriate for conditions that are not error conditions, but that may require
+special handling.
+							</p>
+							<pre>
+								<code class="swift">case notice</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							<p>
+								logging off
+							</p>
+							<pre>
+								<code class="swift">case off</code>
+							</pre>
+							
+							
+						</div>
+					</section>
+					<section>
+						<header>
+							<h2>
+								Methods
+							</h2>
+						</header>
+						<div>
+							
+							<pre>
+								<code class="swift">public static func <(lhs: LogLevel, rhs: LogLevel) -> Bool</code>
+							</pre>
+							
+							
+						</div>
+					</section>
+				</div>
+			</section>
+			<section id="Shell.Shell.Name">
+				<h1>
+					Shell.Shell.Name
+				</h1>
+				<div>
+					
+					<pre>
+						<code class="swift">public enum Name</code>
+					</pre>
+					
+					
+				</div>
+				<section>
+					<header>
+						<h2>
+							Inheritance
+						</h2>
+					</header>
+					<p>
+						`String`
+					</p>
+				</section>
+				<section>
+					<header>
+						<h2>
+							Nested Types
+						</h2>
+					</header>
+					<p>
+						
+					</p>
+				</section>
+				<div>
+					<section>
+						<header>
+							<h2>
+								Enumeration Cases
+							</h2>
+						</header>
+						<div>
+							
+							<pre>
+								<code class="swift">case zsh</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">case sh</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">case fish</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">case bash</code>
+							</pre>
+							
+							
+						</div>
+					</section>
+				</div>
+			</section>
+			<section id="Shell.Path">
+				<h1>
+					Shell.Path
+				</h1>
+				<div>
+					
+					<pre>
+						<code class="swift">public struct Path</code>
+					</pre>
+					
+					
+				</div>
+				<section>
+					<header>
+						<h2>
+							Inheritance
+						</h2>
+					</header>
+					<p>
+						
+					</p>
+				</section>
+				<section>
+					<header>
+						<h2>
+							Nested Types
+						</h2>
+					</header>
+					<p>
+						
+					</p>
+				</section>
+				<div>
+					<section>
+						<header>
+							<h2>
+								Methods
+							</h2>
+						</header>
+						<div>
+							
+							<pre>
+								<code class="swift">@discardableResult public static func mkdir(at path: String, from workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">@discardableResult public static func rm(_ resource: String, directory: Bool = false, force: Bool = false, from workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">@discardableResult public static func exists(at path: String, with workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) -> Bool</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">@discardableResult public static func echo(_ words: @autoclosure () -> String, logLevel: LogLevel = .info) throws -> Shell.Result</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">@discardableResult public static func copy(source: String, destination: String, at workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result</code>
+							</pre>
+							
+							
+						</div>
+					</section>
+					<section>
+						<header>
+							<h2>
+								Properties
+							</h2>
+						</header>
+						<div>
+							
+							<pre>
+								<code class="swift">let shellKitSourcePath = {
+      String(
+        URL(fileURLWithPath: #file)
+          .deletingLastPathComponent() // remove file
+          .deletingLastPathComponent() // remove Source
+          .deletingLastPathComponent() //
+          .withoutScheme()
+      )
+    }()</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">var cwd = FileManager.default.currentDirectoryPath</code>
+							</pre>
+							
+							
+						</div>
+					</section>
+				</div>
+			</section>
+			<section id="Shell.Reporter">
+				<h1>
+					Shell.Reporter
+				</h1>
+				<div>
+					
+					<pre>
+						<code class="swift">public class Reporter</code>
+					</pre>
+					
+					
+				</div>
+				<section>
+					<header>
+						<h2>
+							Inheritance
+						</h2>
+					</header>
+					<p>
+						
+					</p>
+				</section>
+				<section>
+					<header>
+						<h2>
+							Nested Types
+						</h2>
+					</header>
+					<p>
+						`Shell.Reporter.Shell.Reporter.Glyph`
+					</p>
+				</section>
+				<div>
+					<section>
+						<header>
+							<h2>
+								Initializers
+							</h2>
+						</header>
+						<div>
+							
+							<pre>
+								<code class="swift">public init(glyph: Reporter.Glyph? = nil, log: Bool = false)</code>
+							</pre>
+							
+							
+						</div>
+					</section>
+					<section>
+						<header>
+							<h2>
+								Methods
+							</h2>
+						</header>
+						<div>
+							
+							<pre>
+								<code class="swift">public func prepare(log: Bool = false, shellLogLevel: LogLevel, commandLogLevel: LogLevel)</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">public func report(file: FileHandle)</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">public func halt()</code>
+							</pre>
+							
+							
+						</div>
+					</section>
+					<section>
+						<header>
+							<h2>
+								Properties
+							</h2>
+						</header>
+						<div>
+							
+							<pre>
+								<code class="swift">var commandLogLevel: LogLevel = .off</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">var log: Bool</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">var data: Data?</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">var shellLogLevel: LogLevel = .off</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">var glyph: Reporter.Glyph?</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">var pipe: Pipe?</code>
+							</pre>
+							
+							
+						</div>
+					</section>
+				</div>
+			</section>
+			<section id="Data.Shell.Result">
+				<h1>
+					Data.Shell.Result
+				</h1>
+				<div>
+					
+					<pre>
+						<code class="swift">public struct Result</code>
+					</pre>
+					
+					
+				</div>
+				<section>
+					<header>
+						<h2>
+							Inheritance
+						</h2>
+					</header>
+					<p>
+						
+					</p>
+				</section>
+				<section>
+					<header>
+						<h2>
+							Nested Types
+						</h2>
+					</header>
+					<p>
+						
+					</p>
+				</section>
+				<div>
+					<section>
+						<header>
+							<h2>
+								Properties
+							</h2>
+						</header>
+						<div>
+							
+							<pre>
+								<code class="swift">let out: String</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">let status: Int32</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">let err: String</code>
+							</pre>
+							
+							
+						</div>
+					</section>
+				</div>
+			</section>
+			<section id="Shell">
+				<h1>
+					Shell
+				</h1>
+				<div>
+					
+					<pre>
+						<code class="swift">@available(macOS 10.13, *) public class Shell</code>
+					</pre>
+					
+					
+				</div>
+				<section>
+					<header>
+						<h2>
+							Inheritance
+						</h2>
+					</header>
+					<p>
+						
+					</p>
+				</section>
+				<section>
+					<header>
+						<h2>
+							Nested Types
+						</h2>
+					</header>
+					<p>
+						`Shell.Reporter`, `Shell.Shell.Name`, `Shell.Error`, `Shell.Path`, `Shell.Reporter.Shell.Reporter.Glyph`, `Shell.Reporter.Shell.Reporter.Glyph.Level`
+					</p>
+				</section>
+				<div>
+					<section>
+						<header>
+							<h2>
+								Enumeration Cases
+							</h2>
+						</header>
+						<div>
+							
+							<pre>
+								<code class="swift">case validationError(: String)</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							<p>
+								Appropriate for conditions that are not error conditions, but that may require
+special handling.
+							</p>
+							<pre>
+								<code class="swift">case notice</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							<p>
+								Appropriate for informational messages.
+							</p>
+							<pre>
+								<code class="swift">case info</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							<p>
+								logging off
+							</p>
+							<pre>
+								<code class="swift">case off</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">case bash</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">case fish</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							<p>
+								Appropriate for error conditions.
+							</p>
+							<pre>
+								<code class="swift">case error</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">case unicorn</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							<p>
+								Appropriate for messages that contain information normally of use only when
+debugging a program.
+							</p>
+							<pre>
+								<code class="swift">case debug</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">case nonZeroExit(: String)</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							<p>
+								Appropriate for critical error conditions that usually require immediate
+attention.
+							</p>
+							<pre>
+								<code class="swift">case critical</code>
+							</pre>
+							<p>
+								When a `critical` message is logged, the logging backend (`LogHandler`) is free to perform
+more heavy-weight operations to capture system state (such as capturing stack traces) to facilitate
+debugging.
+
+							</p>
+							
+							
+						</div>
+						<div>
+							<p>
+								Appropriate for messages that are not error conditions, but more severe than
+`.notice`.
+							</p>
+							<pre>
+								<code class="swift">case warning</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">case sh</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">case zsh</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							<p>
+								Appropriate for messages that contain information only when debugging a program.
+							</p>
+							<pre>
+								<code class="swift">case trace</code>
+							</pre>
+							
+							
+						</div>
+					</section>
+					<section>
+						<header>
+							<h2>
+								Initializers
+							</h2>
+						</header>
+						<div>
+							
+							<pre>
+								<code class="swift">public init(glyph: Reporter.Glyph? = nil, log: Bool = false)</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">public init(outReport: Shell.Reporter = Shell.Reporter(), errReport: Shell.Reporter = Shell.Reporter(), debug: Bool = false)</code>
+							</pre>
+							
+							
+						</div>
+					</section>
+					<section>
+						<header>
+							<h2>
+								Methods
+							</h2>
+						</header>
+						<div>
+							
+							<pre>
+								<code class="swift">@discardableResult public static func swiftTest(using name: Shell.Name = .sh, arguments: Command.Arguments = [], environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .info) throws -> Shell.Result</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">@discardableResult public static func rm(_ resource: String, directory: Bool = false, force: Bool = false, from workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">@discardableResult public static func swiftBuild(using name: Shell.Name = .sh, arguments: Command.Arguments = [], environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .info) throws -> Shell.Result</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">public func report(file: FileHandle)</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">@discardableResult public static func swiftlint(environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">public func prepare(log: Bool = false, shellLogLevel: LogLevel, commandLogLevel: LogLevel)</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">@discardableResult public static func git(using name: Shell.Name = .sh, arguments: Command.Arguments = [], environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .info) throws -> Shell.Result</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">@discardableResult public static func mkdir(at path: String, from workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">public func halt()</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">@discardableResult public static func swiftFormat(version: String, environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .info) throws -> Shell.Result</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">@discardableResult public static func exists(at path: String, with workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) -> Bool</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">@discardableResult public static func sourceKittenSPM(destination: String, environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">public static func execute(_ command: Command) throws -> Shell.Result</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">@discardableResult public static func swiftTestGenerateLinuxMain(environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .info) throws -> Shell.Result</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">public static func <(lhs: LogLevel, rhs: LogLevel) -> Bool</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">@discardableResult public static func echo(_ words: @autoclosure () -> String, logLevel: LogLevel = .info) throws -> Shell.Result</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">public func execute(_ command: Command) throws -> Shell.Result</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">@discardableResult public static func jazzy(environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">@discardableResult public static func copy(source: String, destination: String, at workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result</code>
+							</pre>
+							
+							
+						</div>
+					</section>
+					<section>
+						<header>
+							<h2>
+								Properties
+							</h2>
+						</header>
+						<div>
+							
+							<pre>
+								<code class="swift">var errLog: Bool = false</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">var name: Shell.Name = .bash</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">var logLevel: LogLevel = .info</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">var glyph: Reporter.Glyph?</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">var git_ls_untracked: [String]</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">var shellLogLevel: LogLevel = .off</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">let shellKitSourcePath = {
+      String(
+        URL(fileURLWithPath: #file)
+          .deletingLastPathComponent() // remove file
+          .deletingLastPathComponent() // remove Source
+          .deletingLastPathComponent() //
+          .withoutScheme()
+      )
+    }()</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">var cwd = FileManager.default.currentDirectoryPath</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">var commandLogLevel: LogLevel = .off</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">var pipe: Pipe?</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">var git_ls_modified: [String]</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">var log: Bool</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">var outLog: Bool = false</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">var git_ls: [String]</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">var data: Data?</code>
+							</pre>
+							
+							
+						</div>
+					</section>
+				</div>
+			</section>
+		</main>
+		<footer>
+			&copy; 2020
+		</footer>
+		<script type="text/javascript">
+			let mainNavLinks = document.querySelectorAll("nav ul li a");
+let mainSections = document.querySelectorAll("main section");
+
+let lastId;
+let cur = [];
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach(link => {
+    let section = document.querySelector(link.hash);
+
+    if (
+      section.offsetTop <= fromTop &&
+      section.offsetTop + section.offsetHeight > fromTop
+    ) {
+      link.classList.add("current");
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js">
+		</script>
+		<script type="text/javascript">
+			hljs.initHighlightingOnLoad();
+		</script>
+	</body>
+</html>

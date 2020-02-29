@@ -62,7 +62,7 @@ pages:
     - cd $WORKDIR
     - mint run thecb4/swift-doc@master swift-doc ./Sources --type html --output Documentation
     - mkdir public
-    - cp -a Documentation public/
+    - mv Documentation/documentation.html public/index.html
   artifacts:
     paths:
     - public
