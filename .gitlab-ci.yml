@@ -16,6 +16,7 @@ spm_514_xenial:
   stage: build-test
   script:
     - swift package update
+    - swift test --generate-linuxmain
     - swift test --enable-code-coverage --filter "^(?!.*MacOS).*$"
     # - swift build --build-tests -c debug
     # - swift test -c debug
@@ -53,16 +54,18 @@ pages:
   stage: docs
   dependencies:
     - spm_514_xenial
-    # - spm_501_bonic
   script:
     - export WORKDIR=$PWD
     - git clone https://github.com/yonaskolb/Mint.git /tmp/Mint
     - cd /tmp/Mint
     - swift run mint install yonaskolb/mint
     - cd $WORKDIR
-    - mint run thecb4/swift-doc@master swift-doc ./Sources --type html --output Documentation
-    - mkdir public
-    - mv Documentation/documentation.html public/index.html
+    - mint install thecb4/swift-doc@master
+    - swift doc ./Sources --output public/ --type html --module-name blanket --author "Cavelle Benjamin" --author-url https://thecb4.io --twitter-handle _thecb4 --git-repository https://github.com/thecb4/blanket
+    # - mkdir public
+    # - mkdir public/Resources
+    # - cp docs/index.html public/index.html
+    # - cp Resources/logo.png public/Resources/logo.png
   artifacts:
     paths:
     - public

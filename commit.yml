@@ -3,7 +3,7 @@ summary: 0.2.0
 
 added: []
 changed:
- - CHANGELOG for 0.1.0, 0.2.0
+ - Changed gitlab-ci to use thecb4/swift-doc
 deprecated: []
 removed: []
 fixed: []
