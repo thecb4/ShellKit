@@ -12,9 +12,7 @@ public func hygene() throws {
   try validate(Shell.git_ls_modified.contains("commit.yml"), "You need to update your commit file")
 }
 
-/// Releases the product
-/// - Parameters:
-///   - version: the version to release
+/// Tests the product
 public func test() throws {
   try Shell.swiftTestGenerateLinuxMain(environment: env)
   try Shell.swiftFormat(version: "5.1", environment: env)
@@ -46,7 +44,8 @@ public func docs() throws {
   )
 }
 
-public func save() {
+/// Saves the project in git with a commit message in commit.yml
+public func save() throws {
   try Shell.git(arguments: ["add", "."])
   try Shell.git(arguments: ["commit", "-F", "commit.yml"])
 }
