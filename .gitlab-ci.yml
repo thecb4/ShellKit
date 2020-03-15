@@ -21,6 +21,7 @@ spm_514_xenial:
     - swift run mint install yonaskolb/mint
     - cd $WORKDIR
     - mint install thecb4/swift-doc@master
+    - mint install yonaskolb/beak@0.5.1
     - swift package update
     - ./workflow.swift run flow
     # - swift build --build-tests -c debug
