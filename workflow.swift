@@ -57,6 +57,6 @@ public func flow() throws {
   try docs()
 }
 
-public func ci() {
+public func ci() throws {
   try test()
 }
