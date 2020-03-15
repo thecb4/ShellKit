@@ -15,8 +15,7 @@ build_and_test:
     entrypoint: [""]
   stage: build-test
   script:
-    - PATH="/usr/local/bin:$PATH"
-    - export PATH
+    - sudo ln -snf /bin/env /usr/bin/env
     - swift package update
     - ./workflow.swift run flow
     # - swift build --build-tests -c debug
@@ -56,8 +55,7 @@ pages:
   dependencies:
     - build_and_test
   script:
-    - PATH="/usr/local/bin:$PATH"
-    - export PATH
+    - sudo ln -snf /bin/env /usr/bin/env
     - ./workflow.swift run docs
     # - swift doc ./Sources --output public/ --type html --module-name blanket --author "Cavelle Benjamin" --author-url https://thecb4.io --twitter-handle _thecb4 --git-repository https://github.com/thecb4/blanket
     # - mkdir public
