@@ -1,0 +1,10 @@
+module: ShellKit
+author: Cavelle Benjamin
+author_url: https://thecb4.io
+github_url: https://gitlab.com/thecb4/shellkit
+copyright: '© Copyright (c) 2020 Cavelle Benjamin (thecb4)'
+sourcekitten_sourcefile: docs/docs.json
+swift_version: 5.1
+theme: fullwidth
+clean: true
+output: docs/api

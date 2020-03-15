@@ -87,7 +87,6 @@ final class ShellTests: XCTestCase {
   }
 
   func testExecute() {
-    
     scenario {
       // given
       Shell.logLevel = .debug
@@ -112,7 +111,6 @@ final class ShellTests: XCTestCase {
   }
 
   func testEcho() {
-    
     scenario {
       // given
       Shell.name = .sh
@@ -128,11 +126,9 @@ final class ShellTests: XCTestCase {
       XCTAssertEqual(result.err, "")
       XCTAssertEqual(result.status, Int32(0))
     }
-
   }
 
   func testCopy() {
-    
     scenario {
       // given
       Shell.name = .sh
@@ -147,7 +143,6 @@ final class ShellTests: XCTestCase {
       // then
       XCTAssertEqual(result.status, Int32(0))
     }
-
   }
 
   func testExists() {
@@ -250,15 +245,15 @@ final class ShellTests: XCTestCase {
   func testGitListModifiedFiles() {
     scenario {
       // given
-       Shell.name = .sh
-       Shell.logLevel = .debug
-       Shell.Path.cwd = Shell.Path.shellKitSourcePath
+      Shell.name = .sh
+      Shell.logLevel = .debug
+      Shell.Path.cwd = Shell.Path.shellKitSourcePath
 
-       // when
-       let files = Shell.git_ls_modified
+      // when
+      let files = Shell.git_ls_modified
 
-       // then
-       XCTAssertTrue(!files.isEmpty)
+      // then
+      XCTAssertTrue(!files.isEmpty)
     }
   }
 
@@ -276,7 +271,7 @@ final class ShellTests: XCTestCase {
       XCTAssertTrue(!files.isEmpty)
     }
   }
-  
+
   func testSwiftlintMacOS() {
     scenario {
       // given
@@ -285,22 +280,22 @@ final class ShellTests: XCTestCase {
       Shell.logLevel = .debug
       Shell.Path.cwd = Shell.Path.shellKitSourcePath
       let env = ["PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"]
-      
+
       // when
       let result = try Shell.swiftlint(environment: env)
-      
+
       // then
       XCTAssertTrue(result.out != "")
     }
   }
-  
+
   func testSourceKittenSPMMacOS() {
     scenario {
       // given
       Shell.name = .sh
       Shell.logLevel = .debug
       Shell.Path.cwd = Shell.Path.shellKitSourcePath
-      let json = "Tests/ShellKitTests/fixtures/docs.json"
+      let json = "Tests/ShellKitTests/fixtures/jazzy/docs/docs.json"
       let env = ["PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"]
       try Shell.rm(json)
 
@@ -312,38 +307,68 @@ final class ShellTests: XCTestCase {
       XCTAssertTrue(Shell.exists(at: json))
     }
   }
-  
+
   func testJazzyMacOS() {
-    
     scenario {
       // given
       Shell.name = .sh
       Shell.logLevel = .debug
       Shell.Path.cwd = Shell.Path.shellKitSourcePath
       let env = ["PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"]
-      let apiPath = "docs/api"
-      let apiIndexHtml = "docs/api/index.html"
+      let apiPath = "Tests/ShellKitTests/fixtures/jazzy/docs/api"
+      let json = "Tests/ShellKitTests/fixtures/jazzy/docs/docs.json"
+      let apiIndexHtml = "Tests/ShellKitTests/fixtures/jazzy/docs/api/index.html"
       try Shell.rm(apiPath, directory: true, force: true)
 
       // when
-      if Shell.exists(at: apiPath) { try Shell.rm(apiPath, from: Shell.Path.cwd) }
-      try Shell.jazzy(environment: env)
+      if Shell.exists(at: apiPath) {
+        try Shell.rm(apiPath, directory: true, force: true, from: Shell.Path.cwd)
+      }
+      try Shell.mkdir(at: apiPath)
+      try Shell.sourceKittenSPM(destination: json, environment: env, logLevel: .debug)
+      try Shell.jazzy(arguments: ["--config", "Tests/ShellKitTests/fixtures/jazzy/.jazzy.yaml"], environment: env)
 
       // then
       XCTAssertTrue(Shell.exists(at: apiPath))
       XCTAssertTrue(Shell.exists(at: apiIndexHtml))
     }
+  }
 
+  func testSwiftDoc() {
+    scenario {
+      // given
+      Shell.name = .sh
+      Shell.logLevel = .debug
+      Shell.Path.cwd = Shell.Path.shellKitSourcePath
+      let env = ["PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"]
+      let apiPath = "Tests/ShellKitTests/fixtures/swift-doc/docs"
+      let apiIndexHtml = "Tests/ShellKitTests/fixtures/swift-doc/docs/index.html"
+      try Shell.rm(apiPath, directory: true, force: true)
+
+      // when
+      if Shell.exists(at: apiPath) { try Shell.rm(apiPath, from: Shell.Path.cwd) }
+      try Shell.swiftDoc(
+        name: "ShellKit",
+        output: apiPath,
+        author: "Cavelle Benjamin",
+        authorUrl: "https://thecb4.io",
+        twitterHandle: "_thecb4",
+        gitRepository: "https://github.com/thecb4/ShellKit",
+        environment: env
+      )
+
+      // then
+      XCTAssertTrue(Shell.exists(at: apiPath))
+      XCTAssertTrue(Shell.exists(at: apiIndexHtml))
+    }
   }
 
   func testDirectoryPath() {
-    
     scenario {
       print("FileManager.default.CurrentDirectoryPath: \(FileManager.default.currentDirectoryPath)")
       print("Shell Source Path: \(Shell.Path.shellKitSourcePath)")
       print("Environment PWD: \(ProcessInfo.processInfo.environment["PWD"] ?? "")")
       print("Environment: \(ProcessInfo.processInfo.environment["HOME"] ?? "")")
     }
-    
   }
 }

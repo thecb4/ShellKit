@@ -1,9 +1,10 @@
-summary: 0.2.0
+summary: Swift Doc
 
 
-added: []
+added:
+  - added swift-doc shell command
 changed:
- - Changed gitlab-ci to use thecb4/swift-doc
+  - added arguments for jazzy
 deprecated: []
 removed: []
 fixed: []

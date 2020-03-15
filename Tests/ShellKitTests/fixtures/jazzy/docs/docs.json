@@ -71,7 +71,7 @@
             "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Command.swift",
             "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <ref.struct usr=\"s:8ShellKit7CommandV\">Command<\/ref.struct>.<decl.name>Environment<\/decl.name> = [<ref.struct usr=\"s:SS\">String<\/ref.struct> : <ref.struct usr=\"s:SS\">String<\/ref.struct>]<\/decl.typealias>",
             "key.kind" : "source.lang.swift.decl.typealias",
-            "key.length" :40,
+            "key.length" : 40,
             "key.name" : "Environment",
             "key.namelength" : 11,
             "key.nameoffset" : 189,
@@ -392,7 +392,8 @@
                     "key.namelength" : 19,
                     "key.nameoffset" : 169,
                     "key.offset" : 169,
-                    "key.parsed_declaration" : "case nonZeroExit(String)","key.parsed_scope.end" : 11,
+                    "key.parsed_declaration" : "case nonZeroExit(String)",
+                    "key.parsed_scope.end" : 11,
                     "key.parsed_scope.start" : 11,
                     "key.typename" : "(Shell.Error.Type) -> (String) -> Shell.Error",
                     "key.typeusr" : "$sy8ShellKit0A0C5ErrorOSScAEmcD",
@@ -442,14 +443,14 @@
 }, {
   "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/File.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 240,
+    "key.length" : 238,
     "key.offset" : 0,
     "key.substructure" : [
       {
         "key.accessibility" : "source.lang.swift.accessibility.internal",
         "key.annotated_decl" : "<Declaration>@frozen struct String<\/Declaration>",
         "key.bodylength" : 139,
-        "key.bodyoffset" : 99,
+        "key.bodyoffset" : 97,
         "key.doc.declaration" : "struct String",
         "key.doc.discussion" : [
           {
@@ -537,7 +538,7 @@
             "Para" : "The `unicodeScalars` view’s elements comprise each Unicode scalar value in the `cafe` string. In particular, because `cafe` was declared using the decomposed form of the `\"é\"` character, `unicodeScalars` contains the scalar values for both the letter `\"e\"` (101) and the accent character `\"´\"` (769)."
           },
           {
-            "Para" : "A string’s `utf16` property is a collection of UTF-16 code units, the 16-bit encoding form of the string’s Unicode scalarvalues. Each code unit is stored as a `UInt16` instance."
+            "Para" : "A string’s `utf16` property is a collection of UTF-16 code units, the 16-bit encoding form of the string’s Unicode scalar values. Each code unit is stored as a `UInt16` instance."
           },
           {
             "CodeListing" : ""
@@ -621,7 +622,8 @@
             "Para" : "For more information about the Unicode terms used in this discussion, see the . In particular, this discussion mentions , , and ."
           }
         ],
-        "key.doc.full_as_xml" : "<Class><Name>String<\/Name><USR>s:SS<\/USR><Declaration>struct String<\/Declaration><CommentParts><Abstract><Para>A Unicode string value that is a collection of characters.<\/Para><\/Abstract><Discussion><Para>A string is a series of characters, such as <codeVoice>&quot;Swift&quot;<\/codeVoice>, that forms a collection. Strings in Swift are Unicode correct and locale insensitive, and are designed to be efficient. The <codeVoice>String<\/codeVoice> type bridges with the Objective-C class <codeVoice>NSString<\/codeVoice> and offers interoperability with C functions that works with strings.<\/Para><Para>You can create new strings using string literals or string interpolations. A <emphasis>string literal<\/emphasis> is a series of characters enclosed in quotes.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let greeting = \"Welcome!\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para><emphasis>String interpolations<\/emphasis> are string literals that evaluate any included expressions and convert the results to string form. String interpolations give you an easy way to build a string from multiple pieces. Wrap each expression in a string interpolation in parentheses, prefixed by a backslash.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let name = \"Rosa\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[let personalizedGreeting = \"Welcome, \\(name)!\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ personalizedGreeting == \"Welcome, Rosa!\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[let price = 2]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[let number = 3]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[let cookiePrice = \"\\(number) cookies: $\\(price * number).\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ cookiePrice == \"3 cookies: $6.\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>Combine strings using the concatenation operator (<codeVoice>+<\/codeVoice>).<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let longerGreeting = greeting + \" We're glad you're here!\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ longerGreeting == \"Welcome! We're glad you're here!\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>Multiline string literals are enclosed in three double quotation marks (<codeVoice>&quot;&quot;&quot;<\/codeVoice>), with each delimiter on its own line. Indentation is stripped from each line of a multiline string literal to match the indentation of the closing delimiter.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let banner = \"\"\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[          __,]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[         (           o  \/) _\/_]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[          `.  , , , ,  \/\/  \/]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[        (___)(_(_\/_(_ \/\/_ (__]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[                     \/)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[                    (\/]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[        \"\"\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><rawHTML><![CDATA[<h1>]]><\/rawHTML>Modifying and Comparing Strings<rawHTML><![CDATA[<\/h1>]]><\/rawHTML><Para>Strings always have value semantics. Modifying a copy of a string leaves the original unaffected.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[var otherGreeting = greeting]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[otherGreeting += \" Have a nice time!\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ otherGreeting == \"Welcome! Have a nice time!\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(greeting)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"Welcome!\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>Comparing strings for equality using the equal-to operator (<codeVoice>==<\/codeVoice>) or a relational operator (like <codeVoice>&lt;<\/codeVoice> or <codeVoice>&gt;=<\/codeVoice>) is always performed using Unicode canonical representation. As a result, different representations of a string compare as being equal.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let cafe1 = \"Cafe\\u{301}\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[let cafe2 = \"Café\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(cafe1 == cafe2)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"true\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>The Unicode scalar value <codeVoice>&quot;\\u{301}&quot;<\/codeVoice> modifies the preceding character to include an accent, so <codeVoice>&quot;e\\u{301}&quot;<\/codeVoice> has the same canonical representation as the single Unicode scalar value <codeVoice>&quot;é&quot;<\/codeVoice>.<\/Para><Para>Basic string operations are not sensitive to locale settings, ensuring that string comparisons and other operations always have a single, stable result, allowing strings to be used as keys in <codeVoice>Dictionary<\/codeVoice> instances and for other purposes.<\/Para><rawHTML><![CDATA[<h1>]]><\/rawHTML>Accessing String Elements<rawHTML><![CDATA[<\/h1>]]><\/rawHTML><Para>A string is a collection of <emphasis>extended grapheme clusters<\/emphasis>, which approximate human-readable characters. Many individual characters, such as “é”, “김”, and “🇮🇳”, can be made up of multiple Unicode scalar values. These scalar values are combined by Unicode’s boundary algorithms into extended grapheme clusters, represented by the Swift <codeVoice>Character<\/codeVoice> type. Each element of a string is represented by a <codeVoice>Character<\/codeVoice> instance.<\/Para><Para>For example, to retrieve the first word of a longer string, you can search for a space and then create a substring from a prefix of thestring up to that point:<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let name = \"Marie Curie\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[let firstSpace = name.firstIndex(of: \" \") ?? name.endIndex]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[let firstName = name[..<firstSpace]]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ firstName == \"Marie\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>The <codeVoice>firstName<\/codeVoice> constant is an instance of the <codeVoice>Substring<\/codeVoice> type—a type that represents substrings of a string while sharing the original string’s storage. Substrings present the same interface as strings.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[print(\"\\(name)'s first name has \\(firstName.count) letters.\")]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"Marie Curie's first name has 5 letters.\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><rawHTML><![CDATA[<h1>]]><\/rawHTML>Accessing a String’s Unicode Representation<rawHTML><![CDATA[<\/h1>]]><\/rawHTML><Para>If you need to access the contents of a string as encoded in different Unicode encodings, use one of the string’s <codeVoice>unicodeScalars<\/codeVoice>, <codeVoice>utf16<\/codeVoice>, or <codeVoice>utf8<\/codeVoice> properties. Each property provides access to a view of the string as a series of code units, each encoded in a different Unicode encoding.<\/Para><Para>To demonstrate the different views available for every string, the following examples use this <codeVoice>String<\/codeVoice> instance:<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let cafe = \"Cafe\\u{301} du 🌍\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(cafe)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"Café du 🌍\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>The <codeVoice>cafe<\/codeVoice> string is a collection of the nine characters that are visible when the string is displayed.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[print(cafe.count)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"9\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(Array(cafe))]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"[\"C\", \"a\", \"f\", \"é\", \" \", \"d\", \"u\", \" \", \"🌍\"]\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><rawHTML><![CDATA[<h2>]]><\/rawHTML>Unicode Scalar View<rawHTML><![CDATA[<\/h2>]]><\/rawHTML><Para>A string’s <codeVoice>unicodeScalars<\/codeVoice> property is a collection of Unicode scalar values, the 21-bit codes that are the basic unit of Unicode. Each scalar value is represented by a <codeVoice>Unicode.Scalar<\/codeVoice> instance and is equivalent to a UTF-32 code unit.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[print(cafe.unicodeScalars.count)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"10\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(Array(cafe.unicodeScalars))]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"[\"C\", \"a\", \"f\", \"e\", \"\\u{0301}\", \" \", \"d\", \"u\", \" \", \"\\u{0001F30D}\"]\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(cafe.unicodeScalars.map { $0.value })]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"[67, 97, 102, 101, 769, 32, 100, 117, 32, 127757]\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>The <codeVoice>unicodeScalars<\/codeVoice> view’s elements comprise each Unicode scalar value in the <codeVoice>cafe<\/codeVoice> string. In particular, because <codeVoice>cafe<\/codeVoice> was declared using the decomposed form of the <codeVoice>&quot;é&quot;<\/codeVoice> character, <codeVoice>unicodeScalars<\/codeVoice> contains the scalar values for both the letter <codeVoice>&quot;e&quot;<\/codeVoice> (101) and theaccent character <codeVoice>&quot;´&quot;<\/codeVoice> (769).<\/Para><rawHTML><![CDATA[<h2>]]><\/rawHTML>UTF-16 View<rawHTML><![CDATA[<\/h2>]]><\/rawHTML><Para>A string’s <codeVoice>utf16<\/codeVoice> property is a collection of UTF-16 code units, the 16-bit encoding form of the string’s Unicode scalar values. Each code unit is stored as a <codeVoice>UInt16<\/codeVoice> instance.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[print(cafe.utf16.count)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"11\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(Array(cafe.utf16))]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"[67, 97, 102, 101, 769, 32, 100, 117, 32, 55356, 57101]\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>The elements of the <codeVoice>utf16<\/codeVoice> view are the code units for the string when encoded in UTF-16. These elements match those accessed through indexed <codeVoice>NSString<\/codeVoice> APIs.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let nscafe = cafe as NSString]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(nscafe.length)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"11\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(nscafe.character(at: 3))]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"101\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><rawHTML><![CDATA[<h2>]]><\/rawHTML>UTF-8 View<rawHTML><![CDATA[<\/h2>]]><\/rawHTML><Para>A string’s <codeVoice>utf8<\/codeVoice> property is a collection of UTF-8 code units, the 8-bit encoding form of the string’s Unicode scalar values. Each code unit is stored as a <codeVoice>UInt8<\/codeVoice> instance.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[print(cafe.utf8.count)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"14\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(Array(cafe.utf8))]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"[67, 97, 102, 101, 204, 129, 32, 100, 117, 32, 240, 159, 140, 141]\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>The elements of the <codeVoice>utf8<\/codeVoice> view are the code units for the string when encoded in UTF-8. This representation matches the one used when <codeVoice>String<\/codeVoice> instances are passed to C APIs.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let cLength = strlen(cafe)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(cLength)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"14\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><rawHTML><![CDATA[<h1>]]><\/rawHTML>Measuring the Length of a String<rawHTML><![CDATA[<\/h1>]]><\/rawHTML><Para>When you need to know the length of a string, you must first consider what you’ll use the length for. Are you measuring the number of characters that will be displayed on the screen, or are you measuring the amount of storage needed for the string in a particular encoding? A single string can have greatly differing lengths when measured by its different views.<\/Para><Para>For example, an ASCII character like the capital letter <emphasis>A<\/emphasis> is represented by a single element in each of its four views. The Unicode scalar value of <emphasis>A<\/emphasis> is <codeVoice>65<\/codeVoice>, which is small enough to fit in a single code unit in both UTF-16 and UTF-8.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let capitalA = \"A\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(capitalA.count)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"1\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(capitalA.unicodeScalars.count)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"1\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(capitalA.utf16.count)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"1\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(capitalA.utf8.count)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"1\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>On the other hand, an emoji flag character is constructed from a pair of Unicode scalar values, like <codeVoice>&quot;\\u{1F1F5}&quot;<\/codeVoice> and <codeVoice>&quot;\\u{1F1F7}&quot;<\/codeVoice>. Each of these scalar values, in turn, is too large to fit into a single UTF-16 or UTF-8 code unit. As a result, each view of the string <codeVoice>&quot;🇵🇷&quot;<\/codeVoice> reports a different length.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let flag = \"🇵🇷\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(flag.count)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"1\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(flag.unicodeScalars.count)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"2\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(flag.utf16.count)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"4\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(flag.utf8.count)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"8\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>To check whether a string is empty, use its <codeVoice>isEmpty<\/codeVoice> property instead of comparing the length of one of the views to <codeVoice>0<\/codeVoice>. Unlike with <codeVoice>isEmpty<\/codeVoice>, calculating a view’s <codeVoice>count<\/codeVoice> property requires iterating through the elements of the string.<\/Para><rawHTML><![CDATA[<h1>]]><\/rawHTML>Accessing String View Elements<rawHTML><![CDATA[<\/h1>]]><\/rawHTML><Para>To find individual elements of a string, use the appropriate view for your task. For example, to retrieve the first word of a longer string, you can search the string for a space and then create a new string from a prefix of the string up to that point.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let name = \"Marie Curie\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[let firstSpace = name.firstIndex(of: \" \") ?? name.endIndex]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[let firstName = name[..<firstSpace]]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(firstName)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"Marie\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>Strings and their views share indices, so you can access the UTF-8 view of the <codeVoice>name<\/codeVoice> string using the same <codeVoice>firstSpace<\/codeVoice> index.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[print(Array(name.utf8[..<firstSpace]))]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"[77, 97, 114, 105, 101]\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>Note that an index into one view may not have an exact corresponding position in another view. For example, the <codeVoice>flag<\/codeVoice> string declared above comprises a single character, but is composed of eight code units when encoded as UTF-8. The following code creates constants for the first and second positions in the <codeVoice>flag.utf8<\/codeVoice> view. Accessing the <codeVoice>utf8<\/codeVoice> view with these indices yields the first and second code UTF-8 units.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let firstCodeUnit = flag.startIndex]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[let secondCodeUnit = flag.utf8.index(after: firstCodeUnit)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ flag.utf8[firstCodeUnit] == 240]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ flag.utf8[secondCodeUnit] == 159]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>When used to access the elements of the <codeVoice>flag<\/codeVoice> string itself, however, the <codeVoice>secondCodeUnit<\/codeVoice> index does not correspond to the position of a specific character. Instead of only accessing the specific UTF-8 code unit, that index is treated as the position of the character at the index’s encoded offset. In the case of <codeVoice>secondCodeUnit<\/codeVoice>, that character is still the flag itself.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[\/\/ flag[firstCodeUnit] == \"🇵🇷\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ flag[secondCodeUnit] == \"🇵🇷\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>If you need to validate that an index from one string’s view corresponds with an exact position in another view, use the index’s <codeVoice>samePosition(in:)<\/codeVoice> method or the <codeVoice>init(_:within:)<\/codeVoice> initializer.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[if let exactIndex = secondCodeUnit.samePosition(in: flag) {]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[    print(flag[exactIndex])]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[} else {]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[    print(\"No exact match for this position.\")]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[}]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"No exact match for this position.\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><rawHTML><![CDATA[<h1>]]><\/rawHTML>Performance Optimizations<rawHTML><![CDATA[<\/h1>]]><\/rawHTML><Para>Although strings in Swift have value semantics, strings use a copy-on-write strategy to store their data in a buffer. This buffer can then be shared by different copies of a string. A string’s data is only copied lazily, upon mutation, when more than one string instance is using the same buffer. Therefore, the first in any sequence of mutating operations may cost O(<emphasis>n<\/emphasis>) time and space.<\/Para><Para>When a string’s contiguous storage fills up, a new buffer must be allocated and data must be moved to the new storage. String buffers use an exponential growth strategy that makes appending to a string a constant time operation when averaged over many append operations.<\/Para><rawHTML><![CDATA[<h1>]]><\/rawHTML>Bridging Between String and NSString<rawHTML><![CDATA[<\/h1>]]><\/rawHTML><Para>Any <codeVoice>String<\/codeVoice> instance can be bridged to <codeVoice>NSString<\/codeVoice> using the type-cast operator (<codeVoice>as<\/codeVoice>), and any <codeVoice>String<\/codeVoice> instance that originates in Objective-C may use an <codeVoice>NSString<\/codeVoice> instance as its storage. Because any arbitrary subclass of <codeVoice>NSString<\/codeVoice> can become a <codeVoice>String<\/codeVoice> instance, there are no guarantees about representation or efficiency when a <codeVoice>String<\/codeVoice> instance is backed by <codeVoice>NSString<\/codeVoice> storage. Because <codeVoice>NSString<\/codeVoice> is immutable, it is just as though the storage was shared by a copy. The first in any sequence of mutating operations causes elements to be copied into unique, contiguous storage which may cost O(<emphasis>n<\/emphasis>) time and space, where <emphasis>n<\/emphasis> is the length of the string’s encoded representation (or more, if the underlying <codeVoice>NSString<\/codeVoice> has unusual performance characteristics).<\/Para><Para>For more information about the Unicode terms used in this discussion, see the <Link href=\"http:\/\/www.unicode.org\/glossary\/\">Unicode.org glossary<\/Link>. In particular, this discussion mentions <Link href=\"http:\/\/www.unicode.org\/glossary\/#extended_grapheme_cluster\">extended grapheme clusters<\/Link>, <Link href=\"http:\/\/www.unicode.org\/glossary\/#unicode_scalar_value\">Unicode scalar values<\/Link>, and <Link href=\"http:\/\/www.unicode.org\/glossary\/#canonical_equivalent\">canonical equivalence<\/Link>.<\/Para><\/Discussion><\/CommentParts><\/Class>","key.doc.name" : "String",
+        "key.doc.full_as_xml" : "<Class><Name>String<\/Name><USR>s:SS<\/USR><Declaration>struct String<\/Declaration><CommentParts><Abstract><Para>A Unicode string value that is a collection of characters.<\/Para><\/Abstract><Discussion><Para>A string is a series of characters, such as <codeVoice>&quot;Swift&quot;<\/codeVoice>, that forms a collection. Strings in Swift are Unicode correct and locale insensitive, and are designed to be efficient. The <codeVoice>String<\/codeVoice> type bridges with the Objective-C class <codeVoice>NSString<\/codeVoice> and offers interoperability with C functions that works with strings.<\/Para><Para>You can create new strings using string literals or string interpolations. A <emphasis>string literal<\/emphasis> is a series of characters enclosed in quotes.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let greeting = \"Welcome!\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para><emphasis>String interpolations<\/emphasis> are string literals that evaluate any included expressions and convert the results to string form. String interpolations give you an easy way to build a string from multiple pieces. Wrap each expression in a string interpolation in parentheses, prefixed by a backslash.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let name = \"Rosa\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[let personalizedGreeting = \"Welcome, \\(name)!\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ personalizedGreeting == \"Welcome, Rosa!\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[let price = 2]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[let number = 3]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[let cookiePrice = \"\\(number) cookies: $\\(price * number).\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ cookiePrice == \"3 cookies: $6.\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>Combine strings using the concatenation operator (<codeVoice>+<\/codeVoice>).<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let longerGreeting = greeting + \" We're glad you're here!\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ longerGreeting == \"Welcome! We're glad you're here!\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>Multiline string literals are enclosed in three double quotation marks (<codeVoice>&quot;&quot;&quot;<\/codeVoice>), with each delimiter on its own line. Indentation is stripped from each line of a multiline string literal to match the indentation of the closing delimiter.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let banner = \"\"\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[          __,]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[         (           o  \/) _\/_]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[          `.  , , , ,  \/\/  \/]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[        (___)(_(_\/_(_ \/\/_ (__]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[                     \/)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[                    (\/]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[        \"\"\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><rawHTML><![CDATA[<h1>]]><\/rawHTML>Modifying and Comparing Strings<rawHTML><![CDATA[<\/h1>]]><\/rawHTML><Para>Strings always have value semantics. Modifying a copy of a string leaves the original unaffected.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[var otherGreeting = greeting]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[otherGreeting += \" Have a nice time!\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ otherGreeting == \"Welcome! Have a nice time!\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(greeting)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"Welcome!\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>Comparing strings for equality using the equal-to operator (<codeVoice>==<\/codeVoice>) or a relational operator (like <codeVoice>&lt;<\/codeVoice> or <codeVoice>&gt;=<\/codeVoice>) is always performed using Unicode canonical representation. As a result, different representations of a string compare as being equal.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let cafe1 = \"Cafe\\u{301}\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[let cafe2 = \"Café\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(cafe1 == cafe2)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"true\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>The Unicode scalar value <codeVoice>&quot;\\u{301}&quot;<\/codeVoice> modifies the preceding character to include an accent, so <codeVoice>&quot;e\\u{301}&quot;<\/codeVoice> has the same canonical representation as the single Unicode scalar value <codeVoice>&quot;é&quot;<\/codeVoice>.<\/Para><Para>Basic string operations are not sensitive to locale settings, ensuring that string comparisons and other operations always have a single, stable result, allowing strings to be used as keys in <codeVoice>Dictionary<\/codeVoice> instances and for other purposes.<\/Para><rawHTML><![CDATA[<h1>]]><\/rawHTML>Accessing String Elements<rawHTML><![CDATA[<\/h1>]]><\/rawHTML><Para>A string is a collection of <emphasis>extended grapheme clusters<\/emphasis>, which approximate human-readable characters. Many individual characters, such as “é”, “김”, and “🇮🇳”, can be made up of multiple Unicode scalar values. These scalar values are combined by Unicode’s boundary algorithms into extended grapheme clusters, represented by the Swift <codeVoice>Character<\/codeVoice> type. Each element of a string is represented by a <codeVoice>Character<\/codeVoice> instance.<\/Para><Para>For example, to retrieve the first word of a longer string, you can search for a space and then create a substring from a prefix of the string up to that point:<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let name = \"Marie Curie\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[let firstSpace = name.firstIndex(of: \" \") ?? name.endIndex]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[let firstName = name[..<firstSpace]]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ firstName == \"Marie\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>The <codeVoice>firstName<\/codeVoice> constant is an instance of the <codeVoice>Substring<\/codeVoice> type—a type that represents substrings of a string while sharing the original string’s storage. Substrings present the same interface as strings.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[print(\"\\(name)'s first name has \\(firstName.count) letters.\")]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"Marie Curie's first name has 5 letters.\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><rawHTML><![CDATA[<h1>]]><\/rawHTML>Accessing a String’s Unicode Representation<rawHTML><![CDATA[<\/h1>]]><\/rawHTML><Para>If you need to access the contents of a string as encoded in different Unicode encodings, use one of the string’s <codeVoice>unicodeScalars<\/codeVoice>, <codeVoice>utf16<\/codeVoice>, or <codeVoice>utf8<\/codeVoice> properties. Each property provides access to a view of the string as a series of code units, each encoded in a different Unicode encoding.<\/Para><Para>To demonstrate the different views available for every string, the following examples use this <codeVoice>String<\/codeVoice> instance:<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let cafe = \"Cafe\\u{301} du 🌍\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(cafe)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"Café du 🌍\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>The <codeVoice>cafe<\/codeVoice> string is a collection of the nine characters that are visible when the string is displayed.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[print(cafe.count)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"9\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(Array(cafe))]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"[\"C\", \"a\", \"f\", \"é\", \" \", \"d\", \"u\", \" \", \"🌍\"]\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><rawHTML><![CDATA[<h2>]]><\/rawHTML>Unicode Scalar View<rawHTML><![CDATA[<\/h2>]]><\/rawHTML><Para>A string’s <codeVoice>unicodeScalars<\/codeVoice> property is a collection of Unicode scalar values, the 21-bit codes that are the basic unit of Unicode. Each scalar value is represented by a <codeVoice>Unicode.Scalar<\/codeVoice> instance and is equivalent to a UTF-32 code unit.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[print(cafe.unicodeScalars.count)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"10\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(Array(cafe.unicodeScalars))]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"[\"C\", \"a\", \"f\", \"e\", \"\\u{0301}\", \" \", \"d\", \"u\", \" \", \"\\u{0001F30D}\"]\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(cafe.unicodeScalars.map { $0.value })]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"[67, 97, 102, 101, 769, 32, 100, 117, 32, 127757]\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>The <codeVoice>unicodeScalars<\/codeVoice> view’s elements comprise each Unicode scalar value in the <codeVoice>cafe<\/codeVoice> string. In particular, because <codeVoice>cafe<\/codeVoice> was declared using the decomposed form of the <codeVoice>&quot;é&quot;<\/codeVoice> character, <codeVoice>unicodeScalars<\/codeVoice> contains the scalar values for both the letter <codeVoice>&quot;e&quot;<\/codeVoice> (101) and the accent character <codeVoice>&quot;´&quot;<\/codeVoice> (769).<\/Para><rawHTML><![CDATA[<h2>]]><\/rawHTML>UTF-16 View<rawHTML><![CDATA[<\/h2>]]><\/rawHTML><Para>A string’s <codeVoice>utf16<\/codeVoice> property is a collection of UTF-16 code units, the 16-bit encoding form of the string’s Unicode scalar values. Each code unit is stored as a <codeVoice>UInt16<\/codeVoice> instance.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[print(cafe.utf16.count)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"11\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(Array(cafe.utf16))]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"[67, 97, 102, 101, 769, 32, 100, 117, 32, 55356, 57101]\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>The elements of the <codeVoice>utf16<\/codeVoice> view are the code units for the string when encoded in UTF-16. These elements match those accessed through indexed <codeVoice>NSString<\/codeVoice> APIs.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let nscafe = cafe as NSString]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(nscafe.length)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"11\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(nscafe.character(at: 3))]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"101\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><rawHTML><![CDATA[<h2>]]><\/rawHTML>UTF-8 View<rawHTML><![CDATA[<\/h2>]]><\/rawHTML><Para>A string’s <codeVoice>utf8<\/codeVoice> property is a collection of UTF-8 code units, the 8-bit encoding form of the string’s Unicode scalar values. Each code unit is stored as a <codeVoice>UInt8<\/codeVoice> instance.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[print(cafe.utf8.count)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"14\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(Array(cafe.utf8))]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"[67, 97, 102, 101, 204, 129, 32, 100, 117, 32, 240, 159, 140, 141]\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>The elements of the <codeVoice>utf8<\/codeVoice> view are the code units for the string when encoded in UTF-8. This representation matches the one used when <codeVoice>String<\/codeVoice> instances are passed to C APIs.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let cLength = strlen(cafe)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(cLength)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"14\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><rawHTML><![CDATA[<h1>]]><\/rawHTML>Measuring the Length of a String<rawHTML><![CDATA[<\/h1>]]><\/rawHTML><Para>When you need to know the length of a string, you must first consider what you’ll use the length for. Are you measuring the number of characters that will be displayed on the screen, or are you measuring the amount of storage needed for the string in a particular encoding? A single string can have greatly differing lengths when measured by its different views.<\/Para><Para>For example, an ASCII character like the capital letter <emphasis>A<\/emphasis> is represented by a single element in each of its four views. The Unicode scalar value of <emphasis>A<\/emphasis> is <codeVoice>65<\/codeVoice>, which is small enough to fit in a single code unit in both UTF-16 and UTF-8.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let capitalA = \"A\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(capitalA.count)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"1\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(capitalA.unicodeScalars.count)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"1\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(capitalA.utf16.count)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"1\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(capitalA.utf8.count)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"1\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>On the other hand, an emoji flag character is constructed from a pair of Unicode scalar values, like <codeVoice>&quot;\\u{1F1F5}&quot;<\/codeVoice> and <codeVoice>&quot;\\u{1F1F7}&quot;<\/codeVoice>. Each of these scalar values, in turn, is too large to fit into a single UTF-16 or UTF-8 code unit. As a result, each view of the string <codeVoice>&quot;🇵🇷&quot;<\/codeVoice> reports a different length.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let flag = \"🇵🇷\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(flag.count)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"1\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(flag.unicodeScalars.count)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"2\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(flag.utf16.count)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"4\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(flag.utf8.count)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"8\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>To check whether a string is empty, use its <codeVoice>isEmpty<\/codeVoice> property instead of comparing the length of one of the views to <codeVoice>0<\/codeVoice>. Unlike with <codeVoice>isEmpty<\/codeVoice>, calculating a view’s <codeVoice>count<\/codeVoice> property requires iterating through the elements of the string.<\/Para><rawHTML><![CDATA[<h1>]]><\/rawHTML>Accessing String View Elements<rawHTML><![CDATA[<\/h1>]]><\/rawHTML><Para>To find individual elements of a string, use the appropriate view for your task. For example, to retrieve the first word of a longer string, you can search the string for a space and then create a new string from a prefix of the string up to that point.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let name = \"Marie Curie\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[let firstSpace = name.firstIndex(of: \" \") ?? name.endIndex]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[let firstName = name[..<firstSpace]]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(firstName)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"Marie\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>Strings and their views share indices, so you can access the UTF-8 view of the <codeVoice>name<\/codeVoice> string using the same <codeVoice>firstSpace<\/codeVoice> index.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[print(Array(name.utf8[..<firstSpace]))]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"[77, 97, 114, 105, 101]\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>Note that an index into one view may not have an exact corresponding position in another view. For example, the <codeVoice>flag<\/codeVoice> string declared above comprises a single character, but is composed of eight code units when encoded as UTF-8. The following code creates constants for the first and second positions in the <codeVoice>flag.utf8<\/codeVoice> view. Accessing the <codeVoice>utf8<\/codeVoice> view with these indices yields the first and second code UTF-8 units.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let firstCodeUnit = flag.startIndex]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[let secondCodeUnit = flag.utf8.index(after: firstCodeUnit)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ flag.utf8[firstCodeUnit] == 240]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ flag.utf8[secondCodeUnit] == 159]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>When used to access the elements of the <codeVoice>flag<\/codeVoice> string itself, however, the <codeVoice>secondCodeUnit<\/codeVoice> index does not correspond to the position of a specific character. Instead of only accessing the specific UTF-8 code unit, that index is treated as the position of the character at the index’s encoded offset. In the case of <codeVoice>secondCodeUnit<\/codeVoice>, that character is still the flag itself.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[\/\/ flag[firstCodeUnit] == \"🇵🇷\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ flag[secondCodeUnit] == \"🇵🇷\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>If you need to validate that an index from one string’s view corresponds with an exact position in another view, use the index’s <codeVoice>samePosition(in:)<\/codeVoice> method or the <codeVoice>init(_:within:)<\/codeVoice> initializer.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[if let exactIndex = secondCodeUnit.samePosition(in: flag) {]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[    print(flag[exactIndex])]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[} else {]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[    print(\"No exact match for this position.\")]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[}]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"No exact match for this position.\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><rawHTML><![CDATA[<h1>]]><\/rawHTML>Performance Optimizations<rawHTML><![CDATA[<\/h1>]]><\/rawHTML><Para>Although strings in Swift have value semantics, strings use a copy-on-write strategy to store their data in a buffer. This buffer can then be shared by different copies of a string. A string’s data is only copied lazily, upon mutation, when more than one string instance is using the same buffer. Therefore, the first in any sequence of mutating operations may cost O(<emphasis>n<\/emphasis>) time and space.<\/Para><Para>When a string’s contiguous storage fills up, a new buffer must be allocated and data must be moved to the new storage. String buffers use an exponential growth strategy that makes appending to a string a constant time operation when averaged over many append operations.<\/Para><rawHTML><![CDATA[<h1>]]><\/rawHTML>Bridging Between String and NSString<rawHTML><![CDATA[<\/h1>]]><\/rawHTML><Para>Any <codeVoice>String<\/codeVoice> instance can be bridged to <codeVoice>NSString<\/codeVoice> using the type-cast operator (<codeVoice>as<\/codeVoice>), and any <codeVoice>String<\/codeVoice> instance that originates in Objective-C may use an <codeVoice>NSString<\/codeVoice> instance as its storage. Because any arbitrary subclass of <codeVoice>NSString<\/codeVoice> can become a <codeVoice>String<\/codeVoice> instance, there are no guarantees about representation or efficiency when a <codeVoice>String<\/codeVoice> instance is backed by <codeVoice>NSString<\/codeVoice> storage. Because <codeVoice>NSString<\/codeVoice> is immutable, it is just as though the storage was shared by a copy. The first in any sequence of mutating operations causes elements to be copied into unique, contiguous storage which may cost O(<emphasis>n<\/emphasis>) time and space, where <emphasis>n<\/emphasis> is the length of the string’s encoded representation (or more, if the underlying <codeVoice>NSString<\/codeVoice> has unusual performance characteristics).<\/Para><Para>For more information about the Unicode terms used in this discussion, see the <Link href=\"http:\/\/www.unicode.org\/glossary\/\">Unicode.org glossary<\/Link>. In particular, this discussion mentions <Link href=\"http:\/\/www.unicode.org\/glossary\/#extended_grapheme_cluster\">extended grapheme clusters<\/Link>, <Link href=\"http:\/\/www.unicode.org\/glossary\/#unicode_scalar_value\">Unicode scalar values<\/Link>, and <Link href=\"http:\/\/www.unicode.org\/glossary\/#canonical_equivalent\">canonical equivalence<\/Link>.<\/Para><\/Discussion><\/CommentParts><\/Class>",
+        "key.doc.name" : "String",
         "key.doc.type" : "Class",
         "key.fully_annotated_decl" : "<decl.struct><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@frozen<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>String<\/decl.name><\/decl.struct>",
         "key.groupname" : "String",
@@ -631,8 +633,8 @@
         "key.modulename" : "Swift",
         "key.name" : "String",
         "key.namelength" : 6,
-        "key.nameoffset" : 91,
-        "key.offset" : 81,
+        "key.nameoffset" : 89,
+        "key.offset" : 79,
         "key.parsed_declaration" : "extension String",
         "key.parsed_scope.end" : 16,
         "key.parsed_scope.start" : 8,
@@ -644,11 +646,11 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 102
+                "key.offset" : 100
               }
             ],
             "key.bodylength" : 105,
-            "key.bodyoffset" : 131,
+            "key.bodyoffset" : 129,
             "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/File.swift",
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>isAbsolute<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
             "key.groupname" : "String",
@@ -656,8 +658,8 @@
             "key.length" : 128,
             "key.name" : "isAbsolute",
             "key.namelength" : 10,
-            "key.nameoffset" : 113,
-            "key.offset" : 109,
+            "key.nameoffset" : 111,
+            "key.offset" : 107,
             "key.parsed_declaration" : "public var isAbsolute: Bool",
             "key.parsed_scope.end" : 15,
             "key.parsed_scope.start" : 9,
@@ -675,7 +677,7 @@
 }, {
   "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Process.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 617,
+    "key.length" : 588,
     "key.offset" : 0,
     "key.substructure" : [
       {
@@ -685,23 +687,23 @@
           {
             "key.attribute" : "source.decl.attribute.available",
             "key.length" : 26,
-            "key.offset" : 102
+            "key.offset" : 100
           }
         ],
-        "key.bodylength" : 467,
-        "key.bodyoffset" : 148,
+        "key.bodylength" : 440,
+        "key.bodyoffset" : 146,
         "key.filepath" : "\/Applications\/Xcode.app\/Contents\/Developer\/Platforms\/MacOSX.platform\/Developer\/SDKs\/MacOSX10.15.sdk\/System\/Library\/Frameworks\/Foundation.framework\/Headers\/NSTask.h",
         "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>Process<\/decl.name> : <ref.class usr=\"c:objc(cs)NSObject\">NSObject<\/ref.class><\/decl.class>",
         "key.is_system" : true,
         "key.kind" : "source.lang.swift.decl.extension",
-        "key.length" : 487,
+        "key.length" : 460,
         "key.modulename" : "Foundation.NSTask",
         "key.name" : "Process",
         "key.namelength" : 7,
-        "key.nameoffset" : 139,
-        "key.offset" : 129,
+        "key.nameoffset" : 137,
+        "key.offset" : 127,
         "key.parsed_declaration" : "extension Process",
-        "key.parsed_scope.end" : 31,
+        "key.parsed_scope.end" : 27,
         "key.parsed_scope.start" : 11,
         "key.substructure" : [
           {
@@ -711,22 +713,22 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 154
+                "key.offset" : 149
               }
             ],
-            "key.bodylength" : 370,
-            "key.bodyoffset" : 240,
+            "key.bodylength" : 349,
+            "key.bodyoffset" : 235,
             "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Process.swift",
             "key.fully_annotated_decl" : "<decl.function.method.static><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>process<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>for<\/decl.var.parameter.argument_label> <decl.var.parameter.name>command<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:8ShellKit7CommandV\">Command<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>using<\/decl.var.parameter.argument_label> <decl.var.parameter.name>shell<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.class usr=\"s:8ShellKit0A0C\">Shell<\/ref.class>.<ref.enum usr=\"s:8ShellKit0A0C4NameO\">Name<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.class usr=\"c:objc(cs)NSTask\">Process<\/ref.class><\/decl.function.returntype><\/decl.function.method.static>",
             "key.kind" : "source.lang.swift.decl.function.method.static",
-            "key.length" : 450,
+            "key.length" : 429,
             "key.name" : "process(for:using:)",
             "key.namelength" : 54,
-            "key.nameoffset" : 173,
-            "key.offset" : 161,
+            "key.nameoffset" : 168,
+            "key.offset" : 156,
             "key.parsed_declaration" : "public static func process(for command: Command, using shell: Shell.Name) -> Process",
-            "key.parsed_scope.end" : 29,
-            "key.parsed_scope.start" : 13,
+            "key.parsed_scope.end" : 26,
+            "key.parsed_scope.start" : 12,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let process: <Type usr=\"c:objc(cs)NSTask\">Process<\/Type><\/Declaration>",
@@ -736,11 +738,11 @@
                 "key.length" : 23,
                 "key.name" : "process",
                 "key.namelength" : 7,
-                "key.nameoffset" : 254,
-                "key.offset" : 250,
+                "key.nameoffset" : 244,
+                "key.offset" : 240,
                 "key.parsed_declaration" : "let process = Process()",
-                "key.parsed_scope.end" : 15,
-                "key.parsed_scope.start" : 15,
+                "key.parsed_scope.end" : 13,
+                "key.parsed_scope.start" : 13,
                 "key.related_decls" : [
                   {
                     "key.annotated_decl" : "<RelatedName usr=\"s:So6NSTaskC8ShellKitE7process3for5usingAbC7CommandV_AC0B0C4NameOtFZ\">process(for:using:)<\/RelatedName>"
@@ -839,7 +841,7 @@
             "key.kind" : "source.lang.swift.decl.class",
             "key.length" : 1789,
             "key.name" : "Reporter",
-            "key.namelength": 8,
+            "key.namelength" : 8,
             "key.nameoffset" : 239,
             "key.offset" : 233,
             "key.parsed_declaration" : "public class Reporter",
@@ -1077,7 +1079,7 @@
                 "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Reporter.swift",
                 "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>halt<\/decl.name>()<\/decl.function.method.instance>",
                 "key.kind" : "source.lang.swift.decl.function.method.instance",
-                "key.length" :156,
+                "key.length" : 156,
                 "key.name" : "halt()",
                 "key.namelength" : 6,
                 "key.nameoffset" : 1020,
@@ -1137,7 +1139,8 @@
                     "key.annotated_decl" : "<Declaration>let trimmed: <Type usr=\"s:SS\">String<\/Type><\/Declaration>",
                     "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Reporter.swift",
                     "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>trimmed<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.type><\/decl.var.local>",
-                    "key.kind" : "source.lang.swift.decl.var.local","key.length" : 66,
+                    "key.kind" : "source.lang.swift.decl.var.local",
+                    "key.length" : 66,
                     "key.name" : "trimmed",
                     "key.namelength" : 7,
                     "key.nameoffset" : 1465,
@@ -1226,7 +1229,8 @@
             "key.substructure" : [
               {
                 "key.kind" : "source.lang.swift.decl.enumcase",
-                "key.length" : 21,"key.namelength" : 0,
+                "key.length" : 21,
+                "key.namelength" : 0,
                 "key.nameoffset" : 0,
                 "key.offset" : 2114,
                 "key.substructure" : [
@@ -1845,7 +1849,8 @@
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:SD5IndexV1loiySbAByxq__G_ADtFZ\">&lt; (_: Dictionary&lt;Key, Value&gt;.Index, _: Dictionary&lt;Key, Value&gt;.Index) -&gt; Bool<\/RelatedName>"
               },
-              {"key.annotated_decl" : "<RelatedName usr=\"s:s15FlattenSequenceVsSlRzSl7ElementRpzrlE5IndexV1loiySbAFyx_G_AHtFZ\">&lt; (_: FlattenCollection&lt;Base&gt;.Index, _: FlattenCollection&lt;Base&gt;.Index) -&gt; Bool<\/RelatedName>"
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s15FlattenSequenceVsSlRzSl7ElementRpzrlE5IndexV1loiySbAFyx_G_AHtFZ\">&lt; (_: FlattenCollection&lt;Base&gt;.Index, _: FlattenCollection&lt;Base&gt;.Index) -&gt; Bool<\/RelatedName>"
               },
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:SFsE1loiySbx_xtFZ\">&lt; (_: Self, _: Self) -&gt; Bool<\/RelatedName>"
@@ -1959,7 +1964,8 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:So17OS_dispatch_queueC8DispatchE17SchedulerTimeTypeV6StrideV1loiySbAG_AGtFZ\">&lt; (_: DispatchQueue.SchedulerTimeType.Stride, _: DispatchQueue.SchedulerTimeType.Stride) -&gt; Bool<\/RelatedName>"
               },
               {
-                "key.annotated_decl" : "<RelatedName usr=\"s:8Dispatch0A4TimeV1loiySbAC_ACtFZ\">&lt; (_: DispatchTime, _: DispatchTime) -&gt; Bool<\/RelatedName>"},
+                "key.annotated_decl" : "<RelatedName usr=\"s:8Dispatch0A4TimeV1loiySbAC_ACtFZ\">&lt; (_: DispatchTime, _: DispatchTime) -&gt; Bool<\/RelatedName>"
+              },
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:8Dispatch0A8WallTimeV1loiySbAC_ACtFZ\">&lt; (_: DispatchWallTime, _: DispatchWallTime) -&gt; Bool<\/RelatedName>"
               }
@@ -2101,7 +2107,8 @@
                 "key.usr" : "s:8ShellKit0A0C6ResultV3outSSvp"
               },
               {
-                "key.accessibility" : "source.lang.swift.accessibility.public","key.annotated_decl" : "<Declaration>public let err: <Type usr=\"s:SS\">String<\/Type><\/Declaration>",
+                "key.accessibility" : "source.lang.swift.accessibility.public",
+                "key.annotated_decl" : "<Declaration>public let err: <Type usr=\"s:SS\">String<\/Type><\/Declaration>",
                 "key.attributes" : [
                   {
                     "key.attribute" : "source.decl.attribute.public",
@@ -2164,7 +2171,7 @@
 }, {
   "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Shell.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 2778,
+    "key.length" : 2753,
     "key.offset" : 0,
     "key.substructure" : [
       {
@@ -2182,17 +2189,18 @@
             "key.offset" : 98
           }
         ],
-        "key.bodylength" : 2396,
+        "key.bodylength" : 2372,
         "key.bodyoffset" : 145,
-        "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Shell.swift","key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>Shell<\/decl.name><\/decl.class>",
+        "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Shell.swift",
+        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>Shell<\/decl.name><\/decl.class>",
         "key.kind" : "source.lang.swift.decl.class",
-        "key.length" : 2410,
+        "key.length" : 2386,
         "key.name" : "Shell",
         "key.namelength" : 5,
         "key.nameoffset" : 138,
         "key.offset" : 132,
         "key.parsed_declaration" : "public class Shell",
-        "key.parsed_scope.end" : 92,
+        "key.parsed_scope.end" : 91,
         "key.parsed_scope.start" : 11,
         "key.runtime_name" : "_TtC4main5Shell",
         "key.substructure" : [
@@ -2257,7 +2265,8 @@
                 "key.length" : 6,
                 "key.offset" : 230
               }
-            ],"key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Shell.swift",
+            ],
+            "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Shell.swift",
             "key.fully_annotated_decl" : "<decl.var.static><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>name<\/decl.name>: <decl.var.type><ref.class usr=\"s:8ShellKit0A0C\">Shell<\/ref.class>.<ref.enum usr=\"s:8ShellKit0A0C4NameO\">Name<\/ref.enum><\/decl.var.type><\/decl.var.static>",
             "key.kind" : "source.lang.swift.decl.var.static",
             "key.length" : 35,
@@ -2461,18 +2470,18 @@
                 "key.offset" : 1251
               }
             ],
-            "key.bodylength" : 1105,
+            "key.bodylength" : 1088,
             "key.bodyoffset" : 1315,
             "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Shell.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>execute<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>command<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:8ShellKit7CommandV\">Command<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword> -&gt; <decl.function.returntype><ref.class usr=\"s:8ShellKit0A0C\">Shell<\/ref.class>.<ref.struct usr=\"s:8ShellKit0A0C6ResultV\">Result<\/ref.struct><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 1163,
+            "key.length" : 1146,
             "key.name" : "execute(_:)",
             "key.namelength" : 27,
             "key.nameoffset" : 1263,
             "key.offset" : 1258,
             "key.parsed_declaration" : "public func execute(_ command: Command) throws -> Shell.Result",
-            "key.parsed_scope.end" : 87,
+            "key.parsed_scope.end" : 86,
             "key.parsed_scope.start" : 51,
             "key.related_decls" : [
               {
@@ -2488,11 +2497,11 @@
                 "key.length" : 154,
                 "key.name" : "result",
                 "key.namelength" : 6,
-                "key.nameoffset" : 2133,
-                "key.offset" : 2129,
+                "key.nameoffset" : 2116,
+                "key.offset" : 2112,
                 "key.parsed_declaration" : "let result = Shell.Result(\n  out: outReport.data?.string ?? \"\",\n  err: errReport.data?.string ?? \"\",\n  status: process.terminationStatus\n)",
-                "key.parsed_scope.end" : 74,
-                "key.parsed_scope.start" : 74,
+                "key.parsed_scope.end" : 73,
+                "key.parsed_scope.start" : 73,
                 "key.typename" : "Shell.Result",
                 "key.typeusr" : "$s8ShellKit0A0C6ResultVD",
                 "key.usr" : "s:8ShellKit0A0C7executeyAC6ResultVAA7CommandVKF6resultL_AFvp"
@@ -2509,22 +2518,22 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 2425
+                "key.offset" : 2408
               }
             ],
-            "key.bodylength" : 43,
-            "key.bodyoffset" : 2496,
+            "key.bodylength" : 36,
+            "key.bodyoffset" : 2479,
             "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Shell.swift",
             "key.fully_annotated_decl" : "<decl.function.method.static><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>execute<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>command<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:8ShellKit7CommandV\">Command<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword> -&gt; <decl.function.returntype><ref.class usr=\"s:8ShellKit0A0C\">Shell<\/ref.class>.<ref.struct usr=\"s:8ShellKit0A0C6ResultV\">Result<\/ref.struct><\/decl.function.returntype><\/decl.function.method.static>",
             "key.kind" : "source.lang.swift.decl.function.method.static",
-            "key.length" : 108,
+            "key.length" : 101,
             "key.name" : "execute(_:)",
             "key.namelength" : 27,
-            "key.nameoffset" : 2444,
-            "key.offset" : 2432,
+            "key.nameoffset" : 2427,
+            "key.offset" : 2415,
             "key.parsed_declaration" : "public static func execute(_ command: Command) throws -> Shell.Result",
-            "key.parsed_scope.end" : 91,
-            "key.parsed_scope.start" : 89,
+            "key.parsed_scope.end" : 90,
+            "key.parsed_scope.start" : 88,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:8ShellKit0A0C7executeyAC6ResultVAA7CommandVKF\">execute(_: Command) throws -&gt; Shell.Result<\/RelatedName>"
@@ -2549,22 +2558,22 @@
           {
             "key.attribute" : "source.decl.attribute.available",
             "key.length" : 26,
-            "key.offset" : 2544
+            "key.offset" : 2520
           }
         ],
-        "key.bodylength" : 188,
-        "key.bodyoffset" : 2588,
-        "key.filepath" :"\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Shell.swift",
+        "key.bodylength" : 187,
+        "key.bodyoffset" : 2564,
+        "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Shell.swift",
         "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>Shell<\/decl.name><\/decl.class>",
         "key.kind" : "source.lang.swift.decl.extension",
-        "key.length" : 206,
+        "key.length" : 205,
         "key.name" : "Shell",
         "key.namelength" : 5,
-        "key.nameoffset" : 2581,
-        "key.offset" : 2571,
+        "key.nameoffset" : 2557,
+        "key.offset" : 2547,
         "key.parsed_declaration" : "extension Shell",
-        "key.parsed_scope.end" : 111,
-        "key.parsed_scope.start" : 95,
+        "key.parsed_scope.end" : 109,
+        "key.parsed_scope.start" : 94,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -2573,16 +2582,16 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 2591
+                "key.offset" : 2567
               }
             ],
             "key.bodylength" : 156,
-            "key.bodyoffset" : 2617,
+            "key.bodyoffset" : 2593,
             "key.elements" : [
               {
                 "key.kind" : "source.lang.swift.structure.elem.typeref",
                 "key.length" : 6,
-                "key.offset" : 2609
+                "key.offset" : 2585
               }
             ],
             "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Shell.swift",
@@ -2596,18 +2605,18 @@
             "key.length" : 176,
             "key.name" : "Name",
             "key.namelength" : 4,
-            "key.nameoffset" : 2603,
-            "key.offset" : 2598,
+            "key.nameoffset" : 2579,
+            "key.offset" : 2574,
             "key.parsed_declaration" : "public enum Name: String",
-            "key.parsed_scope.end" : 109,
-            "key.parsed_scope.start" : 96,
+            "key.parsed_scope.end" : 108,
+            "key.parsed_scope.start" : 95,
             "key.substructure" : [
               {
                 "key.kind" : "source.lang.swift.decl.enumcase",
                 "key.length" : 7,
                 "key.namelength" : 0,
                 "key.nameoffset" : 0,
-                "key.offset" : 2622,
+                "key.offset" : 2598,
                 "key.substructure" : [
                   {
                     "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -2618,11 +2627,11 @@
                     "key.length" : 2,
                     "key.name" : "sh",
                     "key.namelength" : 2,
-                    "key.nameoffset" : 2627,
-                    "key.offset" : 2627,
+                    "key.nameoffset" : 2603,
+                    "key.offset" : 2603,
                     "key.parsed_declaration" : "case sh",
-                    "key.parsed_scope.end" : 97,
-                    "key.parsed_scope.start" : 97,
+                    "key.parsed_scope.end" : 96,
+                    "key.parsed_scope.start" : 96,
                     "key.typename" : "(Shell.Name.Type) -> Shell.Name",
                     "key.typeusr" : "$sy8ShellKit0A0C4NameOAEmcD",
                     "key.usr" : "s:8ShellKit0A0C4NameO2shyA2EmF"
@@ -2634,21 +2643,22 @@
                 "key.length" : 9,
                 "key.namelength" : 0,
                 "key.nameoffset" : 0,
-                "key.offset" : 2634,
+                "key.offset" : 2610,
                 "key.substructure" : [
                   {
-                    "key.accessibility" : "source.lang.swift.accessibility.public","key.annotated_decl" : "<Declaration>case bash<\/Declaration>",
+                    "key.accessibility" : "source.lang.swift.accessibility.public",
+                    "key.annotated_decl" : "<Declaration>case bash<\/Declaration>",
                     "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Shell.swift",
                     "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>bash<\/decl.name><\/decl.enumelement>",
                     "key.kind" : "source.lang.swift.decl.enumelement",
                     "key.length" : 4,
                     "key.name" : "bash",
                     "key.namelength" : 4,
-                    "key.nameoffset" : 2639,
-                    "key.offset" : 2639,
+                    "key.nameoffset" : 2615,
+                    "key.offset" : 2615,
                     "key.parsed_declaration" : "case bash",
-                    "key.parsed_scope.end" : 98,
-                    "key.parsed_scope.start" : 98,
+                    "key.parsed_scope.end" : 97,
+                    "key.parsed_scope.start" : 97,
                     "key.typename" : "(Shell.Name.Type) -> Shell.Name",
                     "key.typeusr" : "$sy8ShellKit0A0C4NameOAEmcD",
                     "key.usr" : "s:8ShellKit0A0C4NameO4bashyA2EmF"
@@ -2660,7 +2670,7 @@
                 "key.length" : 8,
                 "key.namelength" : 0,
                 "key.nameoffset" : 0,
-                "key.offset" : 2648,
+                "key.offset" : 2624,
                 "key.substructure" : [
                   {
                     "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -2671,11 +2681,11 @@
                     "key.length" : 3,
                     "key.name" : "zsh",
                     "key.namelength" : 3,
-                    "key.nameoffset" : 2653,
-                    "key.offset" : 2653,
+                    "key.nameoffset" : 2629,
+                    "key.offset" : 2629,
                     "key.parsed_declaration" : "case zsh",
-                    "key.parsed_scope.end" : 99,
-                    "key.parsed_scope.start" : 99,
+                    "key.parsed_scope.end" : 98,
+                    "key.parsed_scope.start" : 98,
                     "key.typename" : "(Shell.Name.Type) -> Shell.Name",
                     "key.typeusr" : "$sy8ShellKit0A0C4NameOAEmcD",
                     "key.usr" : "s:8ShellKit0A0C4NameO3zshyA2EmF"
@@ -2687,7 +2697,7 @@
                 "key.length" : 9,
                 "key.namelength" : 0,
                 "key.nameoffset" : 0,
-                "key.offset" : 2661,
+                "key.offset" : 2637,
                 "key.substructure" : [
                   {
                     "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -2698,11 +2708,11 @@
                     "key.length" : 4,
                     "key.name" : "fish",
                     "key.namelength" : 4,
-                    "key.nameoffset" : 2666,
-                    "key.offset" : 2666,
+                    "key.nameoffset" : 2642,
+                    "key.offset" : 2642,
                     "key.parsed_declaration" : "case fish",
-                    "key.parsed_scope.end" : 100,
-                    "key.parsed_scope.start" : 100,
+                    "key.parsed_scope.end" : 99,
+                    "key.parsed_scope.start" : 99,
                     "key.typename" : "(Shell.Name.Type) -> Shell.Name",
                     "key.typeusr" : "$sy8ShellKit0A0C4NameOAEmcD",
                     "key.usr" : "s:8ShellKit0A0C4NameO4fishyA2EmF"
@@ -2713,18 +2723,18 @@
                 "key.accessibility" : "source.lang.swift.accessibility.internal",
                 "key.annotated_decl" : "<Declaration>var name: <Type usr=\"s:SS\">String<\/Type> { get }<\/Declaration>",
                 "key.bodylength" : 20,
-                "key.bodyoffset" : 2694,
+                "key.bodyoffset" : 2670,
                 "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Shell.swift",
                 "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>name<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
                 "key.kind" : "source.lang.swift.decl.var.instance",
                 "key.length" : 39,
                 "key.name" : "name",
                 "key.namelength" : 4,
-                "key.nameoffset" : 2680,
-                "key.offset" : 2676,
+                "key.nameoffset" : 2656,
+                "key.offset" : 2652,
                 "key.parsed_declaration" : "var name: String",
-                "key.parsed_scope.end" : 104,
-                "key.parsed_scope.start" : 102,
+                "key.parsed_scope.end" : 103,
+                "key.parsed_scope.start" : 101,
                 "key.typename" : "String",
                 "key.typeusr" : "$sSSD",
                 "key.usr" : "s:8ShellKit0A0C4NameO4nameSSvp"
@@ -2733,18 +2743,18 @@
                 "key.accessibility" : "source.lang.swift.accessibility.internal",
                 "key.annotated_decl" : "<Declaration>var path: <Type usr=\"s:SS\">String<\/Type> { get }<\/Declaration>",
                 "key.bodylength" : 30,
-                "key.bodyoffset" : 2739,
+                "key.bodyoffset" : 2715,
                 "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Shell.swift",
                 "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>path<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
                 "key.kind" : "source.lang.swift.decl.var.instance",
                 "key.length" : 49,
                 "key.name" : "path",
                 "key.namelength" : 4,
-                "key.nameoffset" : 2725,
-                "key.offset" : 2721,
+                "key.nameoffset" : 2701,
+                "key.offset" : 2697,
                 "key.parsed_declaration" : "var path: String",
-                "key.parsed_scope.end" : 108,
-                "key.parsed_scope.start" : 106,
+                "key.parsed_scope.end" : 107,
+                "key.parsed_scope.start" : 105,
                 "key.typename" : "String",
                 "key.typeusr" : "$sSSD",
                 "key.usr" : "s:8ShellKit0A0C4NameO4pathSSvp"
@@ -2807,7 +2817,7 @@
 }, {
   "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/git-commands.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 1961,
+    "key.length" : 1958,
     "key.offset" : 0,
     "key.substructure" : [
       {
@@ -2820,18 +2830,18 @@
             "key.offset" : 87
           }
         ],
-        "key.bodylength" : 1828,
+        "key.bodylength" : 1825,
         "key.bodyoffset" : 131,
         "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Shell.swift",
         "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>Shell<\/decl.name><\/decl.class>",
         "key.kind" : "source.lang.swift.decl.extension",
-        "key.length" : 1846,
+        "key.length" : 1843,
         "key.name" : "Shell",
         "key.namelength" : 5,
         "key.nameoffset" : 124,
         "key.offset" : 114,
         "key.parsed_declaration" : "extension Shell",
-        "key.parsed_scope.end" : 62,
+        "key.parsed_scope.end" : 61,
         "key.parsed_scope.start" : 9,
         "key.substructure" : [
           {
@@ -2841,27 +2851,27 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 158
+                "key.offset" : 155
               },
               {
                 "key.attribute" : "source.decl.attribute.discardableResult",
                 "key.length" : 18,
-                "key.offset" : 137
+                "key.offset" : 134
               }
             ],
             "key.bodylength" : 151,
-            "key.bodyoffset" : 381,
+            "key.bodyoffset" : 378,
             "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/git-commands.swift",
             "key.fully_annotated_decl" : "<decl.function.method.static><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@discardableResult<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>git<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>using<\/decl.var.parameter.argument_label> <decl.var.parameter.name>name<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.class usr=\"s:8ShellKit0A0C\">Shell<\/ref.class>.<ref.enum usr=\"s:8ShellKit0A0C4NameO\">Name<\/ref.enum><\/decl.var.parameter.type> = .sh<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>arguments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:8ShellKit7CommandV\">Command<\/ref.struct>.<ref.typealias usr=\"s:8ShellKit7CommandV9Argumentsa\">Arguments<\/ref.typealias><\/decl.var.parameter.type> = []<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>environment<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:8ShellKit7CommandV\">Command<\/ref.struct>.<ref.typealias usr=\"s:8ShellKit7CommandV11Environmenta\">Environment<\/ref.typealias><\/decl.var.parameter.type> = [:]<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>workingDirectory<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type> = Shell.Path.cwd<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>logLevel<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.typealias usr=\"s:8ShellKit8LogLevela\">LogLevel<\/ref.typealias><\/decl.var.parameter.type> = .info<\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword> -&gt; <decl.function.returntype><ref.class usr=\"s:8ShellKit0A0C\">Shell<\/ref.class>.<ref.struct usr=\"s:8ShellKit0A0C6ResultV\">Result<\/ref.struct><\/decl.function.returntype><\/decl.function.method.static>",
             "key.kind" : "source.lang.swift.decl.function.method.static",
             "key.length" : 368,
             "key.name" : "git(using:arguments:environment:workingDirectory:logLevel:)",
             "key.namelength" : 179,
-            "key.nameoffset" : 177,
-            "key.offset" : 165,
+            "key.nameoffset" : 174,
+            "key.offset" : 162,
             "key.parsed_declaration" : "public static func git(using name: Shell.Name = .sh, arguments: Command.Arguments = [], environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .info) throws -> Shell.Result",
-            "key.parsed_scope.end" : 14,
-            "key.parsed_scope.start" : 12,
+            "key.parsed_scope.end" : 13,
+            "key.parsed_scope.start" : 11,
             "key.substructure" : [
 
             ],
@@ -2876,22 +2886,22 @@
               {
                 "key.attribute" : "source.decl.attribute.discardableResult",
                 "key.length" : 18,
-                "key.offset" : 537
+                "key.offset" : 534
               }
             ],
             "key.bodylength" : 155,
-            "key.bodyoffset" : 715,
+            "key.bodyoffset" : 712,
             "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/git-commands.swift",
             "key.fully_annotated_decl" : "<decl.function.method.static><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@discardableResult<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>gitAddAll<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>environment<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:8ShellKit7CommandV\">Command<\/ref.struct>.<ref.typealias usr=\"s:8ShellKit7CommandV11Environmenta\">Environment<\/ref.typealias><\/decl.var.parameter.type> = [:]<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>workingDirectory<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type> = Shell.Path.cwd<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>logLevel<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.typealias usr=\"s:8ShellKit8LogLevela\">LogLevel<\/ref.typealias><\/decl.var.parameter.type> = .info<\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword> -&gt; <decl.function.returntype><ref.class usr=\"s:8ShellKit0A0C\">Shell<\/ref.class>.<ref.struct usr=\"s:8ShellKit0A0C6ResultV\">Result<\/ref.struct><\/decl.function.returntype><\/decl.function.method.static>",
             "key.kind" : "source.lang.swift.decl.function.method.static",
             "key.length" : 313,
             "key.name" : "gitAddAll(environment:workingDirectory:logLevel:)",
             "key.namelength" : 120,
-            "key.nameoffset" : 570,
-            "key.offset" : 558,
+            "key.nameoffset" : 567,
+            "key.offset" : 555,
             "key.parsed_declaration" : "static func gitAddAll(environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .info) throws -> Shell.Result",
-            "key.parsed_scope.end" : 19,
-            "key.parsed_scope.start" : 17,
+            "key.parsed_scope.end" : 18,
+            "key.parsed_scope.start" : 16,
             "key.substructure" : [
 
             ],
@@ -2906,22 +2916,22 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 875
+                "key.offset" : 872
               }
             ],
             "key.bodylength" : 299,
-            "key.bodyoffset" : 911,
+            "key.bodyoffset" : 908,
             "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/git-commands.swift",
             "key.fully_annotated_decl" : "<decl.var.static><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>git_ls<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct>]<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.static>",
             "key.kind" : "source.lang.swift.decl.var.static",
             "key.length" : 329,
             "key.name" : "git_ls",
             "key.namelength" : 6,
-            "key.nameoffset" : 893,
-            "key.offset" : 882,
+            "key.nameoffset" : 890,
+            "key.offset" : 879,
             "key.parsed_declaration" : "public static var git_ls: [String]",
-            "key.parsed_scope.end" : 33,
-            "key.parsed_scope.start" : 21,
+            "key.parsed_scope.end" : 32,
+            "key.parsed_scope.start" : 20,
             "key.typename" : "[String]",
             "key.typeusr" : "$sSaySSGD",
             "key.usr" : "s:8ShellKit0A0C6git_lsSaySSGvpZ"
@@ -2934,11 +2944,11 @@
             "key.length" : 28,
             "key.name" : "arguments",
             "key.namelength" : 9,
-            "key.nameoffset" : 920,
-            "key.offset" : 916,
+            "key.nameoffset" : 917,
+            "key.offset" : 913,
             "key.parsed_declaration" : "let arguments = [\"ls-files\"]",
-            "key.parsed_scope.end" : 22,
-            "key.parsed_scope.start" : 22,
+            "key.parsed_scope.end" : 21,
+            "key.parsed_scope.start" : 21,
             "key.typename" : "[String]",
             "key.typeusr" : "$sSaySSGD",
             "key.usr" : "s:8ShellKit0A0C6git_lsSaySSGvgZ9argumentsL_AEvp"
@@ -2950,22 +2960,22 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1215
+                "key.offset" : 1212
               }
             ],
             "key.bodylength" : 313,
-            "key.bodyoffset" : 1260,
+            "key.bodyoffset" : 1257,
             "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/git-commands.swift",
             "key.fully_annotated_decl" : "<decl.var.static><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>git_ls_modified<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct>]<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.static>",
             "key.kind" : "source.lang.swift.decl.var.static",
             "key.length" : 352,
             "key.name" : "git_ls_modified",
             "key.namelength" : 15,
-            "key.nameoffset" : 1233,
-            "key.offset" : 1222,
+            "key.nameoffset" : 1230,
+            "key.offset" : 1219,
             "key.parsed_declaration" : "public static var git_ls_modified: [String]",
-            "key.parsed_scope.end" : 47,
-            "key.parsed_scope.start" : 35,
+            "key.parsed_scope.end" : 46,
+            "key.parsed_scope.start" : 34,
             "key.typename" : "[String]",
             "key.typeusr" : "$sSaySSGD",
             "key.usr" : "s:8ShellKit0A0C15git_ls_modifiedSaySSGvpZ"
@@ -2978,11 +2988,11 @@
             "key.length" : 42,
             "key.name" : "arguments",
             "key.namelength" : 9,
-            "key.nameoffset" : 1269,
-            "key.offset" : 1265,
+            "key.nameoffset" : 1266,
+            "key.offset" : 1262,
             "key.parsed_declaration" : "let arguments = [\"ls-files\", \"--modified\"]",
-            "key.parsed_scope.end" : 36,
-            "key.parsed_scope.start" : 36,
+            "key.parsed_scope.end" : 35,
+            "key.parsed_scope.start" : 35,
             "key.typename" : "[String]",
             "key.typeusr" : "$sSaySSGD",
             "key.usr" : "s:8ShellKit0A0C15git_ls_modifiedSaySSGvgZ9argumentsL_AEvp"
@@ -2994,22 +3004,22 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1578
+                "key.offset" : 1575
               }
             ],
             "key.bodylength" : 333,
-            "key.bodyoffset" : 1624,
+            "key.bodyoffset" : 1621,
             "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/git-commands.swift",
             "key.fully_annotated_decl" : "<decl.var.static><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>git_ls_untracked<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct>]<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.static>",
             "key.kind" : "source.lang.swift.decl.var.static",
             "key.length" : 373,
             "key.name" : "git_ls_untracked",
             "key.namelength" : 16,
-            "key.nameoffset" : 1596,
-            "key.offset" : 1585,
+            "key.nameoffset" : 1593,
+            "key.offset" : 1582,
             "key.parsed_declaration" : "public static var git_ls_untracked: [String]",
-            "key.parsed_scope.end" : 61,
-            "key.parsed_scope.start" : 49,
+            "key.parsed_scope.end" : 60,
+            "key.parsed_scope.start" : 48,
             "key.typename" : "[String]",
             "key.typeusr" : "$sSaySSGD",
             "key.usr" : "s:8ShellKit0A0C16git_ls_untrackedSaySSGvpZ"
@@ -3022,11 +3032,11 @@
             "key.length" : 62,
             "key.name" : "arguments",
             "key.namelength" : 9,
-            "key.nameoffset" : 1633,
-            "key.offset" : 1629,
+            "key.nameoffset" : 1630,
+            "key.offset" : 1626,
             "key.parsed_declaration" : "let arguments = [\"ls-files\", \"--others\", \"--exclude-standard\"]",
-            "key.parsed_scope.end" : 50,
-            "key.parsed_scope.start" : 50,
+            "key.parsed_scope.end" : 49,
+            "key.parsed_scope.start" : 49,
             "key.typename" : "[String]",
             "key.typeusr" : "$sSaySSGD",
             "key.usr" : "s:8ShellKit0A0C16git_ls_untrackedSaySSGvgZ9argumentsL_AEvp"
@@ -3041,7 +3051,7 @@
 }, {
   "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/shell-commands.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 2434,
+    "key.length" : 2368,
     "key.offset" : 0,
     "key.substructure" : [
       {
@@ -3054,12 +3064,12 @@
             "key.offset" : 108
           }
         ],
-        "key.bodylength" : 392,
+        "key.bodylength" : 388,
         "key.bodyoffset" : 152,
         "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Shell.swift",
         "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>Shell<\/decl.name><\/decl.class>",
         "key.kind" : "source.lang.swift.decl.extension",
-        "key.length" : 410,
+        "key.length" : 406,
         "key.name" : "Shell",
         "key.namelength" : 5,
         "key.nameoffset" : 145,
@@ -3078,12 +3088,12 @@
                 "key.offset" : 155
               }
             ],
-            "key.bodylength" : 367,
+            "key.bodylength" : 363,
             "key.bodyoffset" : 175,
             "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/shell-commands.swift",
             "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Path<\/decl.name><\/decl.struct>",
             "key.kind" : "source.lang.swift.decl.struct",
-            "key.length" : 381,
+            "key.length" : 377,
             "key.name" : "Path",
             "key.namelength" : 4,
             "key.nameoffset" : 169,
@@ -3125,7 +3135,7 @@
                   {
                     "key.attribute" : "source.decl.attribute.public",
                     "key.length" : 6,
-                    "key.offset" : 254
+                    "key.offset" : 250
                   }
                 ],
                 "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/shell-commands.swift",
@@ -3134,8 +3144,8 @@
                 "key.length" : 278,
                 "key.name" : "shellKitSourcePath",
                 "key.namelength" : 18,
-                "key.nameoffset" : 272,
-                "key.offset" : 261,
+                "key.nameoffset" : 268,
+                "key.offset" : 257,
                 "key.parsed_declaration" : "public static let shellKitSourcePath = {\n  String(\n    URL(fileURLWithPath: #file)\n      .deletingLastPathComponent() \/\/ remove file\n      .deletingLastPathComponent() \/\/ remove Source\n      .deletingLastPathComponent() \/\/\n      .withoutScheme()\n  )\n}()",
                 "key.parsed_scope.end" : 15,
                 "key.parsed_scope.start" : 15,
@@ -3160,11 +3170,11 @@
           {
             "key.attribute" : "source.decl.attribute.public",
             "key.length" : 6,
-            "key.offset" : 547
+            "key.offset" : 543
           }
         ],
-        "key.bodylength" : 222,
-        "key.bodyoffset" : 569,
+        "key.bodylength" : 184,
+        "key.bodyoffset" : 565,
         "key.doc.declaration" : "struct URL : ReferenceConvertible, Equatable",
         "key.doc.discussion" : [
           {
@@ -3180,12 +3190,12 @@
         "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>URL<\/decl.name> : <ref.protocol usr=\"s:10Foundation20ReferenceConvertibleP\">ReferenceConvertible<\/ref.protocol>, <ref.protocol usr=\"s:SQ\">Equatable<\/ref.protocol><\/decl.struct>",
         "key.is_system" : true,
         "key.kind" : "source.lang.swift.decl.extension",
-        "key.length" : 238,
+        "key.length" : 200,
         "key.modulename" : "Foundation",
         "key.name" : "URL",
         "key.namelength" : 3,
-        "key.nameoffset" : 564,
-        "key.offset" : 554,
+        "key.nameoffset" : 560,
+        "key.offset" : 550,
         "key.parsed_declaration" : "public extension URL",
         "key.parsed_scope.end" : 37,
         "key.parsed_scope.start" : 27,
@@ -3193,16 +3203,16 @@
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
             "key.annotated_decl" : "<Declaration>func withoutScheme() -&gt; <Type usr=\"s:SS\">String<\/Type><\/Declaration>",
-            "key.bodylength" : 183,
-            "key.bodyoffset" : 606,
+            "key.bodylength" : 147,
+            "key.bodyoffset" : 600,
             "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/shell-commands.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>withoutScheme<\/decl.name>() -&gt; <decl.function.returntype><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 216,
+            "key.length" : 180,
             "key.name" : "withoutScheme()",
             "key.namelength" : 15,
-            "key.nameoffset" : 579,
-            "key.offset" : 574,
+            "key.nameoffset" : 573,
+            "key.offset" : 568,
             "key.parsed_declaration" : "func withoutScheme() -> String",
             "key.parsed_scope.end" : 36,
             "key.parsed_scope.start" : 28,
@@ -3212,12 +3222,12 @@
                 "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/shell-commands.swift",
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>urlWithoutScheme<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
-                "key.length" : 136,
+                "key.length" : 110,
                 "key.name" : "urlWithoutScheme",
                 "key.namelength" : 16,
-                "key.nameoffset" : 619,
-                "key.offset" : 615,
-                "key.parsed_declaration" : "let urlWithoutScheme = String(\n    pathComponents\n        .joined(separator: \"\/\")\n        .dropFirst()\n)",
+                "key.nameoffset" : 609,
+                "key.offset" : 605,
+                "key.parsed_declaration" : "let urlWithoutScheme = String(\n  pathComponents\n    .joined(separator: \"\/\")\n    .dropFirst()\n)",
                 "key.parsed_scope.end" : 29,
                 "key.parsed_scope.start" : 29,
                 "key.typename" : "String",
@@ -3241,51 +3251,51 @@
           {
             "key.attribute" : "source.decl.attribute.available",
             "key.length" : 26,
-            "key.offset" : 794
+            "key.offset" : 752
           }
         ],
-        "key.bodylength" : 1594,
-        "key.bodyoffset" : 838,
+        "key.bodylength" : 1570,
+        "key.bodyoffset" : 796,
         "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Shell.swift",
         "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>Shell<\/decl.name><\/decl.class>",
         "key.kind" : "source.lang.swift.decl.extension",
-        "key.length" : 1612,
+        "key.length" : 1588,
         "key.name" : "Shell",
         "key.namelength" : 5,
-        "key.nameoffset" : 831,
-        "key.offset" : 821,
+        "key.nameoffset" : 789,
+        "key.offset" : 779,
         "key.parsed_declaration" : "extension Shell",
-        "key.parsed_scope.end" : 76,
+        "key.parsed_scope.end" : 74,
         "key.parsed_scope.start" : 40,
         "key.substructure" : [
           {
-            "key.accessibility": "source.lang.swift.accessibility.public",
+            "key.accessibility" : "source.lang.swift.accessibility.public",
             "key.annotated_decl" : "<Declaration>@discardableResult public static func echo(_ words: @autoclosure () -&gt; <Type usr=\"s:SS\">String<\/Type>, logLevel: <Type usr=\"s:8ShellKit8LogLevela\">LogLevel<\/Type> = .info) throws -&gt; <Type usr=\"s:8ShellKit0A0C\">Shell<\/Type>.<Type usr=\"s:8ShellKit0A0C6ResultV\">Result<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 865
+                "key.offset" : 820
               },
               {
                 "key.attribute" : "source.decl.attribute.discardableResult",
                 "key.length" : 18,
-                "key.offset" : 844
+                "key.offset" : 799
               }
             ],
             "key.bodylength" : 90,
-            "key.bodyoffset" : 977,
+            "key.bodyoffset" : 932,
             "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/shell-commands.swift",
             "key.fully_annotated_decl" : "<decl.function.method.static><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@discardableResult<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>echo<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>words<\/decl.var.parameter.name>: <decl.var.parameter.type><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@autoclosure<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> () -&gt; <decl.function.returntype><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.function.returntype><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>logLevel<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.typealias usr=\"s:8ShellKit8LogLevela\">LogLevel<\/ref.typealias><\/decl.var.parameter.type> = .info<\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword> -&gt; <decl.function.returntype><ref.class usr=\"s:8ShellKit0A0C\">Shell<\/ref.class>.<ref.struct usr=\"s:8ShellKit0A0C6ResultV\">Result<\/ref.struct><\/decl.function.returntype><\/decl.function.method.static>",
             "key.kind" : "source.lang.swift.decl.function.method.static",
             "key.length" : 196,
             "key.name" : "echo(_:logLevel:)",
             "key.namelength" : 68,
-            "key.nameoffset" : 884,
-            "key.offset" : 872,
+            "key.nameoffset" : 839,
+            "key.offset" : 827,
             "key.parsed_declaration" : "public static func echo(_ words: @autoclosure () -> String, logLevel: LogLevel = .info) throws -> Shell.Result",
-            "key.parsed_scope.end" : 45,
-            "key.parsed_scope.start" : 43,
+            "key.parsed_scope.end" : 44,
+            "key.parsed_scope.start" : 42,
             "key.substructure" : [
 
             ],
@@ -3300,26 +3310,27 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1095
+                "key.offset" : 1048
               },
               {
                 "key.attribute" : "source.decl.attribute.discardableResult",
                 "key.length" : 18,
-                "key.offset" : 1074
+                "key.offset" : 1027
               }
             ],
-            "key.bodylength" : 157,"key.bodyoffset" : 1222,
+            "key.bodylength" : 157,
+            "key.bodyoffset" : 1175,
             "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/shell-commands.swift",
             "key.fully_annotated_decl" : "<decl.function.method.static><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@discardableResult<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>exists<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>at<\/decl.var.parameter.argument_label> <decl.var.parameter.name>path<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>with<\/decl.var.parameter.argument_label> <decl.var.parameter.name>workingDirectory<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type> = Shell.Path.cwd<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>logLevel<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.typealias usr=\"s:8ShellKit8LogLevela\">LogLevel<\/ref.typealias><\/decl.var.parameter.type> = .off<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.function.returntype><\/decl.function.method.static>",
             "key.kind" : "source.lang.swift.decl.function.method.static",
             "key.length" : 278,
             "key.name" : "exists(at:with:logLevel:)",
             "key.namelength" : 98,
-            "key.nameoffset" : 1114,
-            "key.offset" : 1102,
+            "key.nameoffset" : 1067,
+            "key.offset" : 1055,
             "key.parsed_declaration" : "public static func exists(at path: String, with workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) -> Bool",
-            "key.parsed_scope.end" : 52,
-            "key.parsed_scope.start" : 48,
+            "key.parsed_scope.end" : 51,
+            "key.parsed_scope.start" : 47,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let fullPath: <Type usr=\"s:SS\">String<\/Type><\/Declaration>",
@@ -3329,11 +3340,11 @@
                 "key.length" : 69,
                 "key.name" : "fullPath",
                 "key.namelength" : 8,
-                "key.nameoffset" : 1231,
-                "key.offset" : 1227,
+                "key.nameoffset" : 1184,
+                "key.offset" : 1180,
                 "key.parsed_declaration" : "let fullPath = path.isAbsolute ? path : workingDirectory + \"\/\\(path)\"",
-                "key.parsed_scope.end" : 49,
-                "key.parsed_scope.start" : 49,
+                "key.parsed_scope.end" : 48,
+                "key.parsed_scope.start" : 48,
                 "key.typename" : "String",
                 "key.typeusr" : "$sSSD",
                 "key.usr" : "s:8ShellKit0A0C6exists2at4with8logLevelSbSS_SSAC8ReporterC0G0OtFZ8fullPathL_SSvp"
@@ -3346,30 +3357,31 @@
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
             "key.annotated_decl" : "<Declaration>@discardableResult public static func mkdir(at path: <Type usr=\"s:SS\">String<\/Type>, from workingDirectory: <Type usr=\"s:SS\">String<\/Type> = Shell.Path.cwd, logLevel: <Type usr=\"s:8ShellKit8LogLevela\">LogLevel<\/Type> = .off) throws -&gt; <Type usr=\"s:8ShellKit0A0C\">Shell<\/Type>.<Type usr=\"s:8ShellKit0A0C6ResultV\">Result<\/Type><\/Declaration>",
-            "key.attributes" : [{
+            "key.attributes" : [
+              {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1407
+                "key.offset" : 1358
               },
               {
                 "key.attribute" : "source.decl.attribute.discardableResult",
                 "key.length" : 18,
-                "key.offset" : 1386
+                "key.offset" : 1337
               }
             ],
             "key.bodylength" : 104,
-            "key.bodyoffset" : 1548,
+            "key.bodyoffset" : 1499,
             "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/shell-commands.swift",
             "key.fully_annotated_decl" : "<decl.function.method.static><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@discardableResult<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>mkdir<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>at<\/decl.var.parameter.argument_label> <decl.var.parameter.name>path<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>from<\/decl.var.parameter.argument_label> <decl.var.parameter.name>workingDirectory<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type> = Shell.Path.cwd<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>logLevel<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.typealias usr=\"s:8ShellKit8LogLevela\">LogLevel<\/ref.typealias><\/decl.var.parameter.type> = .off<\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword> -&gt; <decl.function.returntype><ref.class usr=\"s:8ShellKit0A0C\">Shell<\/ref.class>.<ref.struct usr=\"s:8ShellKit0A0C6ResultV\">Result<\/ref.struct><\/decl.function.returntype><\/decl.function.method.static>",
             "key.kind" : "source.lang.swift.decl.function.method.static",
             "key.length" : 239,
             "key.name" : "mkdir(at:from:logLevel:)",
             "key.namelength" : 97,
-            "key.nameoffset" : 1426,
-            "key.offset" : 1414,
+            "key.nameoffset" : 1377,
+            "key.offset" : 1365,
             "key.parsed_declaration" : "public static func mkdir(at path: String, from workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result",
-            "key.parsed_scope.end" : 57,
-            "key.parsed_scope.start" : 55,
+            "key.parsed_scope.end" : 56,
+            "key.parsed_scope.start" : 54,
             "key.substructure" : [
 
             ],
@@ -3384,27 +3396,27 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1678
+                "key.offset" : 1629
               },
               {
                 "key.attribute" : "source.decl.attribute.discardableResult",
                 "key.length" : 18,
-                "key.offset" : 1657
+                "key.offset" : 1608
               }
             ],
-            "key.bodylength" : 245,
-            "key.bodyoffset" : 1865,
+            "key.bodylength" : 228,
+            "key.bodyoffset" : 1816,
             "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/shell-commands.swift",
             "key.fully_annotated_decl" : "<decl.function.method.static><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@discardableResult<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>rm<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>resource<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>directory<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.parameter.type> = false<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>force<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.parameter.type> = false<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>from<\/decl.var.parameter.argument_label> <decl.var.parameter.name>workingDirectory<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type> = Shell.Path.cwd<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>logLevel<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.typealias usr=\"s:8ShellKit8LogLevela\">LogLevel<\/ref.typealias><\/decl.var.parameter.type> = .off<\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword> -&gt; <decl.function.returntype><ref.class usr=\"s:8ShellKit0A0C\">Shell<\/ref.class>.<ref.struct usr=\"s:8ShellKit0A0C6ResultV\">Result<\/ref.struct><\/decl.function.returntype><\/decl.function.method.static>",
             "key.kind" : "source.lang.swift.decl.function.method.static",
-            "key.length" : 426,
+            "key.length" : 409,
             "key.name" : "rm(_:directory:force:from:logLevel:)",
             "key.namelength" : 143,
-            "key.nameoffset" : 1697,
-            "key.offset" : 1685,
+            "key.nameoffset" : 1648,
+            "key.offset" : 1636,
             "key.parsed_declaration" : "public static func rm(_ resource: String, directory: Bool = false, force: Bool = false, from workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result",
-            "key.parsed_scope.end" : 70,
-            "key.parsed_scope.start" : 60,
+            "key.parsed_scope.end" : 68,
+            "key.parsed_scope.start" : 59,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>var args: [<Type usr=\"s:SS\">String<\/Type>]<\/Declaration>",
@@ -3414,11 +3426,11 @@
                 "key.length" : 23,
                 "key.name" : "args",
                 "key.namelength" : 4,
-                "key.nameoffset" : 1879,
-                "key.offset" : 1875,
+                "key.nameoffset" : 1825,
+                "key.offset" : 1821,
                 "key.parsed_declaration" : "var args: [String] = []",
-                "key.parsed_scope.end" : 62,
-                "key.parsed_scope.start" : 62,
+                "key.parsed_scope.end" : 60,
+                "key.parsed_scope.start" : 60,
                 "key.typename" : "[String]",
                 "key.typeusr" : "$sSaySSGD",
                 "key.usr" : "s:8ShellKit0A0C2rm_9directory5force4from8logLevelAC6ResultVSS_S2bSSAC8ReporterC0H0OtKFZ4argsL_SaySSGvp"
@@ -3435,27 +3447,27 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 2136
+                "key.offset" : 2070
               },
               {
                 "key.attribute" : "source.decl.attribute.discardableResult",
                 "key.length" : 18,
-                "key.offset" : 2115
+                "key.offset" : 2049
               }
             ],
             "key.bodylength" : 136,
-            "key.bodyoffset" : 2294,
+            "key.bodyoffset" : 2228,
             "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/shell-commands.swift",
             "key.fully_annotated_decl" : "<decl.function.method.static><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@discardableResult<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>copy<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>source<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>destination<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>at<\/decl.var.parameter.argument_label> <decl.var.parameter.name>workingDirectory<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type> = Shell.Path.cwd<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>logLevel<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.typealias usr=\"s:8ShellKit8LogLevela\">LogLevel<\/ref.typealias><\/decl.var.parameter.type> = .off<\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword> -&gt; <decl.function.returntype><ref.class usr=\"s:8ShellKit0A0C\">Shell<\/ref.class>.<ref.struct usr=\"s:8ShellKit0A0C6ResultV\">Result<\/ref.struct><\/decl.function.returntype><\/decl.function.method.static>",
             "key.kind" : "source.lang.swift.decl.function.method.static",
             "key.length" : 288,
             "key.name" : "copy(source:destination:at:logLevel:)",
             "key.namelength" : 114,
-            "key.nameoffset" : 2155,
-            "key.offset" : 2143,
+            "key.nameoffset" : 2089,
+            "key.offset" : 2077,
             "key.parsed_declaration" : "public static func copy(source: String, destination: String, at workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result",
-            "key.parsed_scope.end" : 75,
-            "key.parsed_scope.start" : 73,
+            "key.parsed_scope.end" : 73,
+            "key.parsed_scope.start" : 71,
             "key.substructure" : [
 
             ],
@@ -3473,7 +3485,7 @@
 }, {
   "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/swift-commands.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 2948,
+    "key.length" : 4221,
     "key.offset" : 0,
     "key.substructure" : [
       {
@@ -3486,18 +3498,18 @@
             "key.offset" : 126
           }
         ],
-        "key.bodylength" : 2776,
+        "key.bodylength" : 4049,
         "key.bodyoffset" : 170,
         "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Shell.swift",
         "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>Shell<\/decl.name><\/decl.class>",
         "key.kind" : "source.lang.swift.decl.extension",
-        "key.length" : 2794,
+        "key.length" : 4067,
         "key.name" : "Shell",
         "key.namelength" : 5,
         "key.nameoffset" : 163,
         "key.offset" : 153,
         "key.parsed_declaration" : "extension Shell",
-        "key.parsed_scope.end" : 71,
+        "key.parsed_scope.end" : 93,
         "key.parsed_scope.start" : 12,
         "key.substructure" : [
           {
@@ -3507,27 +3519,27 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 197
+                "key.offset" : 194
               },
               {
                 "key.attribute" : "source.decl.attribute.discardableResult",
                 "key.length" : 18,
-                "key.offset" : 176
+                "key.offset" : 173
               }
             ],
             "key.bodylength" : 165,
-            "key.bodyoffset" : 427,
+            "key.bodyoffset" : 424,
             "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/swift-commands.swift",
             "key.fully_annotated_decl" : "<decl.function.method.static><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@discardableResult<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>swiftBuild<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>using<\/decl.var.parameter.argument_label> <decl.var.parameter.name>name<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.class usr=\"s:8ShellKit0A0C\">Shell<\/ref.class>.<ref.enum usr=\"s:8ShellKit0A0C4NameO\">Name<\/ref.enum><\/decl.var.parameter.type> = .sh<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>arguments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:8ShellKit7CommandV\">Command<\/ref.struct>.<ref.typealias usr=\"s:8ShellKit7CommandV9Argumentsa\">Arguments<\/ref.typealias><\/decl.var.parameter.type> = []<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>environment<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:8ShellKit7CommandV\">Command<\/ref.struct>.<ref.typealias usr=\"s:8ShellKit7CommandV11Environmenta\">Environment<\/ref.typealias><\/decl.var.parameter.type> = [:]<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>workingDirectory<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type> = Shell.Path.cwd<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>logLevel<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.typealias usr=\"s:8ShellKit8LogLevela\">LogLevel<\/ref.typealias><\/decl.var.parameter.type> = .info<\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword> -&gt; <decl.function.returntype><ref.class usr=\"s:8ShellKit0A0C\">Shell<\/ref.class>.<ref.struct usr=\"s:8ShellKit0A0C6ResultV\">Result<\/ref.struct><\/decl.function.returntype><\/decl.function.method.static>",
             "key.kind" : "source.lang.swift.decl.function.method.static",
             "key.length" : 389,
             "key.name" : "swiftBuild(using:arguments:environment:workingDirectory:logLevel:)",
             "key.namelength" : 186,
-            "key.nameoffset" : 216,
-            "key.offset" : 204,
+            "key.nameoffset" : 213,
+            "key.offset" : 201,
             "key.parsed_declaration" : "public static func swiftBuild(using name: Shell.Name = .sh, arguments: Command.Arguments = [], environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .info) throws -> Shell.Result",
-            "key.parsed_scope.end" : 17,
-            "key.parsed_scope.start" : 15,
+            "key.parsed_scope.end" : 16,
+            "key.parsed_scope.start" : 14,
             "key.substructure" : [
 
             ],
@@ -3542,27 +3554,27 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 618
+                "key.offset" : 615
               },
               {
                 "key.attribute" : "source.decl.attribute.discardableResult",
                 "key.length" : 18,
-                "key.offset" : 597
+                "key.offset" : 594
               }
             ],
             "key.bodylength" : 164,
-            "key.bodyoffset" : 847,
+            "key.bodyoffset" : 844,
             "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/swift-commands.swift",
             "key.fully_annotated_decl" : "<decl.function.method.static><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@discardableResult<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>swiftTest<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>using<\/decl.var.parameter.argument_label> <decl.var.parameter.name>name<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.class usr=\"s:8ShellKit0A0C\">Shell<\/ref.class>.<ref.enum usr=\"s:8ShellKit0A0C4NameO\">Name<\/ref.enum><\/decl.var.parameter.type> = .sh<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>arguments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:8ShellKit7CommandV\">Command<\/ref.struct>.<ref.typealias usr=\"s:8ShellKit7CommandV9Argumentsa\">Arguments<\/ref.typealias><\/decl.var.parameter.type> = []<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>environment<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:8ShellKit7CommandV\">Command<\/ref.struct>.<ref.typealias usr=\"s:8ShellKit7CommandV11Environmenta\">Environment<\/ref.typealias><\/decl.var.parameter.type> = [:]<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>workingDirectory<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type> = Shell.Path.cwd<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>logLevel<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.typealias usr=\"s:8ShellKit8LogLevela\">LogLevel<\/ref.typealias><\/decl.var.parameter.type> = .info<\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword> -&gt; <decl.function.returntype><ref.class usr=\"s:8ShellKit0A0C\">Shell<\/ref.class>.<ref.struct usr=\"s:8ShellKit0A0C6ResultV\">Result<\/ref.struct><\/decl.function.returntype><\/decl.function.method.static>",
             "key.kind" : "source.lang.swift.decl.function.method.static",
             "key.length" : 387,
             "key.name" : "swiftTest(using:arguments:environment:workingDirectory:logLevel:)",
             "key.namelength" : 185,
-            "key.nameoffset" : 637,
-            "key.offset" : 625,
+            "key.nameoffset" : 634,
+            "key.offset" : 622,
             "key.parsed_declaration" : "public static func swiftTest(using name: Shell.Name = .sh, arguments: Command.Arguments = [], environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .info) throws -> Shell.Result",
-            "key.parsed_scope.end" : 22,
-            "key.parsed_scope.start" : 20,
+            "key.parsed_scope.end" : 21,
+            "key.parsed_scope.start" : 19,
             "key.substructure" : [
 
             ],
@@ -3577,27 +3589,27 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1037
+                "key.offset" : 1034
               },
               {
                 "key.attribute" : "source.decl.attribute.discardableResult",
                 "key.length" : 18,
-                "key.offset" : 1016
+                "key.offset" : 1013
               }
             ],
             "key.bodylength" : 176,
-            "key.bodyoffset" : 1218,
+            "key.bodyoffset" : 1215,
             "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/swift-commands.swift",
             "key.fully_annotated_decl" : "<decl.function.method.static><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@discardableResult<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>swiftTestGenerateLinuxMain<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>environment<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:8ShellKit7CommandV\">Command<\/ref.struct>.<ref.typealias usr=\"s:8ShellKit7CommandV11Environmenta\">Environment<\/ref.typealias><\/decl.var.parameter.type> = [:]<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>workingDirectory<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type> = Shell.Path.cwd<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>logLevel<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.typealias usr=\"s:8ShellKit8LogLevela\">LogLevel<\/ref.typealias><\/decl.var.parameter.type> = .info<\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword> -&gt; <decl.function.returntype><ref.class usr=\"s:8ShellKit0A0C\">Shell<\/ref.class>.<ref.struct usr=\"s:8ShellKit0A0C6ResultV\">Result<\/ref.struct><\/decl.function.returntype><\/decl.function.method.static>",
             "key.kind" : "source.lang.swift.decl.function.method.static",
             "key.length" : 351,
             "key.name" : "swiftTestGenerateLinuxMain(environment:workingDirectory:logLevel:)",
             "key.namelength" : 137,
-            "key.nameoffset" : 1056,
-            "key.offset" : 1044,
+            "key.nameoffset" : 1053,
+            "key.offset" : 1041,
             "key.parsed_declaration" : "public static func swiftTestGenerateLinuxMain(environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .info) throws -> Shell.Result",
-            "key.parsed_scope.end" : 27,
-            "key.parsed_scope.start" : 25,
+            "key.parsed_scope.end" : 26,
+            "key.parsed_scope.start" : 24,
             "key.substructure" : [
 
             ],
@@ -3607,32 +3619,67 @@
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>@discardableResult public static func swiftlint(environment: <Type usr=\"s:8ShellKit7CommandV\">Command<\/Type>.<Type usr=\"s:8ShellKit7CommandV11Environmenta\">Environment<\/Type> = [:], workingDirectory: <Type usr=\"s:SS\">String<\/Type> = Shell.Path.cwd, logLevel: <Type usr=\"s:8ShellKit8LogLevela\">LogLevel<\/Type> = .off) throws -&gt; <Type usr=\"s:8ShellKit0A0C\">Shell<\/Type>.<Type usr=\"s:8ShellKit0A0C6ResultV\">Result<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 1417
+              },
+              {
+                "key.attribute" : "source.decl.attribute.discardableResult",
+                "key.length" : 18,
+                "key.offset" : 1396
+              }
+            ],
+            "key.bodylength" : 156,
+            "key.bodyoffset" : 1580,
+            "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/swift-commands.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.static><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@discardableResult<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>swiftlint<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>environment<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:8ShellKit7CommandV\">Command<\/ref.struct>.<ref.typealias usr=\"s:8ShellKit7CommandV11Environmenta\">Environment<\/ref.typealias><\/decl.var.parameter.type> = [:]<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>workingDirectory<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type> = Shell.Path.cwd<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>logLevel<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.typealias usr=\"s:8ShellKit8LogLevela\">LogLevel<\/ref.typealias><\/decl.var.parameter.type> = .off<\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword> -&gt; <decl.function.returntype><ref.class usr=\"s:8ShellKit0A0C\">Shell<\/ref.class>.<ref.struct usr=\"s:8ShellKit0A0C6ResultV\">Result<\/ref.struct><\/decl.function.returntype><\/decl.function.method.static>",
+            "key.kind" : "source.lang.swift.decl.function.method.static",
+            "key.length" : 313,
+            "key.name" : "swiftlint(environment:workingDirectory:logLevel:)",
+            "key.namelength" : 119,
+            "key.nameoffset" : 1436,
+            "key.offset" : 1424,
+            "key.parsed_declaration" : "public static func swiftlint(environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result",
+            "key.parsed_scope.end" : 31,
+            "key.parsed_scope.start" : 29,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(Shell.Type) -> ([String : String], String, Shell.Reporter.Level) throws -> Shell.Result",
+            "key.typeusr" : "$s11environment16workingDirectory8logLevel8ShellKit0F0C6ResultVSDyS2SG_SSAF8ReporterC0E0OtKcD",
+            "key.usr" : "s:8ShellKit0A0C9swiftlint11environment16workingDirectory8logLevelAC6ResultVSDyS2SG_SSAC8ReporterC0H0OtKFZ"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
             "key.annotated_decl" : "<Declaration>@discardableResult public static func swiftFormat(version: <Type usr=\"s:SS\">String<\/Type>, environment: <Type usr=\"s:8ShellKit7CommandV\">Command<\/Type>.<Type usr=\"s:8ShellKit7CommandV11Environmenta\">Environment<\/Type> = [:], workingDirectory: <Type usr=\"s:SS\">String<\/Type> = Shell.Path.cwd, logLevel: <Type usr=\"s:8ShellKit8LogLevela\">LogLevel<\/Type> = .info) throws -&gt; <Type usr=\"s:8ShellKit0A0C\">Shell<\/Type>.<Type usr=\"s:8ShellKit0A0C6ResultV\">Result<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1420
+                "key.offset" : 1762
               },
               {
                 "key.attribute" : "source.decl.attribute.discardableResult",
                 "key.length" : 18,
-                "key.offset" : 1399
+                "key.offset" : 1741
               }
             ],
             "key.bodylength" : 195,
-            "key.bodyoffset" : 1603,
+            "key.bodyoffset" : 1945,
             "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/swift-commands.swift",
             "key.fully_annotated_decl" : "<decl.function.method.static><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@discardableResult<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>swiftFormat<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>version<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>environment<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:8ShellKit7CommandV\">Command<\/ref.struct>.<ref.typealias usr=\"s:8ShellKit7CommandV11Environmenta\">Environment<\/ref.typealias><\/decl.var.parameter.type> = [:]<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>workingDirectory<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type> = Shell.Path.cwd<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>logLevel<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.typealias usr=\"s:8ShellKit8LogLevela\">LogLevel<\/ref.typealias><\/decl.var.parameter.type> = .info<\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword> -&gt; <decl.function.returntype><ref.class usr=\"s:8ShellKit0A0C\">Shell<\/ref.class>.<ref.struct usr=\"s:8ShellKit0A0C6ResultV\">Result<\/ref.struct><\/decl.function.returntype><\/decl.function.method.static>",
             "key.kind" : "source.lang.swift.decl.function.method.static",
             "key.length" : 372,
             "key.name" : "swiftFormat(version:environment:workingDirectory:logLevel:)",
             "key.namelength" : 139,
-            "key.nameoffset" : 1439,
-            "key.offset" : 1427,
+            "key.nameoffset" : 1781,
+            "key.offset" : 1769,
             "key.parsed_declaration" : "public static func swiftFormat(version: String, environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .info) throws -> Shell.Result",
-            "key.parsed_scope.end" : 32,
-            "key.parsed_scope.start" : 30,
+            "key.parsed_scope.end" : 36,
+            "key.parsed_scope.start" : 34,
             "key.substructure" : [
 
             ],
@@ -3647,41 +3694,58 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1824
+                "key.offset" : 2166
               },
               {
                 "key.attribute" : "source.decl.attribute.discardableResult",
                 "key.length" : 18,
-                "key.offset" : 1803
+                "key.offset" : 2145
               }
             ],
-            "key.bodylength" : 604,
-            "key.bodyoffset" : 2014,
+            "key.bodylength" : 483,
+            "key.bodyoffset" : 2356,
             "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/swift-commands.swift",
             "key.fully_annotated_decl" : "<decl.function.method.static><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@discardableResult<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>sourceKittenSPM<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>destination<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>environment<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:8ShellKit7CommandV\">Command<\/ref.struct>.<ref.typealias usr=\"s:8ShellKit7CommandV11Environmenta\">Environment<\/ref.typealias><\/decl.var.parameter.type> = [:]<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>workingDirectory<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type> = Shell.Path.cwd<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>logLevel<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.typealias usr=\"s:8ShellKit8LogLevela\">LogLevel<\/ref.typealias><\/decl.var.parameter.type> = .off<\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword> -&gt; <decl.function.returntype><ref.class usr=\"s:8ShellKit0A0C\">Shell<\/ref.class>.<ref.struct usr=\"s:8ShellKit0A0C6ResultV\">Result<\/ref.struct><\/decl.function.returntype><\/decl.function.method.static>",
             "key.kind" : "source.lang.swift.decl.function.method.static",
-            "key.length" : 788,
+            "key.length" : 667,
             "key.name" : "sourceKittenSPM(destination:environment:workingDirectory:logLevel:)",
             "key.namelength" : 146,
-            "key.nameoffset" : 1843,
-            "key.offset" : 1831,
+            "key.nameoffset" : 2185,
+            "key.offset" : 2173,
             "key.parsed_declaration" : "public static func sourceKittenSPM(destination: String, environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result",
-            "key.parsed_scope.end" : 63,
-            "key.parsed_scope.start" : 35,
+            "key.parsed_scope.end" : 58,
+            "key.parsed_scope.start" : 39,
             "key.substructure" : [
+              {
+                "key.annotated_decl" : "<Declaration>let path: <Type usr=\"s:SS\">String<\/Type><\/Declaration>",
+                "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/swift-commands.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>path<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 86,
+                "key.name" : "path",
+                "key.namelength" : 4,
+                "key.nameoffset" : 2366,
+                "key.offset" : 2362,
+                "key.parsed_declaration" : "let path = destination.isAbsolute ? destination : workingDirectory + \"\/\\(destination)\"",
+                "key.parsed_scope.end" : 41,
+                "key.parsed_scope.start" : 41,
+                "key.typename" : "String",
+                "key.typeusr" : "$sSSD",
+                "key.usr" : "s:8ShellKit0A0C15sourceKittenSPM11destination11environment16workingDirectory8logLevelAC6ResultVSS_SDyS2SGSSAC8ReporterC0K0OtKFZ4pathL_SSvp"
+              },
               {
                 "key.annotated_decl" : "<Declaration>let command: <Type usr=\"s:8ShellKit7CommandV\">Command<\/Type><\/Declaration>",
                 "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/swift-commands.swift",
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>command<\/decl.name>: <decl.var.type><ref.struct usr=\"s:8ShellKit7CommandV\">Command<\/ref.struct><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
-                "key.length" : 190,
+                "key.length" : 201,
                 "key.name" : "command",
                 "key.namelength" : 7,
-                "key.nameoffset" : 2024,
-                "key.offset" : 2020,
-                "key.parsed_declaration" : "let command = Command(\n  name: \"sourcekitten\",\n  arguments: [\"doc\", \"--spm\"],\n  environment: environment,\n  workingDirectory: workingDirectory,\n  logLevel: logLevel\n)",
-                "key.parsed_scope.end" : 37,
-                "key.parsed_scope.start" : 37,
+                "key.nameoffset" : 2458,
+                "key.offset" : 2454,
+                "key.parsed_declaration" : "let command = Command(\n  name: \"sourcekitten\",\n  arguments: [\"doc\", \"--spm\", \">\", path],\n  environment: environment,\n  workingDirectory: workingDirectory,\n  logLevel: logLevel\n)",
+                "key.parsed_scope.end" : 43,
+                "key.parsed_scope.start" : 43,
                 "key.typename" : "Command",
                 "key.typeusr" : "$s8ShellKit7CommandVD",
                 "key.usr" : "s:8ShellKit0A0C15sourceKittenSPM11destination11environment16workingDirectory8logLevelAC6ResultVSS_SDyS2SGSSAC8ReporterC0K0OtKFZ7commandL_AA7CommandVvp"
@@ -3694,48 +3758,14 @@
                 "key.length" : 39,
                 "key.name" : "result",
                 "key.namelength" : 6,
-                "key.nameoffset" : 2248,
-                "key.offset" : 2244,
-                "key.parsed_declaration" : "let result= try Shell.execute(command)",
-                "key.parsed_scope.end" : 47,
-                "key.parsed_scope.start" : 47,
+                "key.nameoffset" : 2665,
+                "key.offset" : 2661,
+                "key.parsed_declaration" : "let result = try Shell.execute(command)",
+                "key.parsed_scope.end" : 51,
+                "key.parsed_scope.start" : 51,
                 "key.typename" : "Shell.Result",
                 "key.typeusr" : "$s8ShellKit0A0C6ResultVD",
                 "key.usr" : "s:8ShellKit0A0C15sourceKittenSPM11destination11environment16workingDirectory8logLevelAC6ResultVSS_SDyS2SGSSAC8ReporterC0K0OtKFZ6resultL_AJvp"
-              },
-              {
-                "key.annotated_decl" : "<Declaration>let path: <Type usr=\"s:SS\">String<\/Type><\/Declaration>",
-                "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/swift-commands.swift",
-                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>path<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.type><\/decl.var.local>",
-                "key.kind" : "source.lang.swift.decl.var.local",
-                "key.length" : 86,
-                "key.name" : "path",
-                "key.namelength" : 4,
-                "key.nameoffset" : 2371,
-                "key.offset" : 2367,
-                "key.parsed_declaration" : "let path = destination.isAbsolute ? destination : workingDirectory + \"\/\\(destination)\"",
-                "key.parsed_scope.end" : 53,
-                "key.parsed_scope.start" : 53,
-                "key.typename" : "String",
-                "key.typeusr" : "$sSSD",
-                "key.usr" : "s:8ShellKit0A0C15sourceKittenSPM11destination11environment16workingDirectory8logLevelAC6ResultVSS_SDyS2SGSSAC8ReporterC0K0OtKFZ4pathL_SSvp"
-              },
-              {
-                "key.annotated_decl" : "<Declaration>let url: <Type usr=\"s:10Foundation3URLV\">URL<\/Type><\/Declaration>",
-                "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/swift-commands.swift",
-                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>url<\/decl.name>: <decl.var.type><ref.struct usr=\"s:10Foundation3URLV\">URL<\/ref.struct><\/decl.var.type><\/decl.var.local>",
-                "key.kind" : "source.lang.swift.decl.var.local",
-                "key.length" : 36,
-                "key.name" : "url",
-                "key.namelength" : 3,
-                "key.nameoffset" : 2488,
-                "key.offset" : 2484,
-                "key.parsed_declaration" : "let url = URL(fileURLWithPath: path)",
-                "key.parsed_scope.end" : 57,
-                "key.parsed_scope.start" : 57,
-                "key.typename" : "URL",
-                "key.typeusr" : "$s10Foundation3URLVD",
-                "key.usr" : "s:8ShellKit0A0C15sourceKittenSPM11destination11environment16workingDirectory8logLevelAC6ResultVSS_SDyS2SGSSAC8ReporterC0K0OtKFZ3urlL_10Foundation3URLVvp"
               }
             ],
             "key.typename" : "(Shell.Type) -> (String, [String : String], String, Shell.Reporter.Level) throws -> Shell.Result",
@@ -3744,38 +3774,89 @@
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>@discardableResult public static func jazzy(environment: <Type usr=\"s:8ShellKit7CommandV\">Command<\/Type>.<Type usr=\"s:8ShellKit7CommandV11Environmenta\">Environment<\/Type> = [:], workingDirectory: <Type usr=\"s:SS\">String<\/Type> = Shell.Path.cwd, logLevel: <Type usr=\"s:8ShellKit8LogLevela\">LogLevel<\/Type> = .off) throws -&gt; <Type usr=\"s:8ShellKit0A0C\">Shell<\/Type>.<Type usr=\"s:8ShellKit0A0C6ResultV\">Result<\/Type><\/Declaration>",
+            "key.annotated_decl" : "<Declaration>@discardableResult public static func jazzy(arguments: [<Type usr=\"s:SS\">String<\/Type>] = [], environment: <Type usr=\"s:8ShellKit7CommandV\">Command<\/Type>.<Type usr=\"s:8ShellKit7CommandV11Environmenta\">Environment<\/Type> = [:], workingDirectory: <Type usr=\"s:SS\">String<\/Type> = Shell.Path.cwd, logLevel: <Type usr=\"s:8ShellKit8LogLevela\">LogLevel<\/Type> = .off) throws -&gt; <Type usr=\"s:8ShellKit0A0C\">Shell<\/Type>.<Type usr=\"s:8ShellKit0A0C6ResultV\">Result<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 2646
+                "key.offset" : 2865
               },
               {
                 "key.attribute" : "source.decl.attribute.discardableResult",
                 "key.length" : 18,
-                "key.offset" : 2625
+                "key.offset" : 2844
               }
             ],
-            "key.bodylength" : 139,
-            "key.bodyoffset" : 2805,
+            "key.bodylength" : 153,
+            "key.bodyoffset" : 3050,
             "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/swift-commands.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.static><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@discardableResult<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>jazzy<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>environment<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:8ShellKit7CommandV\">Command<\/ref.struct>.<ref.typealias usr=\"s:8ShellKit7CommandV11Environmenta\">Environment<\/ref.typealias><\/decl.var.parameter.type> = [:]<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>workingDirectory<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type> = Shell.Path.cwd<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>logLevel<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.typealias usr=\"s:8ShellKit8LogLevela\">LogLevel<\/ref.typealias><\/decl.var.parameter.type> = .off<\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword> -&gt; <decl.function.returntype><ref.class usr=\"s:8ShellKit0A0C\">Shell<\/ref.class>.<ref.struct usr=\"s:8ShellKit0A0C6ResultV\">Result<\/ref.struct><\/decl.function.returntype><\/decl.function.method.static>",
+            "key.fully_annotated_decl" : "<decl.function.method.static><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@discardableResult<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>jazzy<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>arguments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct>]<\/decl.var.parameter.type> = []<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>environment<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:8ShellKit7CommandV\">Command<\/ref.struct>.<ref.typealias usr=\"s:8ShellKit7CommandV11Environmenta\">Environment<\/ref.typealias><\/decl.var.parameter.type> = [:]<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>workingDirectory<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type> = Shell.Path.cwd<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>logLevel<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.typealias usr=\"s:8ShellKit8LogLevela\">LogLevel<\/ref.typealias><\/decl.var.parameter.type> = .off<\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword> -&gt; <decl.function.returntype><ref.class usr=\"s:8ShellKit0A0C\">Shell<\/ref.class>.<ref.struct usr=\"s:8ShellKit0A0C6ResultV\">Result<\/ref.struct><\/decl.function.returntype><\/decl.function.method.static>",
             "key.kind" : "source.lang.swift.decl.function.method.static",
-            "key.length" : 292,
-            "key.name" : "jazzy(environment:workingDirectory:logLevel:)",
-            "key.namelength" : 115,
-            "key.nameoffset" : 2665,
-            "key.offset" : 2653,
-            "key.parsed_declaration" : "public static func jazzy(environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result",
-            "key.parsed_scope.end" : 70,
-            "key.parsed_scope.start" : 66,
+            "key.length" : 332,
+            "key.name" : "jazzy(arguments:environment:workingDirectory:logLevel:)",
+            "key.namelength" : 141,
+            "key.nameoffset" : 2884,
+            "key.offset" : 2872,
+            "key.parsed_declaration" : "public static func jazzy(arguments: [String] = [], environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result",
+            "key.parsed_scope.end" : 63,
+            "key.parsed_scope.start" : 61,
             "key.substructure" : [
 
             ],
-            "key.typename" : "(Shell.Type) -> ([String : String], String, Shell.Reporter.Level) throws -> Shell.Result",
-            "key.typeusr" : "$s11environment16workingDirectory8logLevel8ShellKit0F0C6ResultVSDyS2SG_SSAF8ReporterC0E0OtKcD",
-            "key.usr" : "s:8ShellKit0A0C5jazzy11environment16workingDirectory8logLevelAC6ResultVSDyS2SG_SSAC8ReporterC0H0OtKFZ"
+            "key.typename" : "(Shell.Type) -> ([String], [String : String], String, Shell.Reporter.Level) throws -> Shell.Result",
+            "key.typeusr" : "$s9arguments11environment16workingDirectory8logLevel8ShellKit0G0C6ResultVSaySSG_SDyS2SGSSAG8ReporterC0F0OtKcD",
+            "key.usr" : "s:8ShellKit0A0C5jazzy9arguments11environment16workingDirectory8logLevelAC6ResultVSaySSG_SDyS2SGSSAC8ReporterC0I0OtKFZ"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>@discardableResult public static func swiftDoc(_ input: <Type usr=\"s:SS\">String<\/Type> = &quot;.\/Sources&quot;, name: <Type usr=\"s:SS\">String<\/Type>, output: <Type usr=\"s:SS\">String<\/Type>, author: <Type usr=\"s:SS\">String<\/Type>, authorUrl: <Type usr=\"s:SS\">String<\/Type>, twitterHandle: <Type usr=\"s:SS\">String<\/Type>, gitRepository: <Type usr=\"s:SS\">String<\/Type>, environment: <Type usr=\"s:8ShellKit7CommandV\">Command<\/Type>.<Type usr=\"s:8ShellKit7CommandV11Environmenta\">Environment<\/Type> = [:], workingDirectory: <Type usr=\"s:SS\">String<\/Type> = Shell.Path.cwd, logLevel: <Type usr=\"s:8ShellKit8LogLevela\">LogLevel<\/Type> = .off) throws -&gt; <Type usr=\"s:8ShellKit0A0C\">Shell<\/Type>.<Type usr=\"s:8ShellKit0A0C6ResultV\">Result<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 3229
+              },
+              {
+                "key.attribute" : "source.decl.attribute.discardableResult",
+                "key.length" : 18,
+                "key.offset" : 3208
+              }
+            ],
+            "key.bodylength" : 640,
+            "key.bodyoffset" : 3577,
+            "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/swift-commands.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.static><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@discardableResult<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>swiftDoc<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>input<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type> = &quot;.\/Sources&quot;<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>name<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>output<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>author<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>authorUrl<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>twitterHandle<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>gitRepository<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>environment<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:8ShellKit7CommandV\">Command<\/ref.struct>.<ref.typealias usr=\"s:8ShellKit7CommandV11Environmenta\">Environment<\/ref.typealias><\/decl.var.parameter.type> = [:]<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>workingDirectory<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type> = Shell.Path.cwd<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>logLevel<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.typealias usr=\"s:8ShellKit8LogLevela\">LogLevel<\/ref.typealias><\/decl.var.parameter.type> = .off<\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword> -&gt; <decl.function.returntype><ref.class usr=\"s:8ShellKit0A0C\">Shell<\/ref.class>.<ref.struct usr=\"s:8ShellKit0A0C6ResultV\">Result<\/ref.struct><\/decl.function.returntype><\/decl.function.method.static>",
+            "key.kind" : "source.lang.swift.decl.function.method.static",
+            "key.length" : 982,
+            "key.name" : "swiftDoc(_:name:output:author:authorUrl:twitterHandle:gitRepository:environment:workingDirectory:logLevel:)",
+            "key.namelength" : 304,
+            "key.nameoffset" : 3248,
+            "key.offset" : 3236,
+            "key.parsed_declaration" : "public static func swiftDoc(\n  _ input: String = \".\/Sources\",\n  name: String,\n  output: String,\n  author: String,\n  authorUrl: String,\n  twitterHandle: String,\n  gitRepository: String,\n  environment: Command.Environment = [:],\n  workingDirectory: String = Shell.Path.cwd,\n  logLevel: LogLevel = .off\n) throws -> Shell.Result",
+            "key.parsed_scope.end" : 92,
+            "key.parsed_scope.start" : 66,
+            "key.substructure" : [
+              {
+                "key.annotated_decl" : "<Declaration>let args: [<Type usr=\"s:SS\">String<\/Type>]<\/Declaration>",
+                "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/swift-commands.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>args<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct>]<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 257,
+                "key.name" : "args",
+                "key.namelength" : 4,
+                "key.nameoffset" : 3797,
+                "key.offset" : 3793,
+                "key.parsed_declaration" : "let args = [\n  \"doc\", input,\n  \"--output\", output,\n  \"--type\", \"html\",\n  \"--module-name\", name,\n  \"--author\", author,\n  \"--author-url\", authorUrl,\n  \"--twitter-handle\", twitterHandle,\n  \"--git-repository\", gitRepository\n]",
+                "key.parsed_scope.end" : 79,
+                "key.parsed_scope.start" : 79,
+                "key.typename" : "[String]",
+                "key.typeusr" : "$sSaySSGD",
+                "key.usr" : "s:8ShellKit0A0C8swiftDoc_4name6output6author0G3Url13twitterHandle13gitRepository11environment16workingDirectory8logLevelAC6ResultVSS_S6SSDyS2SGSSAC8ReporterC0Q0OtKFZ4argsL_SaySSGvp"
+              }
+            ],
+            "key.typename" : "(Shell.Type) -> (String, String, String, String, String, String, String, [String : String], String, Shell.Reporter.Level) throws -> Shell.Result",
+            "key.typeusr" : "$s_4name6output6author0C3Url13twitterHandle13gitRepository11environment16workingDirectory8logLevel8ShellKit0N0C6ResultVSS_S6SSDyS2SGSSAL8ReporterC0M0OtKcD",
+            "key.usr" : "s:8ShellKit0A0C8swiftDoc_4name6output6author0G3Url13twitterHandle13gitRepository11environment16workingDirectory8logLevelAC6ResultVSS_S6SSDyS2SGSSAC8ReporterC0Q0OtKFZ"
           }
         ],
         "key.typename" : "Shell.Type",
