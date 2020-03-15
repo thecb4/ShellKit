@@ -1,11 +1,10 @@
-summary: Swift Doc
+summary: Fixed CI
 
 
-added:
-  - added swift-doc shell command
-changed:
-  - added arguments for jazzy
+added: []
+changed: []
 deprecated: []
 removed: []
-fixed: []
+fixed:
+ - install swift doc in gitlab-ci test
 security: []
