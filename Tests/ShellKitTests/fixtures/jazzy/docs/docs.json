@@ -3485,7 +3485,7 @@
 }, {
   "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/swift-commands.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 4221,
+    "key.length" : 4220,
     "key.offset" : 0,
     "key.substructure" : [
       {
@@ -3498,18 +3498,18 @@
             "key.offset" : 126
           }
         ],
-        "key.bodylength" : 4049,
+        "key.bodylength" : 4048,
         "key.bodyoffset" : 170,
         "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Shell.swift",
         "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>Shell<\/decl.name><\/decl.class>",
         "key.kind" : "source.lang.swift.decl.extension",
-        "key.length" : 4067,
+        "key.length" : 4066,
         "key.name" : "Shell",
         "key.namelength" : 5,
         "key.nameoffset" : 163,
         "key.offset" : 153,
         "key.parsed_declaration" : "extension Shell",
-        "key.parsed_scope.end" : 93,
+        "key.parsed_scope.end" : 92,
         "key.parsed_scope.start" : 12,
         "key.substructure" : [
           {
@@ -3702,18 +3702,18 @@
                 "key.offset" : 2145
               }
             ],
-            "key.bodylength" : 483,
+            "key.bodylength" : 482,
             "key.bodyoffset" : 2356,
             "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/swift-commands.swift",
             "key.fully_annotated_decl" : "<decl.function.method.static><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@discardableResult<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>sourceKittenSPM<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>destination<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>environment<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:8ShellKit7CommandV\">Command<\/ref.struct>.<ref.typealias usr=\"s:8ShellKit7CommandV11Environmenta\">Environment<\/ref.typealias><\/decl.var.parameter.type> = [:]<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>workingDirectory<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type> = Shell.Path.cwd<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>logLevel<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.typealias usr=\"s:8ShellKit8LogLevela\">LogLevel<\/ref.typealias><\/decl.var.parameter.type> = .off<\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword> -&gt; <decl.function.returntype><ref.class usr=\"s:8ShellKit0A0C\">Shell<\/ref.class>.<ref.struct usr=\"s:8ShellKit0A0C6ResultV\">Result<\/ref.struct><\/decl.function.returntype><\/decl.function.method.static>",
             "key.kind" : "source.lang.swift.decl.function.method.static",
-            "key.length" : 667,
+            "key.length" : 666,
             "key.name" : "sourceKittenSPM(destination:environment:workingDirectory:logLevel:)",
             "key.namelength" : 146,
             "key.nameoffset" : 2185,
             "key.offset" : 2173,
             "key.parsed_declaration" : "public static func sourceKittenSPM(destination: String, environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result",
-            "key.parsed_scope.end" : 58,
+            "key.parsed_scope.end" : 57,
             "key.parsed_scope.start" : 39,
             "key.substructure" : [
               {
@@ -3724,11 +3724,11 @@
                 "key.length" : 86,
                 "key.name" : "path",
                 "key.namelength" : 4,
-                "key.nameoffset" : 2366,
-                "key.offset" : 2362,
+                "key.nameoffset" : 2365,
+                "key.offset" : 2361,
                 "key.parsed_declaration" : "let path = destination.isAbsolute ? destination : workingDirectory + \"\/\\(destination)\"",
-                "key.parsed_scope.end" : 41,
-                "key.parsed_scope.start" : 41,
+                "key.parsed_scope.end" : 40,
+                "key.parsed_scope.start" : 40,
                 "key.typename" : "String",
                 "key.typeusr" : "$sSSD",
                 "key.usr" : "s:8ShellKit0A0C15sourceKittenSPM11destination11environment16workingDirectory8logLevelAC6ResultVSS_SDyS2SGSSAC8ReporterC0K0OtKFZ4pathL_SSvp"
@@ -3741,11 +3741,11 @@
                 "key.length" : 201,
                 "key.name" : "command",
                 "key.namelength" : 7,
-                "key.nameoffset" : 2458,
-                "key.offset" : 2454,
+                "key.nameoffset" : 2457,
+                "key.offset" : 2453,
                 "key.parsed_declaration" : "let command = Command(\n  name: \"sourcekitten\",\n  arguments: [\"doc\", \"--spm\", \">\", path],\n  environment: environment,\n  workingDirectory: workingDirectory,\n  logLevel: logLevel\n)",
-                "key.parsed_scope.end" : 43,
-                "key.parsed_scope.start" : 43,
+                "key.parsed_scope.end" : 42,
+                "key.parsed_scope.start" : 42,
                 "key.typename" : "Command",
                 "key.typeusr" : "$s8ShellKit7CommandVD",
                 "key.usr" : "s:8ShellKit0A0C15sourceKittenSPM11destination11environment16workingDirectory8logLevelAC6ResultVSS_SDyS2SGSSAC8ReporterC0K0OtKFZ7commandL_AA7CommandVvp"
@@ -3758,11 +3758,11 @@
                 "key.length" : 39,
                 "key.name" : "result",
                 "key.namelength" : 6,
-                "key.nameoffset" : 2665,
-                "key.offset" : 2661,
+                "key.nameoffset" : 2664,
+                "key.offset" : 2660,
                 "key.parsed_declaration" : "let result = try Shell.execute(command)",
-                "key.parsed_scope.end" : 51,
-                "key.parsed_scope.start" : 51,
+                "key.parsed_scope.end" : 50,
+                "key.parsed_scope.start" : 50,
                 "key.typename" : "Shell.Result",
                 "key.typeusr" : "$s8ShellKit0A0C6ResultVD",
                 "key.usr" : "s:8ShellKit0A0C15sourceKittenSPM11destination11environment16workingDirectory8logLevelAC6ResultVSS_SDyS2SGSSAC8ReporterC0K0OtKFZ6resultL_AJvp"
@@ -3779,27 +3779,27 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 2865
+                "key.offset" : 2864
               },
               {
                 "key.attribute" : "source.decl.attribute.discardableResult",
                 "key.length" : 18,
-                "key.offset" : 2844
+                "key.offset" : 2843
               }
             ],
             "key.bodylength" : 153,
-            "key.bodyoffset" : 3050,
+            "key.bodyoffset" : 3049,
             "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/swift-commands.swift",
             "key.fully_annotated_decl" : "<decl.function.method.static><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@discardableResult<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>jazzy<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>arguments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct>]<\/decl.var.parameter.type> = []<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>environment<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:8ShellKit7CommandV\">Command<\/ref.struct>.<ref.typealias usr=\"s:8ShellKit7CommandV11Environmenta\">Environment<\/ref.typealias><\/decl.var.parameter.type> = [:]<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>workingDirectory<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type> = Shell.Path.cwd<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>logLevel<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.typealias usr=\"s:8ShellKit8LogLevela\">LogLevel<\/ref.typealias><\/decl.var.parameter.type> = .off<\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword> -&gt; <decl.function.returntype><ref.class usr=\"s:8ShellKit0A0C\">Shell<\/ref.class>.<ref.struct usr=\"s:8ShellKit0A0C6ResultV\">Result<\/ref.struct><\/decl.function.returntype><\/decl.function.method.static>",
             "key.kind" : "source.lang.swift.decl.function.method.static",
             "key.length" : 332,
             "key.name" : "jazzy(arguments:environment:workingDirectory:logLevel:)",
             "key.namelength" : 141,
-            "key.nameoffset" : 2884,
-            "key.offset" : 2872,
+            "key.nameoffset" : 2883,
+            "key.offset" : 2871,
             "key.parsed_declaration" : "public static func jazzy(arguments: [String] = [], environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result",
-            "key.parsed_scope.end" : 63,
-            "key.parsed_scope.start" : 61,
+            "key.parsed_scope.end" : 62,
+            "key.parsed_scope.start" : 60,
             "key.substructure" : [
 
             ],
@@ -3814,27 +3814,27 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 3229
+                "key.offset" : 3228
               },
               {
                 "key.attribute" : "source.decl.attribute.discardableResult",
                 "key.length" : 18,
-                "key.offset" : 3208
+                "key.offset" : 3207
               }
             ],
             "key.bodylength" : 640,
-            "key.bodyoffset" : 3577,
+            "key.bodyoffset" : 3576,
             "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/swift-commands.swift",
             "key.fully_annotated_decl" : "<decl.function.method.static><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@discardableResult<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>swiftDoc<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>input<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type> = &quot;.\/Sources&quot;<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>name<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>output<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>author<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>authorUrl<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>twitterHandle<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>gitRepository<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>environment<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:8ShellKit7CommandV\">Command<\/ref.struct>.<ref.typealias usr=\"s:8ShellKit7CommandV11Environmenta\">Environment<\/ref.typealias><\/decl.var.parameter.type> = [:]<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>workingDirectory<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type> = Shell.Path.cwd<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>logLevel<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.typealias usr=\"s:8ShellKit8LogLevela\">LogLevel<\/ref.typealias><\/decl.var.parameter.type> = .off<\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword> -&gt; <decl.function.returntype><ref.class usr=\"s:8ShellKit0A0C\">Shell<\/ref.class>.<ref.struct usr=\"s:8ShellKit0A0C6ResultV\">Result<\/ref.struct><\/decl.function.returntype><\/decl.function.method.static>",
             "key.kind" : "source.lang.swift.decl.function.method.static",
             "key.length" : 982,
             "key.name" : "swiftDoc(_:name:output:author:authorUrl:twitterHandle:gitRepository:environment:workingDirectory:logLevel:)",
             "key.namelength" : 304,
-            "key.nameoffset" : 3248,
-            "key.offset" : 3236,
+            "key.nameoffset" : 3247,
+            "key.offset" : 3235,
             "key.parsed_declaration" : "public static func swiftDoc(\n  _ input: String = \".\/Sources\",\n  name: String,\n  output: String,\n  author: String,\n  authorUrl: String,\n  twitterHandle: String,\n  gitRepository: String,\n  environment: Command.Environment = [:],\n  workingDirectory: String = Shell.Path.cwd,\n  logLevel: LogLevel = .off\n) throws -> Shell.Result",
-            "key.parsed_scope.end" : 92,
-            "key.parsed_scope.start" : 66,
+            "key.parsed_scope.end" : 91,
+            "key.parsed_scope.start" : 65,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let args: [<Type usr=\"s:SS\">String<\/Type>]<\/Declaration>",
@@ -3844,11 +3844,11 @@
                 "key.length" : 257,
                 "key.name" : "args",
                 "key.namelength" : 4,
-                "key.nameoffset" : 3797,
-                "key.offset" : 3793,
+                "key.nameoffset" : 3796,
+                "key.offset" : 3792,
                 "key.parsed_declaration" : "let args = [\n  \"doc\", input,\n  \"--output\", output,\n  \"--type\", \"html\",\n  \"--module-name\", name,\n  \"--author\", author,\n  \"--author-url\", authorUrl,\n  \"--twitter-handle\", twitterHandle,\n  \"--git-repository\", gitRepository\n]",
-                "key.parsed_scope.end" : 79,
-                "key.parsed_scope.start" : 79,
+                "key.parsed_scope.end" : 78,
+                "key.parsed_scope.start" : 78,
                 "key.typename" : "[String]",
                 "key.typeusr" : "$sSaySSGD",
                 "key.usr" : "s:8ShellKit0A0C8swiftDoc_4name6output6author0G3Url13twitterHandle13gitRepository11environment16workingDirectory8logLevelAC6ResultVSS_S6SSDyS2SGSSAC8ReporterC0Q0OtKFZ4argsL_SaySSGvp"

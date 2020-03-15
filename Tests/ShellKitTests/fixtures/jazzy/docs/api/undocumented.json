@@ -527,14 +527,14 @@
     },
     {
       "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/swift-commands.swift",
-      "line": 61,
+      "line": 60,
       "symbol": "Shell.jazzy(arguments:environment:workingDirectory:logLevel:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/swift-commands.swift",
-      "line": 66,
+      "line": 65,
       "symbol": "Shell.swiftDoc(_:name:output:author:authorUrl:twitterHandle:gitRepository:environment:workingDirectory:logLevel:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"

@@ -1,10 +1,10 @@
-summary: Fixed CI
+summary: Updating Workflow
 
 
 added: []
-changed: []
+changed:
+  - Workflow uses swift doc
 deprecated: []
 removed: []
-fixed:
- - install swift doc in gitlab-ci test
+fixed: []
 security: []

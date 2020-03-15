@@ -1,5 +1,5 @@
 #!/usr/bin/env beak --path
-// beak: https://gitlab.com/thecb4/shellkit.git  ShellKit @ revision:62584cf9
+// beak: https://gitlab.com/thecb4/shellkit.git  ShellKit @ revision:85933edb
 
 import ShellKit
 import Foundation
@@ -38,6 +38,12 @@ public func test() throws {
 
 /// Document the product
 public func docs() throws {
-  try Shell.sourceKittenSPM(destination: "docs/docs.json")
-  try Shell.jazzy()
+  try Shell.swiftDoc(
+    name: "ShellKit",
+    output: "docs",
+    author: "Cavelle Benjamin",
+    authorUrl: "https://thecb4.io",
+    twitterHandle: "_thecb4",
+    gitRepository: "https://github.com/thecb4/ShellKit"
+  )
 }

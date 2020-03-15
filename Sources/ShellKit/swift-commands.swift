@@ -37,7 +37,6 @@ extension Shell {
 
   @discardableResult
   public static func sourceKittenSPM(destination: String, environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result {
-
     let path = destination.isAbsolute ? destination : workingDirectory + "/\(destination)"
 
     let command = Command(
