@@ -9,19 +9,12 @@ stages:
   - docs
   # - release
 
-spm_514_xenial:
+build_and_test:
   image:
-    name: swift:5.1.4-xenial
+    name: thecb4/swift-plus:latest
     entrypoint: [""]
   stage: build-test
   script:
-    - export WORKDIR=$PWD
-    - git clone https://github.com/yonaskolb/Mint.git /tmp/Mint
-    - cd /tmp/Mint
-    - swift run mint install yonaskolb/mint
-    - cd $WORKDIR
-    - mint install thecb4/swift-doc@master
-    - mint install yonaskolb/beak@0.5.1
     - swift package update
     - ./workflow.swift run flow
     # - swift build --build-tests -c debug
@@ -56,18 +49,13 @@ spm_514_xenial:
 
 pages:
   image:
-    name: swift:5.1.4-xenial
+    name: thecb4/swift-plus:latest
   stage: docs
   dependencies:
     - spm_514_xenial
   script:
-    - export WORKDIR=$PWD
-    - git clone https://github.com/yonaskolb/Mint.git /tmp/Mint
-    - cd /tmp/Mint
-    - swift run mint install yonaskolb/mint
-    - cd $WORKDIR
-    - mint install thecb4/swift-doc@master
-    - swift doc ./Sources --output public/ --type html --module-name blanket --author "Cavelle Benjamin" --author-url https://thecb4.io --twitter-handle _thecb4 --git-repository https://github.com/thecb4/blanket
+    ./workflow.swift run docs
+    # - swift doc ./Sources --output public/ --type html --module-name blanket --author "Cavelle Benjamin" --author-url https://thecb4.io --twitter-handle _thecb4 --git-repository https://github.com/thecb4/blanket
     # - mkdir public
     # - mkdir public/Resources
     # - cp docs/index.html public/index.html
