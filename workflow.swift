@@ -49,6 +49,8 @@ public func docs() throws {
 }
 
 public func flow() throws {
+  let os = ProcessInfo().operatingSystemVersion
+  print(os)
   try hygene()
   try test()
   try docs()

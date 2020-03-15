@@ -1,9 +1,9 @@
-summary: Updating Workflow
+summary: Use Workflow.swift in gitlab-ci
 
 
-added:
-  - flow func to Workflow
-changed: []
+added: []
+changed:
+  - added workflow.swift to gitlab-ci
 deprecated: []
 removed: []
 fixed: []

@@ -22,8 +22,7 @@ spm_514_xenial:
     - cd $WORKDIR
     - mint install thecb4/swift-doc@master
     - swift package update
-    - swift test --generate-linuxmain
-    - swift test --enable-code-coverage --filter "^(?!.*MacOS).*$"
+    - ./workflow.swift run flow
     # - swift build --build-tests -c debug
     # - swift test -c debug
     # - swift build -c release
