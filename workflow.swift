@@ -58,5 +58,5 @@ public func flow() throws {
 }
 
 public func ci() {
-  test()
+  try test()
 }
