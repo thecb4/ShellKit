@@ -1,6 +1,6 @@
 
 <html lang="en-US">
-	<!-- Generated on: 2020-03-15 03:58:20 +0000 -->
+	<!-- Generated on: 2020-03-15 05:35:48 +0000 -->
 	<head>
 		<title>
 			ShellKit Documentation
@@ -402,7 +402,7 @@ try Shell.swiftTestGenerateLinuxMain()
 						<div>
 							
 							<pre>
-								<code class="swift">public typealias Environment = [String: String]</code>
+								<code class="swift">public typealias Arguments = [String]</code>
 							</pre>
 							
 							
@@ -410,7 +410,7 @@ try Shell.swiftTestGenerateLinuxMain()
 						<div>
 							
 							<pre>
-								<code class="swift">public typealias Arguments = [String]</code>
+								<code class="swift">public typealias Environment = [String: String]</code>
 							</pre>
 							
 							
@@ -425,14 +425,6 @@ try Shell.swiftTestGenerateLinuxMain()
 						<div>
 							
 							<pre>
-								<code class="swift">let environment: Command.Environment</code>
-							</pre>
-							
-							
-						</div>
-						<div>
-							
-							<pre>
 								<code class="swift">let errLog: Bool</code>
 							</pre>
 							
@@ -441,7 +433,7 @@ try Shell.swiftTestGenerateLinuxMain()
 						<div>
 							
 							<pre>
-								<code class="swift">let logLevel: LogLevel</code>
+								<code class="swift">let outLog: Bool</code>
 							</pre>
 							
 							
@@ -449,7 +441,15 @@ try Shell.swiftTestGenerateLinuxMain()
 						<div>
 							
 							<pre>
-								<code class="swift">let outLog: Bool</code>
+								<code class="swift">let environment: Command.Environment</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">let name: String</code>
 							</pre>
 							
 							
@@ -473,7 +473,7 @@ try Shell.swiftTestGenerateLinuxMain()
 						<div>
 							
 							<pre>
-								<code class="swift">let name: String</code>
+								<code class="swift">let logLevel: LogLevel</code>
 							</pre>
 							
 							
@@ -637,20 +637,10 @@ try Shell.swiftTestGenerateLinuxMain()
 						</header>
 						<div>
 							<p>
-								Appropriate for informational messages.
+								logging off
 							</p>
 							<pre>
-								<code class="swift">case info</code>
-							</pre>
-							
-							
-						</div>
-						<div>
-							<p>
-								Appropriate for error conditions.
-							</p>
-							<pre>
-								<code class="swift">case error</code>
+								<code class="swift">case off</code>
 							</pre>
 							
 							
@@ -696,20 +686,30 @@ debugging a program.
 						</div>
 						<div>
 							<p>
-								logging off
+								Appropriate for messages that contain information only when debugging a program.
 							</p>
 							<pre>
-								<code class="swift">case off</code>
+								<code class="swift">case trace</code>
 							</pre>
 							
 							
 						</div>
 						<div>
 							<p>
-								Appropriate for messages that contain information only when debugging a program.
+								Appropriate for informational messages.
 							</p>
 							<pre>
-								<code class="swift">case trace</code>
+								<code class="swift">case info</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							<p>
+								Appropriate for error conditions.
+							</p>
+							<pre>
+								<code class="swift">case error</code>
 							</pre>
 							
 							
@@ -785,14 +785,6 @@ special handling.
 						<div>
 							
 							<pre>
-								<code class="swift">case fish</code>
-							</pre>
-							
-							
-						</div>
-						<div>
-							
-							<pre>
 								<code class="swift">case sh</code>
 							</pre>
 							
@@ -802,6 +794,14 @@ special handling.
 							
 							<pre>
 								<code class="swift">case bash</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">case fish</code>
 							</pre>
 							
 							
@@ -859,7 +859,7 @@ special handling.
 						<div>
 							
 							<pre>
-								<code class="swift">@discardableResult public static func echo(_ words: @autoclosure () -> String, logLevel: LogLevel = .info) throws -> Shell.Result</code>
+								<code class="swift">@discardableResult public static func rm(_ resource: String, directory: Bool = false, force: Bool = false, from workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result</code>
 							</pre>
 							
 							
@@ -875,7 +875,7 @@ special handling.
 						<div>
 							
 							<pre>
-								<code class="swift">@discardableResult public static func copy(source: String, destination: String, at workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result</code>
+								<code class="swift">@discardableResult public static func echo(_ words: @autoclosure () -> String, logLevel: LogLevel = .info) throws -> Shell.Result</code>
 							</pre>
 							
 							
@@ -891,7 +891,7 @@ special handling.
 						<div>
 							
 							<pre>
-								<code class="swift">@discardableResult public static func rm(_ resource: String, directory: Bool = false, force: Bool = false, from workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result</code>
+								<code class="swift">@discardableResult public static func copy(source: String, destination: String, at workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result</code>
 							</pre>
 							
 							
@@ -987,6 +987,14 @@ special handling.
 						<div>
 							
 							<pre>
+								<code class="swift">public func report(file: FileHandle)</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
 								<code class="swift">public func prepare(log: Bool = false, shellLogLevel: LogLevel, commandLogLevel: LogLevel)</code>
 							</pre>
 							
@@ -996,14 +1004,6 @@ special handling.
 							
 							<pre>
 								<code class="swift">public func halt()</code>
-							</pre>
-							
-							
-						</div>
-						<div>
-							
-							<pre>
-								<code class="swift">public func report(file: FileHandle)</code>
 							</pre>
 							
 							
@@ -1018,7 +1018,7 @@ special handling.
 						<div>
 							
 							<pre>
-								<code class="swift">var data: Data?</code>
+								<code class="swift">var pipe: Pipe?</code>
 							</pre>
 							
 							
@@ -1026,7 +1026,7 @@ special handling.
 						<div>
 							
 							<pre>
-								<code class="swift">var commandLogLevel: LogLevel = .off</code>
+								<code class="swift">var data: Data?</code>
 							</pre>
 							
 							
@@ -1050,7 +1050,7 @@ special handling.
 						<div>
 							
 							<pre>
-								<code class="swift">var pipe: Pipe?</code>
+								<code class="swift">var commandLogLevel: LogLevel = .off</code>
 							</pre>
 							
 							
@@ -1108,7 +1108,7 @@ special handling.
 						<div>
 							
 							<pre>
-								<code class="swift">let status: Int32</code>
+								<code class="swift">let out: String</code>
 							</pre>
 							
 							
@@ -1116,7 +1116,7 @@ special handling.
 						<div>
 							
 							<pre>
-								<code class="swift">let out: String</code>
+								<code class="swift">let status: Int32</code>
 							</pre>
 							
 							
@@ -1161,7 +1161,7 @@ special handling.
 						</h2>
 					</header>
 					<p>
-						`Shell.Path`, `Shell.Reporter.Shell.Reporter.Glyph.Level`, `Shell.Reporter`, `Shell.Shell.Name`, `Shell.Reporter.Shell.Reporter.Glyph`, `Shell.Error`
+						`Shell.Path`, `Shell.Error`, `Shell.Reporter.Shell.Reporter.Glyph`, `Shell.Reporter`, `Shell.Shell.Name`, `Shell.Reporter.Shell.Reporter.Glyph.Level`
 					</p>
 				</section>
 				<div>
@@ -1172,30 +1172,9 @@ special handling.
 							</h2>
 						</header>
 						<div>
-							<p>
-								Appropriate for conditions that are not error conditions, but that may require
-special handling.
-							</p>
-							<pre>
-								<code class="swift">case notice</code>
-							</pre>
-							
-							
-						</div>
-						<div>
-							<p>
-								Appropriate for error conditions.
-							</p>
-							<pre>
-								<code class="swift">case error</code>
-							</pre>
-							
-							
-						</div>
-						<div>
 							
 							<pre>
-								<code class="swift">case validationError(: String)</code>
+								<code class="swift">case sh</code>
 							</pre>
 							
 							
@@ -1206,33 +1185,6 @@ special handling.
 							</p>
 							<pre>
 								<code class="swift">case trace</code>
-							</pre>
-							
-							
-						</div>
-						<div>
-							
-							<pre>
-								<code class="swift">case bash</code>
-							</pre>
-							
-							
-						</div>
-						<div>
-							
-							<pre>
-								<code class="swift">case nonZeroExit(: String)</code>
-							</pre>
-							
-							
-						</div>
-						<div>
-							<p>
-								Appropriate for messages that are not error conditions, but more severe than
-`.notice`.
-							</p>
-							<pre>
-								<code class="swift">case warning</code>
 							</pre>
 							
 							
@@ -1250,10 +1202,21 @@ debugging a program.
 						</div>
 						<div>
 							<p>
-								Appropriate for informational messages.
+								Appropriate for messages that are not error conditions, but more severe than
+`.notice`.
 							</p>
 							<pre>
-								<code class="swift">case info</code>
+								<code class="swift">case warning</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							<p>
+								Appropriate for error conditions.
+							</p>
+							<pre>
+								<code class="swift">case error</code>
 							</pre>
 							
 							
@@ -1261,7 +1224,7 @@ debugging a program.
 						<div>
 							
 							<pre>
-								<code class="swift">case zsh</code>
+								<code class="swift">case bash</code>
 							</pre>
 							
 							
@@ -1269,15 +1232,7 @@ debugging a program.
 						<div>
 							
 							<pre>
-								<code class="swift">case fish</code>
-							</pre>
-							
-							
-						</div>
-						<div>
-							
-							<pre>
-								<code class="swift">case sh</code>
+								<code class="swift">case unicorn</code>
 							</pre>
 							
 							
@@ -1302,7 +1257,7 @@ debugging.
 						<div>
 							
 							<pre>
-								<code class="swift">case unicorn</code>
+								<code class="swift">case zsh</code>
 							</pre>
 							
 							
@@ -1313,6 +1268,51 @@ debugging.
 							</p>
 							<pre>
 								<code class="swift">case off</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							<p>
+								Appropriate for informational messages.
+							</p>
+							<pre>
+								<code class="swift">case info</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							<p>
+								Appropriate for conditions that are not error conditions, but that may require
+special handling.
+							</p>
+							<pre>
+								<code class="swift">case notice</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">case validationError(: String)</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">case nonZeroExit(: String)</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">case fish</code>
 							</pre>
 							
 							
@@ -1350,39 +1350,7 @@ debugging.
 						<div>
 							
 							<pre>
-								<code class="swift">@discardableResult public static func echo(_ words: @autoclosure () -> String, logLevel: LogLevel = .info) throws -> Shell.Result</code>
-							</pre>
-							
-							
-						</div>
-						<div>
-							
-							<pre>
-								<code class="swift">public func report(file: FileHandle)</code>
-							</pre>
-							
-							
-						</div>
-						<div>
-							
-							<pre>
-								<code class="swift">public static func <(lhs: LogLevel, rhs: LogLevel) -> Bool</code>
-							</pre>
-							
-							
-						</div>
-						<div>
-							
-							<pre>
-								<code class="swift">@discardableResult public static func sourceKittenSPM(destination: String, environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result</code>
-							</pre>
-							
-							
-						</div>
-						<div>
-							
-							<pre>
-								<code class="swift">@discardableResult public static func swiftlint(environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result</code>
+								<code class="swift">public static func execute(_ command: Command) throws -> Shell.Result</code>
 							</pre>
 							
 							
@@ -1398,63 +1366,7 @@ debugging.
 						<div>
 							
 							<pre>
-								<code class="swift">@discardableResult public static func git(using name: Shell.Name = .sh, arguments: Command.Arguments = [], environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .info) throws -> Shell.Result</code>
-							</pre>
-							
-							
-						</div>
-						<div>
-							
-							<pre>
-								<code class="swift">public static func execute(_ command: Command) throws -> Shell.Result</code>
-							</pre>
-							
-							
-						</div>
-						<div>
-							
-							<pre>
-								<code class="swift">@discardableResult public static func exists(at path: String, with workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) -> Bool</code>
-							</pre>
-							
-							
-						</div>
-						<div>
-							
-							<pre>
-								<code class="swift">@discardableResult public static func swiftFormat(version: String, environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .info) throws -> Shell.Result</code>
-							</pre>
-							
-							
-						</div>
-						<div>
-							
-							<pre>
-								<code class="swift">public func execute(_ command: Command) throws -> Shell.Result</code>
-							</pre>
-							
-							
-						</div>
-						<div>
-							
-							<pre>
-								<code class="swift">@discardableResult public static func jazzy(arguments: [String] = [], environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result</code>
-							</pre>
-							
-							
-						</div>
-						<div>
-							
-							<pre>
-								<code class="swift">@discardableResult public static func copy(source: String, destination: String, at workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result</code>
-							</pre>
-							
-							
-						</div>
-						<div>
-							
-							<pre>
-								<code class="swift">@discardableResult public static func swiftTestGenerateLinuxMain(environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .info) throws -> Shell.Result</code>
+								<code class="swift">@discardableResult public static func echo(_ words: @autoclosure () -> String, logLevel: LogLevel = .info) throws -> Shell.Result</code>
 							</pre>
 							
 							
@@ -1470,7 +1382,7 @@ debugging.
 						<div>
 							
 							<pre>
-								<code class="swift">@discardableResult public static func rm(_ resource: String, directory: Bool = false, force: Bool = false, from workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result</code>
+								<code class="swift">public func report(file: FileHandle)</code>
 							</pre>
 							
 							
@@ -1478,7 +1390,7 @@ debugging.
 						<div>
 							
 							<pre>
-								<code class="swift">@discardableResult public static func swiftBuild(using name: Shell.Name = .sh, arguments: Command.Arguments = [], environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .info) throws -> Shell.Result</code>
+								<code class="swift">@discardableResult public static func swiftTestGenerateLinuxMain(environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .info) throws -> Shell.Result</code>
 							</pre>
 							
 							
@@ -1486,7 +1398,15 @@ debugging.
 						<div>
 							
 							<pre>
-								<code class="swift">@discardableResult public static func mkdir(at path: String, from workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result</code>
+								<code class="swift">public static func <(lhs: LogLevel, rhs: LogLevel) -> Bool</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">@discardableResult public static func swiftlint(environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result</code>
 							</pre>
 							
 							
@@ -1502,7 +1422,87 @@ debugging.
 						<div>
 							
 							<pre>
+								<code class="swift">@discardableResult public static func copy(source: String, destination: String, at workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">@discardableResult public static func mkdir(at path: String, from workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">@discardableResult public static func jazzy(arguments: [String] = [], environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">public func execute(_ command: Command) throws -> Shell.Result</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">@discardableResult public static func swiftBuild(using name: Shell.Name = .sh, arguments: Command.Arguments = [], environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .info) throws -> Shell.Result</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">@discardableResult public static func rm(_ resource: String, directory: Bool = false, force: Bool = false, from workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">@discardableResult public static func swiftFormat(version: String, environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .info) throws -> Shell.Result</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
 								<code class="swift">public func prepare(log: Bool = false, shellLogLevel: LogLevel, commandLogLevel: LogLevel)</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">@discardableResult public static func sourceKittenSPM(destination: String, environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">@discardableResult public static func git(using name: Shell.Name = .sh, arguments: Command.Arguments = [], environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .info) throws -> Shell.Result</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">@discardableResult public static func exists(at path: String, with workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) -> Bool</code>
 							</pre>
 							
 							
@@ -1514,30 +1514,6 @@ debugging.
 								Properties
 							</h2>
 						</header>
-						<div>
-							
-							<pre>
-								<code class="swift">var git_ls_untracked: [String]</code>
-							</pre>
-							
-							
-						</div>
-						<div>
-							
-							<pre>
-								<code class="swift">var errLog: Bool = false</code>
-							</pre>
-							
-							
-						</div>
-						<div>
-							
-							<pre>
-								<code class="swift">var pipe: Pipe?</code>
-							</pre>
-							
-							
-						</div>
 						<div>
 							
 							<pre>
@@ -1557,7 +1533,31 @@ debugging.
 						<div>
 							
 							<pre>
-								<code class="swift">var git_ls_modified: [String]</code>
+								<code class="swift">var pipe: Pipe?</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">var shellLogLevel: LogLevel = .off</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">var errLog: Bool = false</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">var git_ls: [String]</code>
 							</pre>
 							
 							
@@ -1589,23 +1589,7 @@ debugging.
 						<div>
 							
 							<pre>
-								<code class="swift">var name: Shell.Name = .bash</code>
-							</pre>
-							
-							
-						</div>
-						<div>
-							
-							<pre>
-								<code class="swift">var outLog: Bool = false</code>
-							</pre>
-							
-							
-						</div>
-						<div>
-							
-							<pre>
-								<code class="swift">var git_ls: [String]</code>
+								<code class="swift">var logLevel: LogLevel = .info</code>
 							</pre>
 							
 							
@@ -1629,7 +1613,7 @@ debugging.
 						<div>
 							
 							<pre>
-								<code class="swift">var logLevel: LogLevel = .info</code>
+								<code class="swift">var outLog: Bool = false</code>
 							</pre>
 							
 							
@@ -1637,7 +1621,23 @@ debugging.
 						<div>
 							
 							<pre>
-								<code class="swift">var shellLogLevel: LogLevel = .off</code>
+								<code class="swift">var name: Shell.Name = .bash</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">var git_ls_untracked: [String]</code>
+							</pre>
+							
+							
+						</div>
+						<div>
+							
+							<pre>
+								<code class="swift">var git_ls_modified: [String]</code>
 							</pre>
 							
 							
@@ -1648,7 +1648,7 @@ debugging.
 		</main>
 		<footer>
 			<span>&copy; 2020  All rights reserved.</span>
-			<span>Last updated on Saturday, March 14, 2020, 23:58 EDT</span>
+			<span>Last updated on Sunday, March 15, 2020, 01:35 EDT</span>
 			<span>Generated by swift-doc, a community project. Icons by <a href="https://icons8.com">Icons8</a></span>
 		</footer>
 		<script type="text/javascript">

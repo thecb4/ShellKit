@@ -47,3 +47,9 @@ public func docs() throws {
     gitRepository: "https://github.com/thecb4/ShellKit"
   )
 }
+
+public func flow() throws {
+  try hygene()
+  try test()
+  try docs()
+}

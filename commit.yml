@@ -1,9 +1,9 @@
 summary: Updating Workflow
 
 
-added: []
-changed:
-  - Workflow uses swift doc
+added:
+  - flow func to Workflow
+changed: []
 deprecated: []
 removed: []
 fixed: []
