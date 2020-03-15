@@ -1,4 +1,4 @@
-#!/usr/bin/env beak --path
+#!/bin/env beak --path
 // beak: https://gitlab.com/thecb4/shellkit.git  ShellKit @ revision:85933edb
 
 import ShellKit
