@@ -31,8 +31,7 @@ public func test() throws {
   // swift test --enable-code-coverage && \
   // git add . && git commit -m "$1"
 
-  try Shell.git(arguments: ["add", "."])
-  try Shell.git(arguments: ["commit", "-F", "commit.yml"])
+
 }
 
 /// Document the product
@@ -47,8 +46,17 @@ public func docs() throws {
   )
 }
 
+public func save() {
+  try Shell.git(arguments: ["add", "."])
+  try Shell.git(arguments: ["commit", "-F", "commit.yml"])
+}
+
 public func flow() throws {
   try hygene()
   try test()
   try docs()
+}
+
+public func ci() {
+  test()
 }

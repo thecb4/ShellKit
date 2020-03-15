@@ -17,7 +17,7 @@ build_and_test:
   script:
     # - ln -snf /bin/env /usr/bin/env
     - swift package update
-    - beak --path workflow.swift run flow
+    - beak --path workflow.swift run ci
     # - swift build --build-tests -c debug
     # - swift test -c debug
     # - swift build -c release
