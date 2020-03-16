@@ -16,7 +16,13 @@ public func hygene() throws {
 public func test() throws {
   try Shell.swiftTestGenerateLinuxMain(environment: env)
   try Shell.swiftFormat(version: "5.1", environment: env)
-  try Shell.swiftTest(arguments: ["--enable-code-coverage"], environment: env)
+
+  #if os(macOS)
+      try Shell.swiftTest(arguments: ["--enable-code-coverage"], environment: env)
+  #else
+      try Shell.swiftTest(arguments: ["--enable-code-coverage", "--filter \"^(?!.*MacOS).*$\""], environment: env)
+  #endif
+
 
   // try Shell.git
   // try Shell.swiftFormat(arguments: ["--swiftversion", "5.1", "."])
