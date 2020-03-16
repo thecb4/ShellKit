@@ -28,8 +28,6 @@ public func test() throws {
   // swiftlint lint . && \
   // swift test --enable-code-coverage && \
   // git add . && git commit -m "$1"
-
-
 }
 
 /// Document the product
