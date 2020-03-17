@@ -1,9 +1,8 @@
-summary: Changelogger release preparation
+summary: Beak changes
 
-added:
-  - changelogger command to prepare a release
-  - changelogger command to generate CHANGELOG.md
-changed: []
+added:[]
+changed:
+  - beak.swift back to workflow.swift to avoid changing gitlab-ci
 deprecated: []
 removed: []
 fixed: []
