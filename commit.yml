@@ -1,9 +1,8 @@
-summary: Use Workflow.swift in gitlab-ci
+summary: Added Changelogger.
 
-
-added: []
-changed:
-  - added workflow.swift to gitlab-ci
+added:
+  - changelogger to shellkit
+changed: []
 deprecated: []
 removed: []
 fixed: []

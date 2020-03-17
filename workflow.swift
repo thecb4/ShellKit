@@ -22,18 +22,6 @@ public func test() throws {
   #else
       try Shell.swiftTest(arguments: ["--enable-code-coverage", "--filter \"^(?!.*MacOS).*$\""], environment: env)
   #endif
-
-
-  // try Shell.git
-  // try Shell.swiftFormat(arguments: ["--swiftversion", "5.1", "."])
-  // try Shell.swiftLint(arguments: ["."])
-  // try Shell.swiftTest(using: .zsh, arguments: ["--enable-code-coverage"])
-
-  // swift test --generate-linuxmain && \
-  // swiftformat --swiftversion 5.1 . && \
-  // swiftlint lint . && \
-  // swift test --enable-code-coverage && \
-  // git add . && git commit -m "$1"
 }
 
 /// Document the product
@@ -50,6 +38,7 @@ public func docs() throws {
 
 /// Saves the project in git with a commit message in commit.yml
 public func save() throws {
+  try hygene()
   try Shell.git(arguments: ["add", "."])
   try Shell.git(arguments: ["commit", "-F", "commit.yml"])
 }

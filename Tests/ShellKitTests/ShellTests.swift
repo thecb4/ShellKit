@@ -362,6 +362,29 @@ final class ShellTests: XCTestCase {
       XCTAssertTrue(Shell.exists(at: apiIndexHtml))
     }
   }
+  
+  func testChangeLoggerInit() {
+    scenario {
+      // given
+      Shell.name = .sh
+      Shell.logLevel = .debug
+      Shell.Path.cwd = Shell.Path.shellKitSourcePath + "/Tests/ShellKitTests/fixtures/changelogger"
+      let env = ["PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"]
+      let commitYAML = "commit.yml"
+      let changeLoggerFolder = ".changelog"
+      let changeLoggerYAML   = ".changelog/changelog.yml"
+      try Shell.rm(changeLoggerFolder, directory: true, force: true)
+      try Shell.rm(commitYAML, directory: true, force: true)
+
+      // when
+      try Shell.changelogger(arguments: ["init"], environment: env)
+
+      // then
+      XCTAssertTrue(Shell.exists(at: commitYAML))
+      XCTAssertTrue(Shell.exists(at: changeLoggerFolder))
+      XCTAssertTrue(Shell.exists(at: changeLoggerYAML))
+    }
+  }
 
   func testDirectoryPath() {
     scenario {
