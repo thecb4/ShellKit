@@ -1,6 +1,6 @@
 title: ShellKit Changelog
 logs:
-- version: 0.7.0
+- version: 0.3.0
   date: 2020-03-17T00:08:13.889664053Z
   commit:
     summary: New Swift Commands
