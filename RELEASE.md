@@ -1,6 +1,7 @@
-#### [0.7.0] - 2020-Mar-17.
+#### [0.3.2] - 2020-Mar-17.
 ##### Added
-- changelogger to shellkit
+- li (local integration) command for workflow
+- changelogger command to local integration (li)
 
 ##### Changed
 -

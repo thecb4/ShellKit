@@ -1,9 +1,21 @@
 title: ShellKit Changelog
 logs:
 - version: unreleased
-  date: 2020-03-17T00:30:28.586110949Z
+  date: 2020-03-17T12:10:37.19216299Z
   commit:
-    summary: Updated workflow with changelog commands
+    summary: Changelogger release preparation
+    added:
+    - changelogger command to prepare a release
+    - changelogger command to generate CHANGELOG.md
+    changed: []
+    deprecated: []
+    removed: []
+    fixed: []
+    security: []
+- version: 0.3.2
+  date: 2020-03-17T12:03:37.592793941Z
+  commit:
+    summary: Space Mountain Time
     added:
     - li (local integration) command for workflow
     - changelogger command to local integration (li)

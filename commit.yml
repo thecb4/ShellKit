@@ -1,8 +1,8 @@
-summary: Updated workflow with changelog commands
+summary: Changelogger release preparation
 
 added:
-  - li (local integration) command for workflow
-  - changelogger command to local integration (li)
+  - changelogger command to prepare a release
+  - changelogger command to generate CHANGELOG.md
 changed: []
 deprecated: []
 removed: []

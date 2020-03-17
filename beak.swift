@@ -1,9 +1,15 @@
 // beak: https://gitlab.com/thecb4/shellkit.git  ShellKit @ revision:2630153a
+// beak: mxcl/Version @ exact:2.0.0
 
 import ShellKit
+import Version
 import Foundation
 
 let env = ["PATH": "/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"]
+
+public enum ReleaseAction {
+  case prepare
+}
 
 /// Hygene before any real work begins
 public func hygene() throws {
@@ -56,6 +62,15 @@ public func ci() throws {
 public func li() throws {
   try hygene()
   try test()
-  try Shell.changelogger(arguments: ["log"])
+  try Shell.changelogger(arguments: ["log"], environment: env)
   try save()
+}
+
+public func release(action: ReleaseAction, version: String? = nil, summary: String) throws {
+  switch action {
+    case .prepare:
+      guard let version = version else { return }
+      try Shell.changelogger(arguments: ["release", "\"\(summary)\"", "--version-tag", version], environment: env)
+      try Shell.changelogger(arguments: ["markdown"])
+  }
 }
