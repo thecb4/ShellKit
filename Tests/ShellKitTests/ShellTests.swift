@@ -362,7 +362,7 @@ final class ShellTests: XCTestCase {
       XCTAssertTrue(Shell.exists(at: apiIndexHtml))
     }
   }
-  
+
   func testChangeLoggerInit() {
     scenario {
       // given
@@ -372,7 +372,7 @@ final class ShellTests: XCTestCase {
       let env = ["PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"]
       let commitYAML = "commit.yml"
       let changeLoggerFolder = ".changelog"
-      let changeLoggerYAML   = ".changelog/changelog.yml"
+      let changeLoggerYAML = ".changelog/changelog.yml"
       try Shell.rm(changeLoggerFolder, directory: true, force: true)
       try Shell.rm(commitYAML, directory: true, force: true)
 

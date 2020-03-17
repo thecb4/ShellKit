@@ -15,6 +15,7 @@
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__ShellTests = [
+      ("testChangeLoggerInit", testChangeLoggerInit),
       ("testCopy", testCopy),
       ("testCreateDirectory", testCreateDirectory),
       ("testCreateProcess", testCreateProcess),

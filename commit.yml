@@ -1,7 +1,8 @@
-summary: Added Changelogger.
+summary: Updated workflow with changelog commands
 
 added:
-  - changelogger to shellkit
+  - li (local integration) command for workflow
+  - changelogger command to local integration (li)
 changed: []
 deprecated: []
 removed: []

@@ -538,6 +538,13 @@
       "symbol": "Shell.swiftDoc(_:name:output:author:authorUrl:twitterHandle:gitRepository:environment:workingDirectory:logLevel:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/swift-commands.swift",
+      "line": 94,
+      "symbol": "Shell.changelogger(arguments:environment:workingDirectory:logLevel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
     }
   ],
   "source_directory": "/Users/cavellebenjamin/Development/toolbox/ShellKit"

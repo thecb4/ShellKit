@@ -1,5 +1,17 @@
 title: ShellKit Changelog
 logs:
+- version: unreleased
+  date: 2020-03-17T00:30:28.586110949Z
+  commit:
+    summary: Updated workflow with changelog commands
+    added:
+    - li (local integration) command for workflow
+    - changelogger command to local integration (li)
+    changed: []
+    deprecated: []
+    removed: []
+    fixed: []
+    security: []
 - version: 0.3.0
   date: 2020-03-17T00:08:13.889664053Z
   commit:

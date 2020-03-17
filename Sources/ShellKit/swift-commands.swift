@@ -89,10 +89,9 @@ extension Shell {
       Command(name: "swift", arguments: args, environment: environment, workingDirectory: workingDirectory, logLevel: logLevel)
     )
   }
-  
+
   @discardableResult
   public static func changelogger(arguments: [String] = [], environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result {
     try Shell.execute(Command(name: "changelogger", arguments: arguments, environment: environment, workingDirectory: workingDirectory, logLevel: logLevel))
   }
-
 }

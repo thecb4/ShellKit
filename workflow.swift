@@ -1,4 +1,4 @@
-// beak: https://gitlab.com/thecb4/shellkit.git  ShellKit @ revision:85933edb
+// beak: https://gitlab.com/thecb4/shellkit.git  ShellKit @ revision:2630153a
 
 import ShellKit
 import Foundation
@@ -18,9 +18,9 @@ public func test() throws {
   try Shell.swiftFormat(version: "5.1", environment: env)
 
   #if os(macOS)
-      try Shell.swiftTest(arguments: ["--enable-code-coverage"], environment: env)
+    try Shell.swiftTest(arguments: ["--enable-code-coverage"], environment: env)
   #else
-      try Shell.swiftTest(arguments: ["--enable-code-coverage", "--filter \"^(?!.*MacOS).*$\""], environment: env)
+    try Shell.swiftTest(arguments: ["--enable-code-coverage", "--filter \"^(?!.*MacOS).*$\""], environment: env)
   #endif
 }
 
@@ -51,4 +51,11 @@ public func flow() throws {
 
 public func ci() throws {
   try test()
+}
+
+public func li() throws {
+  try hygene()
+  try test()
+  try Shell.changelogger(arguments: ["log"])
+  try save()
 }

@@ -3485,7 +3485,7 @@
 }, {
   "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/swift-commands.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 4220,
+    "key.length" : 4598,
     "key.offset" : 0,
     "key.substructure" : [
       {
@@ -3498,18 +3498,18 @@
             "key.offset" : 126
           }
         ],
-        "key.bodylength" : 4048,
+        "key.bodylength" : 4426,
         "key.bodyoffset" : 170,
         "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Shell.swift",
         "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>Shell<\/decl.name><\/decl.class>",
         "key.kind" : "source.lang.swift.decl.extension",
-        "key.length" : 4066,
+        "key.length" : 4444,
         "key.name" : "Shell",
         "key.namelength" : 5,
         "key.nameoffset" : 163,
         "key.offset" : 153,
         "key.parsed_declaration" : "extension Shell",
-        "key.parsed_scope.end" : 92,
+        "key.parsed_scope.end" : 97,
         "key.parsed_scope.start" : 12,
         "key.substructure" : [
           {
@@ -3857,6 +3857,41 @@
             "key.typename" : "(Shell.Type) -> (String, String, String, String, String, String, String, [String : String], String, Shell.Reporter.Level) throws -> Shell.Result",
             "key.typeusr" : "$s_4name6output6author0C3Url13twitterHandle13gitRepository11environment16workingDirectory8logLevel8ShellKit0N0C6ResultVSS_S6SSDyS2SGSSAL8ReporterC0M0OtKcD",
             "key.usr" : "s:8ShellKit0A0C8swiftDoc_4name6output6author0G3Url13twitterHandle13gitRepository11environment16workingDirectory8logLevelAC6ResultVSS_S6SSDyS2SGSSAC8ReporterC0Q0OtKFZ"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>@discardableResult public static func changelogger(arguments: [<Type usr=\"s:SS\">String<\/Type>] = [], environment: <Type usr=\"s:8ShellKit7CommandV\">Command<\/Type>.<Type usr=\"s:8ShellKit7CommandV11Environmenta\">Environment<\/Type> = [:], workingDirectory: <Type usr=\"s:SS\">String<\/Type> = Shell.Path.cwd, logLevel: <Type usr=\"s:8ShellKit8LogLevela\">LogLevel<\/Type> = .off) throws -&gt; <Type usr=\"s:8ShellKit0A0C\">Shell<\/Type>.<Type usr=\"s:8ShellKit0A0C6ResultV\">Result<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 4242
+              },
+              {
+                "key.attribute" : "source.decl.attribute.discardableResult",
+                "key.length" : 18,
+                "key.offset" : 4221
+              }
+            ],
+            "key.bodylength" : 160,
+            "key.bodyoffset" : 4434,
+            "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/swift-commands.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.static><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@discardableResult<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>changelogger<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>arguments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct>]<\/decl.var.parameter.type> = []<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>environment<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:8ShellKit7CommandV\">Command<\/ref.struct>.<ref.typealias usr=\"s:8ShellKit7CommandV11Environmenta\">Environment<\/ref.typealias><\/decl.var.parameter.type> = [:]<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>workingDirectory<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type> = Shell.Path.cwd<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>logLevel<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.typealias usr=\"s:8ShellKit8LogLevela\">LogLevel<\/ref.typealias><\/decl.var.parameter.type> = .off<\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword> -&gt; <decl.function.returntype><ref.class usr=\"s:8ShellKit0A0C\">Shell<\/ref.class>.<ref.struct usr=\"s:8ShellKit0A0C6ResultV\">Result<\/ref.struct><\/decl.function.returntype><\/decl.function.method.static>",
+            "key.kind" : "source.lang.swift.decl.function.method.static",
+            "key.length" : 346,
+            "key.name" : "changelogger(arguments:environment:workingDirectory:logLevel:)",
+            "key.namelength" : 148,
+            "key.nameoffset" : 4261,
+            "key.offset" : 4249,
+            "key.parsed_declaration" : "public static func changelogger(arguments: [String] = [], environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result",
+            "key.parsed_scope.end" : 96,
+            "key.parsed_scope.start" : 94,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(Shell.Type) -> ([String], [String : String], String, Shell.Reporter.Level) throws -> Shell.Result",
+            "key.typeusr" : "$s9arguments11environment16workingDirectory8logLevel8ShellKit0G0C6ResultVSaySSG_SDyS2SGSSAG8ReporterC0F0OtKcD",
+            "key.usr" : "s:8ShellKit0A0C12changelogger9arguments11environment16workingDirectory8logLevelAC6ResultVSaySSG_SDyS2SGSSAC8ReporterC0I0OtKFZ"
           }
         ],
         "key.typename" : "Shell.Type",
