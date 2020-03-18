@@ -26,6 +26,7 @@ struct Calm: ParsableCommand {
       Test.self,
       Hygene.self,
       LocalIntegration.self,
+      Save.self,
       Documentation.self
     ],
     defaultSubcommand: Test.self
