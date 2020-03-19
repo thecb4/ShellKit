@@ -1,11 +1,9 @@
 summary: Added ArgumentParser File for devops
 
-added:
-  - Calm.swift for devops as alternative to workflow.swift
-changed: []
+added: []
+changed:
+  - moved from beak to swift-sh for continous integration
 deprecated: []
 removed: []
 fixed: []
 security: []
-
-(1)

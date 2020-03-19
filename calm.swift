@@ -29,7 +29,7 @@ struct Calm: ParsableCommand {
       Save.self,
       Documentation.self
     ],
-    defaultSubcommand: Test.self
+    defaultSubcommand: Hygene.self
   )
 }
 
@@ -38,6 +38,7 @@ extension Calm {
     static var configuration = "Perform hygene activities on the project"
 
     func run() throws {
+      Calm.whoseThere()
       try ShellKit.validate(Shell.exists(at: "commit.yml"), "You need to add a commit.yml file")
       try ShellKit.validate(!Shell.git_ls_untracked.contains("commit.yml"), "You need to track commit file")
       try ShellKit.validate(Shell.git_ls_modified.contains("commit.yml"), "You need to update your commit file")
@@ -99,5 +100,23 @@ extension Calm {
     }
   }
 }
+
+extension Calm {
+  static func whoseThere() {
+    let mirror = Mirror(reflecting: self)
+
+    print(mirror)
+
+    for (name, value) in mirror.children {
+      print(name)
+      print(value)
+      // if let command = child.value as? ParsableCommand {
+      //     print(command)
+      // }
+    }
+  }
+}
+
+Calm.whoseThere()
 
 Calm.main()
