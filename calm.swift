@@ -153,7 +153,7 @@ extension Calm.Release {
       // try Shell.changelogger(arguments: ["release", "\"\(summary)\"", "--version-tag", version], environment: env)
       // try Shell.changelogger(arguments: ["markdown"])
       let files = try Shell.git(arguments: ["status", "--untracked-files=no", "--porcelain"])
-      print(files)
+      try ShellKit.validate(files.out == "", "Dirt repository. Clean it up before preparing your release")
       print(summary)
       print(version)
     }
