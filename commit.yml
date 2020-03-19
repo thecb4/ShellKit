@@ -1,6 +1,10 @@
 summary: Added ArgumentParser File for devops
 
-added: []
+added:
+  - release subcommand with
+  - `new` subcommand on release
+  - prepare subcommand on release
+  - publish subcommand on release
 changed:
   - moved from beak to swift-sh for continous integration
 deprecated: []

@@ -2,9 +2,13 @@
 
 import ArgumentParser // apple/swift-argument-parser == 0.0.2
 import ShellKit // https://gitlab.com/thecb4/shellkit.git  == 2630153a
+import Version // mxcl/Version == 2.0.0
+
 // import SigmaSwiftStatistics evgenyneu/SigmaSwiftStatistics == master
 
 let env = ["PATH": "/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"]
+
+extension Version: ExpressibleByArgument {}
 
 extension ParsableCommand {
   static func run(using arguments: [String] = []) throws {
@@ -26,7 +30,9 @@ struct Calm: ParsableCommand {
       Test.self,
       Hygene.self,
       LocalIntegration.self,
+      ContinousIntegration.self,
       Save.self,
+      Release.self,
       Documentation.self
     ],
     defaultSubcommand: Hygene.self
@@ -38,7 +44,6 @@ extension Calm {
     static var configuration = "Perform hygene activities on the project"
 
     func run() throws {
-      Calm.whoseThere()
       try ShellKit.validate(Shell.exists(at: "commit.yml"), "You need to add a commit.yml file")
       try ShellKit.validate(!Shell.git_ls_untracked.contains("commit.yml"), "You need to track commit file")
       try ShellKit.validate(Shell.git_ls_modified.contains("commit.yml"), "You need to update your commit file")
@@ -73,7 +78,7 @@ extension Calm {
   }
 
   struct LocalIntegration: ParsableCommand {
-    static var configuration = "Perform local integrations"
+    static var configuration = "Perform local integration"
 
     @Flag(help: "Save on integration completion")
     var save: Bool
@@ -82,6 +87,14 @@ extension Calm {
       try Hygene.run()
       try Test.run()
       if save { try Save.run() }
+    }
+  }
+
+  struct ContinousIntegration: ParsableCommand {
+    static var configuration = "Perform continous integration"
+
+    func run() throws {
+      try Test.run()
     }
   }
 
@@ -102,21 +115,60 @@ extension Calm {
 }
 
 extension Calm {
-  static func whoseThere() {
-    let mirror = Mirror(reflecting: self)
+  struct Release: ParsableCommand {
+    static var configuration = CommandConfiguration(
+      abstract: "Release of work",
+      subcommands: [
+        New.self,
+        Prepare.self,
+        Publish.self
+      ],
+      defaultSubcommand: New.self
+    )
+  }
+}
 
-    print(mirror)
+extension Calm.Release {
+  struct New: ParsableCommand {
+    static var configuration = "creates new release (tag)"
+    // TO-DO: move to an option group
+    @Argument(help: "version for the release")
+    var version: Version
 
-    for (name, value) in mirror.children {
-      print(name)
-      print(value)
-      // if let command = child.value as? ParsableCommand {
-      //     print(command)
-      // }
+    func run() {
+      print("new release \(version)")
+    }
+  }
+
+  struct Prepare: ParsableCommand {
+    static var configuration = "prepare the current release"
+
+    @Argument(help: "summary of the release to prepare")
+    var summary: String
+
+    @Argument(help: "version for the release")
+    var version: Version
+
+    func run() throws {
+      // try Shell.changelogger(arguments: ["release", "\"\(summary)\"", "--version-tag", version], environment: env)
+      // try Shell.changelogger(arguments: ["markdown"])
+      let files = try Shell.git(arguments: ["status", "--untracked-files=no", "--porcelain"])
+      print(files)
+      print(summary)
+      print(version)
+    }
+
+  }
+
+  struct Publish: ParsableCommand {
+    @Argument(help: "version for the release")
+    var version: Version
+
+    func run() {
+      print("new release \(version)")
     }
   }
 }
 
-Calm.whoseThere()
 
 Calm.main()
