@@ -5,5 +5,5 @@ changed: []
 deprecated: []
 removed: []
 fixed:
-  - ./calm.swift to check for linux os
+  - ./calm.swift changed linux to Linux
 security: []
