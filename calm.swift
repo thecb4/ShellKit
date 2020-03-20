@@ -30,7 +30,7 @@ struct Calm: ParsableCommand {
       Test.self,
       Hygene.self,
       LocalIntegration.self,
-      ContinousIntegration.self,
+      ContinuousIntegration.self,
       Save.self,
       Release.self,
       Documentation.self
@@ -90,7 +90,7 @@ extension Calm {
     }
   }
 
-  struct ContinousIntegration: ParsableCommand {
+  struct ContinuousIntegration: ParsableCommand {
     static var configuration = "Perform continous integration"
 
     func run() throws {
@@ -150,14 +150,12 @@ extension Calm.Release {
     var version: Version
 
     func run() throws {
-      // try Shell.changelogger(arguments: ["release", "\"\(summary)\"", "--version-tag", version], environment: env)
-      // try Shell.changelogger(arguments: ["markdown"])
       let files = try Shell.git(arguments: ["status", "--untracked-files=no", "--porcelain"])
       try ShellKit.validate(files.out == "", "Dirt repository. Clean it up before preparing your release")
-      print(summary)
-      print(version)
-    }
 
+      try Shell.changelogger(arguments: ["release", "\"\(summary)\"", "--version-tag", version.description], environment: env)
+      try Shell.changelogger(arguments: ["markdown"])
+    }
   }
 
   struct Publish: ParsableCommand {
@@ -169,6 +167,5 @@ extension Calm.Release {
     }
   }
 }
-
 
 Calm.main()

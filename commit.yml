@@ -1,12 +1,9 @@
-summary: Release commands
+summary: Fix Continuous Integration
 
-added:
-  - release subcommand with
-  - `new` subcommand on release
-  - prepare subcommand on release
-  - publish subcommand on release
+added: []
 changed: []
 deprecated: []
 removed: []
-fixed: []
+fixed:
+  - Spelling error for Continuous Integration
 security: []
