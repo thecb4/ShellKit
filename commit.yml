@@ -5,5 +5,5 @@ changed: []
 deprecated: []
 removed: []
 fixed:
-  - Spelling error for Continuous Integration
+  - ./calm.swift to check for linux os
 security: []

@@ -59,7 +59,7 @@ extension Calm {
 
       var arguments = ["--enable-code-coverage"]
 
-      #if os(macOS)
+      #if os(linux)
         arguments += ["--filter \"^(?!.*MacOS).*$\""]
       #endif
 
