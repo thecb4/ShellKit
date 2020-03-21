@@ -1,6 +1,17 @@
 title: ShellKit Changelog
 logs:
 - version: unreleased
+  date: 2020-03-21T10:47:08.842736959Z
+  commit:
+    summary: Fix Continuous Integration
+    added:
+    - changelogger logs commit in save
+    changed: []
+    deprecated: []
+    removed: []
+    fixed: []
+    security: []
+- version: unreleased
   date: 2020-03-17T12:10:37.19216299Z
   commit:
     summary: Changelogger release preparation

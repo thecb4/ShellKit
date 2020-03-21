@@ -1,9 +1,9 @@
 summary: Fix Continuous Integration
 
-added: []
+added:
+  - changelogger logs commit in save
 changed: []
 deprecated: []
 removed: []
-fixed:
-  - ./calm.swift changed linux to Linux
+fixed: []
 security: []

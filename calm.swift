@@ -72,6 +72,7 @@ extension Calm {
 
     func run() throws {
       try Hygene.run()
+      try Shell.changelogger(arguments: ["log"])
       try Shell.git(arguments: ["add", "-A"])
       try Shell.git(arguments: ["commit", "-F", "commit.yml"])
     }
