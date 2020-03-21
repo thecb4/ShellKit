@@ -1,21 +1,11 @@
 title: ShellKit Changelog
 logs:
-- version: unreleased
-  date: 2020-03-21T10:47:08.842736959Z
+- version: 0.3.3
+  date: 2020-03-21T10:47:51.122674942Z
   commit:
-    summary: Fix Continuous Integration
+    summary: Calm
     added:
     - changelogger logs commit in save
-    changed: []
-    deprecated: []
-    removed: []
-    fixed: []
-    security: []
-- version: unreleased
-  date: 2020-03-17T12:10:37.19216299Z
-  commit:
-    summary: Changelogger release preparation
-    added:
     - changelogger command to prepare a release
     - changelogger command to generate CHANGELOG.md
     changed: []

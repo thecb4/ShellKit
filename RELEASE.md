@@ -1,7 +1,8 @@
-#### [0.3.2] - 2020-Mar-17.
+#### [0.3.3] - 2020-Mar-21.
 ##### Added
-- li (local integration) command for workflow
-- changelogger command to local integration (li)
+- changelogger logs commit in save
+- changelogger command to prepare a release
+- changelogger command to generate CHANGELOG.md
 
 ##### Changed
 -

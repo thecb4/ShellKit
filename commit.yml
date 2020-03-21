@@ -1,8 +1,8 @@
-summary: Fix Continuous Integration
+summary: Updated Changelog
 
 added:
-  - changelogger logs commit in save
-changed: []
+changed:
+  - Changelog
 deprecated: []
 removed: []
 fixed: []
