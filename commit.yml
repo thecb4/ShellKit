@@ -1,9 +1,9 @@
-summary: Hotfix 0.4.0
+summary: Fix gitlab ci pipeline
 
 added: []
 changed: []
 deprecated: []
 removed: []
 fixed:
- - gitlab ci file so that it calls ./calm.swift work integration 
+ - test step of ci pipeline to exclude macOS only tests
 security: []

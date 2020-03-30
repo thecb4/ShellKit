@@ -1,9 +1,9 @@
 title: ShellKit Changelog
 logs:
-- version: unreleased
-  date: 2020-03-30T00:15:33.445451974Z
+- version: 0.4.2
+  date: 2020-03-30T00:40:59.397109985Z
   commit:
-    summary: Bump to 0.4.0
+    summary: Fix CI
     added:
     - calm.swift based on Calm 0.8.0
     - shell script to push api docs to wiki (gitlab only for now)
@@ -12,7 +12,8 @@ logs:
     deprecated: []
     removed:
     - swift doc test removed to upgrade to 0.1.0
-    fixed: []
+    fixed:
+    - test step of ci pipeline to exclude macOS only tests
     security: []
 - version: 0.4.0
   date: 2020-03-30T00:14:12.883865952Z
