@@ -92,6 +92,10 @@ extension Calm.Work {
         "--enable-code-coverage"
       ]
 
+      #if os(Linux)
+        arguments += ["--filter \"^(?!.*MacOS).*$\""]
+      #endif
+
       try Shell.swiftTest(arguments: arguments)
     }
   }

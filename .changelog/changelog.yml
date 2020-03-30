@@ -1,6 +1,17 @@
 title: ShellKit Changelog
 logs:
 - version: unreleased
+  date: 2020-03-30T00:35:21.102422952Z
+  commit:
+    summary: Fix gitlab ci pipeline
+    added: []
+    changed: []
+    deprecated: []
+    removed: []
+    fixed:
+    - test step of ci pipeline to exclude macOS only tests
+    security: []
+- version: unreleased
   date: 2020-03-30T00:15:33.445451974Z
   commit:
     summary: Bump to 0.4.0
