@@ -1,5 +1,19 @@
 title: ShellKit Changelog
 logs:
+- version: unreleased
+  date: 2020-03-30T00:10:19.959720969Z
+  commit:
+    summary: Updated Changelog
+    added:
+    - calm.swift based on Calm 0.8.0
+    - shell script to push api docs to wiki (gitlab only for now)
+    changed:
+    - docs step so that
+    deprecated: []
+    removed:
+    - swift doc test removed to upgrade to 0.1.0
+    fixed: []
+    security: []
 - version: 0.3.3
   date: 2020-03-21T10:47:51.122674942Z
   commit:
