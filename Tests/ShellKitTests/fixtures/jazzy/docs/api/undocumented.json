@@ -212,6 +212,13 @@
     },
     {
       "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Result.swift",
+      "line": 12,
+      "symbol": "Data.string",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/Result.swift",
       "line": 28,
       "symbol": "Shell.Result",
       "symbol_kind": "source.lang.swift.decl.struct",
@@ -401,6 +408,13 @@
     },
     {
       "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/git-commands.swift",
+      "line": 16,
+      "symbol": "Shell.gitAddAll(environment:workingDirectory:logLevel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/git-commands.swift",
       "line": 20,
       "symbol": "Shell.git_ls",
       "symbol_kind": "source.lang.swift.decl.var.static",
@@ -542,6 +556,13 @@
     {
       "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/swift-commands.swift",
       "line": 94,
+      "symbol": "Shell.swiftDoc(arguments:environment:workingDirectory:logLevel:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/cavellebenjamin/Development/toolbox/ShellKit/Sources/ShellKit/swift-commands.swift",
+      "line": 99,
       "symbol": "Shell.changelogger(arguments:environment:workingDirectory:logLevel:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"

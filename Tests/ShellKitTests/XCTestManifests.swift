@@ -34,7 +34,6 @@
       ("testShellName", testShellName),
       ("testShellPrepare", testShellPrepare),
       ("testSourceKittenSPMMacOS", testSourceKittenSPMMacOS),
-      ("testSwiftDoc", testSwiftDoc),
       ("testSwiftlintMacOS", testSwiftlintMacOS)
     ]
   }

@@ -334,34 +334,34 @@ final class ShellTests: XCTestCase {
     }
   }
 
-  func testSwiftDoc() {
-    scenario {
-      // given
-      Shell.name = .sh
-      Shell.logLevel = .debug
-      Shell.Path.cwd = Shell.Path.shellKitSourcePath
-      let env = ["PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"]
-      let apiPath = "Tests/ShellKitTests/fixtures/swift-doc/docs"
-      let apiIndexHtml = "Tests/ShellKitTests/fixtures/swift-doc/docs/index.html"
-      try Shell.rm(apiPath, directory: true, force: true)
+  // func testSwiftDoc() {
+  //   scenario {
+  //     // given
+  //     Shell.name = .sh
+  //     Shell.logLevel = .debug
+  //     Shell.Path.cwd = Shell.Path.shellKitSourcePath
+  //     let env = ["PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"]
+  //     let apiPath = "Tests/ShellKitTests/fixtures/swift-doc/docs"
+  //     let apiIndexHtml = "Tests/ShellKitTests/fixtures/swift-doc/docs/index.html"
+  //     try Shell.rm(apiPath, directory: true, force: true)
 
-      // when
-      if Shell.exists(at: apiPath) { try Shell.rm(apiPath, from: Shell.Path.cwd) }
-      try Shell.swiftDoc(
-        name: "ShellKit",
-        output: apiPath,
-        author: "Cavelle Benjamin",
-        authorUrl: "https://thecb4.io",
-        twitterHandle: "_thecb4",
-        gitRepository: "https://github.com/thecb4/ShellKit",
-        environment: env
-      )
+  //     // when
+  //     if Shell.exists(at: apiPath) { try Shell.rm(apiPath, from: Shell.Path.cwd) }
+  //     try Shell.swiftDoc(
+  //       name: "ShellKit",
+  //       output: apiPath,
+  //       author: "Cavelle Benjamin",
+  //       authorUrl: "https://thecb4.io",
+  //       twitterHandle: "_thecb4",
+  //       gitRepository: "https://github.com/thecb4/ShellKit",
+  //       environment: env
+  //     )
 
-      // then
-      XCTAssertTrue(Shell.exists(at: apiPath))
-      XCTAssertTrue(Shell.exists(at: apiIndexHtml))
-    }
-  }
+  //     // then
+  //     XCTAssertTrue(Shell.exists(at: apiPath))
+  //     XCTAssertTrue(Shell.exists(at: apiIndexHtml))
+  //   }
+  // }
 
   func testChangeLoggerInit() {
     scenario {
