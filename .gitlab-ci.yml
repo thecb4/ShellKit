@@ -20,7 +20,7 @@ build_and_test:
     # - mint install realm/SwiftLint --force
     # - mint install nicklockwood/SwiftFormat --force
     - swift package update
-    - ./calm.swift continuous-integration
+    - ./calm.swift work integration  
     # - beak --path workflow.swift run ci
     # - swift build --build-tests -c debug
     # - swift test -c debug
