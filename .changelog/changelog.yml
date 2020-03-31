@@ -1,9 +1,9 @@
 title: ShellKit Changelog
 logs:
-- version: unreleased
-  date: 2020-03-31T21:46:07.313060998Z
+- version: 0.5.0
+  date: 2020-03-31T21:47:49.895980954Z
   commit:
-    summary: Fixing the calm workflow
+    summary: fix calm
     added: []
     changed: []
     deprecated: []

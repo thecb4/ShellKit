@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 * Format based on [Keep A Change Log](https://keepachangelog.com/en/1.0.0/)
 * This project adheres to [Semantic Versioning](http://semver.org/).
 
+#### [0.5.0] - 2020-Mar-31.
+##### Added
+-
+
+##### Changed
+-
+
+##### Deprecated
+-
+
+##### Removed
+-
+
+##### Fixed
+-
+
+##### Security
+-
+
 #### [0.4.2] - 2020-Mar-30.
 ##### Added
 - calm.swift based on Calm 0.8.0
