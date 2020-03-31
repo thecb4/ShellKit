@@ -1,9 +1,8 @@
-summary: Fix gitlab ci pipeline
+summary: Fixing the calm workflow
 
 added: []
 changed: []
 deprecated: []
 removed: []
-fixed:
- - test step of ci pipeline to exclude macOS only tests
+fixed: []
 security: []
