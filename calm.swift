@@ -1,71 +1,6 @@
 #!/usr/bin/swift sh
 
-import Calm // @thecb4 == 0.9.0
-
-import Path
-
-// extension Shell {
-//   @discardableResult
-//   public static func swiftDoc(arguments: [String] = [], environment: Command.Environment = [:], workingDirectory: String = Shell.Path.cwd, logLevel: LogLevel = .off) throws -> Shell.Result {
-//     try Shell.execute(Command(name: "swift", arguments: ["doc"] += arguments, environment: environment, workingDirectory: workingDirectory, logLevel: logLevel))
-//   }
-// }
-
-// class TemporaryDirectory {
-//     let url: URL
-//     var path: DynamicPath { return DynamicPath(Path(string: url.path)) }
-
-//     /**
-//      Creates a new temporary directory.
-
-//      The directory is recursively deleted when this object deallocates.
-
-//      If you need a temporary directory on a specific volume use the `appropriateFor`
-//      parameter.
-
-//      - Important: If you are moving a file, ensure to use the `appropriateFor`
-//      parameter, since it is volume aware and moving the file across volumes will take
-//      exponentially longer!
-//      - Important: The `appropriateFor` parameter does not work on Linux.
-//      - Parameter appropriateFor: The temporary directory will be located on this
-//      volume.
-//     */
-//     init(appropriateFor: URL? = nil) throws {
-//       #if !os(Linux)
-//         let appropriate: URL
-//         if let appropriateFor = appropriateFor {
-//             appropriate = appropriateFor
-//         } else if #available(OSX 10.12, iOS 10, tvOS 10, watchOS 3, *) {
-//             appropriate = FileManager.default.temporaryDirectory
-//         } else {
-//             appropriate = URL(fileURLWithPath: NSTemporaryDirectory())
-//         }
-//         url = try FileManager.default.url(for: .itemReplacementDirectory, in: .userDomainMask, appropriateFor: appropriate, create: true)
-//       #else
-//         let envs = ProcessInfo.processInfo.environment
-//         let env = envs["TMPDIR"] ?? envs["TEMP"] ?? envs["TMP"] ?? "/tmp"
-//         let dir = Path.root/env/"swift-sh.XXXXXX"
-//         var template = [UInt8](dir.string.utf8).map({ Int8($0) }) + [Int8(0)]
-//         guard mkdtemp(&template) != nil else { throw CocoaError.error(.featureUnsupported) }
-//         url = URL(fileURLWithPath: String(cString: template))
-//       #endif
-//     }
-
-//     deinit {
-//         do {
-//             try path.chmod(0o777).delete()
-//         } catch {
-//             //TODO log
-//         }
-//     }
-// }
-
-// extension Path {
-//     static func mktemp<T>(body: (DynamicPath) throws -> T) throws -> T {
-//         let tmp = try TemporaryDirectory()
-//         return try body(tmp.path)
-//     }
-// }
+import Calm // @thecb4 == 0.9.1
 
 @available(macOS 10.13, *)
 extension Calm.Work {
@@ -86,13 +21,14 @@ extension Calm.Work {
       try Shell.swiftTestGenerateLinuxMain(environment: Calm.env)
       try Shell.swiftFormat(version: "5.1", environment: Calm.env)
 
-      let arguments = [
+      var arguments = [
         "--parallel",
         "--xunit-output Tests/Results.xml",
         "--enable-code-coverage"
       ]
 
       #if os(Linux)
+        print("Linux build")
         arguments += ["--filter \"^(?!.*MacOS).*$\""]
       #endif
 
@@ -174,8 +110,7 @@ Calm.Work.configuration.subcommands += [
   Calm.Work.Hygene.self,
   Calm.Work.Test.self,
   Calm.Work.Save.self,
-  Calm.Work.Integration.self,
-  Calm.Work.Documentation.self
+  Calm.Work.Integration.self
 ]
 
 if #available(macOS 10.13, *) {

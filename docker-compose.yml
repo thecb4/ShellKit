@@ -2,13 +2,12 @@ version: "3.7"
 
 services:
   swift-linux:
-    image: thecb4/swift-plus:latest
+    image: thecb4/swift-plus:5.2-xenial
     command:
       - /bin/sh
       - -c
       - |
-        mkdir /tmp/git
-        cd /tmp/git
-        git clone https://gitlab.com/thecb4/shellkit.git
-        cd shellkit
-        ./calm.swift work
+        cd /calm
+        ./calm.swift work test
+    volumes:
+      - ./:/calm
