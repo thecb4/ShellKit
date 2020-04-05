@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
 <testsuite name="TestResults" errors="0" tests="21" failures="0" time="0.0">
-<testcase classname="ShellKitTests.ShellTests" name="testCopy" time="0.0">
-</testcase>
 <testcase classname="ShellKitTests.ShellTests" name="testCreateDirectory" time="0.0">
+</testcase>
+<testcase classname="ShellKitTests.ShellTests" name="testCreateProcess" time="0.0">
+</testcase>
+<testcase classname="ShellKitTests.ShellTests" name="testCopy" time="0.0">
 </testcase>
 <testcase classname="ShellKitTests.CommandTests" name="testCreateCommand" time="0.0">
 </testcase>
@@ -11,35 +13,33 @@
 </testcase>
 <testcase classname="ShellKitTests.ShellTests" name="testCreateShell" time="0.0">
 </testcase>
-<testcase classname="ShellKitTests.ShellTests" name="testCreateProcess" time="0.0">
-</testcase>
-<testcase classname="ShellKitTests.ShellTests" name="testDeleteDirectory" time="0.0">
+<testcase classname="ShellKitTests.ShellTests" name="testEcho" time="0.0">
 </testcase>
 <testcase classname="ShellKitTests.ShellTests" name="testDirectoryPath" time="0.0">
 </testcase>
-<testcase classname="ShellKitTests.ShellTests" name="testEcho" time="0.0">
+<testcase classname="ShellKitTests.ShellTests" name="testDeleteDirectory" time="0.0">
 </testcase>
 <testcase classname="ShellKitTests.ShellTests" name="testExecute" time="0.0">
 </testcase>
 <testcase classname="ShellKitTests.ShellTests" name="testExists" time="0.0">
 </testcase>
-<testcase classname="ShellKitTests.ShellTests" name="testGitListModifiedFiles" time="0.0">
-</testcase>
 <testcase classname="ShellKitTests.ShellTests" name="testGitListFiles" time="0.0">
+</testcase>
+<testcase classname="ShellKitTests.ShellTests" name="testGitListModifiedFiles" time="0.0">
 </testcase>
 <testcase classname="ShellKitTests.ShellTests" name="testGitListUntrackedFiles" time="0.0">
 </testcase>
 <testcase classname="ShellKitTests.ShellTests" name="testRm" time="0.0">
 </testcase>
-<testcase classname="ShellKitTests.ShellTests" name="testShellName" time="0.0">
+<testcase classname="ShellKitTests.ShellTests" name="testNotExists" time="0.0">
 </testcase>
 <testcase classname="ShellKitTests.ShellTests" name="testShellPrepare" time="0.0">
+</testcase>
+<testcase classname="ShellKitTests.ShellTests" name="testShellName" time="0.0">
 </testcase>
 <testcase classname="ShellKitTests.ShellTests" name="testSwiftlintMacOS" time="0.0">
 </testcase>
 <testcase classname="ShellKitTests.ShellTests" name="testSourceKittenSPMMacOS" time="0.0">
-</testcase>
-<testcase classname="ShellKitTests.ShellTests" name="testNotExists" time="0.0">
 </testcase>
 <testcase classname="ShellKitTests.ShellTests" name="testJazzyMacOS" time="0.0">
 </testcase>
