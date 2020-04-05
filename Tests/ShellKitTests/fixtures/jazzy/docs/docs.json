@@ -770,7 +770,7 @@
 }, {
   "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Reporter.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 4005,
+    "key.length" : 3975,
     "key.offset" : 0,
     "key.substructure" : [
       {
@@ -1178,12 +1178,12 @@
             "key.offset" : 2026
           }
         ],
-        "key.bodylength" : 1299,
+        "key.bodylength" : 1269,
         "key.bodyoffset" : 2079,
         "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Reporter.swift",
         "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>Reporter<\/decl.name><\/decl.class>",
         "key.kind" : "source.lang.swift.decl.extension",
-        "key.length" : 1326,
+        "key.length" : 1296,
         "key.name" : "Shell.Reporter",
         "key.namelength" : 14,
         "key.nameoffset" : 2063,
@@ -1277,7 +1277,7 @@
                 "key.offset" : 2300
               }
             ],
-            "key.bodylength" : 1026,
+            "key.bodylength" : 996,
             "key.bodyoffset" : 2350,
             "key.doc.column" : 15,
             "key.doc.comment" : "The log level.\n\nLog levels are ordered by their severity, with `.trace` being the least severe and\n`.critical` being the most severe.",
@@ -1325,7 +1325,7 @@
               }
             ],
             "key.kind" : "source.lang.swift.decl.enum",
-            "key.length" : 1070,
+            "key.length" : 1040,
             "key.name" : "Level",
             "key.namelength" : 5,
             "key.nameoffset" : 2312,
@@ -1376,7 +1376,7 @@
                 "key.length" : 10,
                 "key.namelength" : 0,
                 "key.nameoffset" : 0,
-                "key.offset" : 2480,
+                "key.offset" : 2478,
                 "key.substructure" : [
                   {
                     "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -1390,15 +1390,15 @@
                     "key.doc.name" : "trace",
                     "key.doc.type" : "Other",
                     "key.doclength" : 85,
-                    "key.docoffset" : 2391,
+                    "key.docoffset" : 2389,
                     "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Reporter.swift",
                     "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>trace<\/decl.name><\/decl.enumelement>",
                     "key.kind" : "source.lang.swift.decl.enumelement",
                     "key.length" : 5,
                     "key.name" : "trace",
                     "key.namelength" : 5,
-                    "key.nameoffset" : 2485,
-                    "key.offset" : 2485,
+                    "key.nameoffset" : 2483,
+                    "key.offset" : 2483,
                     "key.parsed_declaration" : "case trace",
                     "key.parsed_scope.end" : 93,
                     "key.parsed_scope.start" : 93,
@@ -1413,7 +1413,7 @@
                 "key.length" : 10,
                 "key.namelength" : 0,
                 "key.nameoffset" : 0,
-                "key.offset" : 2613,
+                "key.offset" : 2607,
                 "key.substructure" : [
                   {
                     "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -1426,16 +1426,16 @@
                     "key.doc.line" : 97,
                     "key.doc.name" : "debug",
                     "key.doc.type" : "Other",
-                    "key.doclength" : 111,
-                    "key.docoffset" : 2498,
+                    "key.doclength" : 109,
+                    "key.docoffset" : 2494,
                     "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Reporter.swift",
                     "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>debug<\/decl.name><\/decl.enumelement>",
                     "key.kind" : "source.lang.swift.decl.enumelement",
                     "key.length" : 5,
                     "key.name" : "debug",
                     "key.namelength" : 5,
-                    "key.nameoffset" : 2618,
-                    "key.offset" : 2618,
+                    "key.nameoffset" : 2612,
+                    "key.offset" : 2612,
                     "key.parsed_declaration" : "case debug",
                     "key.parsed_scope.end" : 97,
                     "key.parsed_scope.start" : 97,
@@ -1450,7 +1450,7 @@
                 "key.length" : 9,
                 "key.namelength" : 0,
                 "key.nameoffset" : 0,
-                "key.offset" : 2679,
+                "key.offset" : 2671,
                 "key.substructure" : [
                   {
                     "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -1464,15 +1464,15 @@
                     "key.doc.name" : "info",
                     "key.doc.type" : "Other",
                     "key.doclength" : 44,
-                    "key.docoffset" : 2631,
+                    "key.docoffset" : 2623,
                     "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Reporter.swift",
                     "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>info<\/decl.name><\/decl.enumelement>",
                     "key.kind" : "source.lang.swift.decl.enumelement",
                     "key.length" : 4,
                     "key.name" : "info",
                     "key.namelength" : 4,
-                    "key.nameoffset" : 2684,
-                    "key.offset" : 2684,
+                    "key.nameoffset" : 2676,
+                    "key.offset" : 2676,
                     "key.parsed_declaration" : "case info",
                     "key.parsed_scope.end" : 100,
                     "key.parsed_scope.start" : 100,
@@ -1487,7 +1487,7 @@
                 "key.length" : 11,
                 "key.namelength" : 0,
                 "key.nameoffset" : 0,
-                "key.offset" : 2811,
+                "key.offset" : 2799,
                 "key.substructure" : [
                   {
                     "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -1500,16 +1500,16 @@
                     "key.doc.line" : 104,
                     "key.doc.name" : "notice",
                     "key.doc.type" : "Other",
-                    "key.doclength" : 111,
-                    "key.docoffset" : 2696,
+                    "key.doclength" : 109,
+                    "key.docoffset" : 2686,
                     "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Reporter.swift",
                     "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>notice<\/decl.name><\/decl.enumelement>",
                     "key.kind" : "source.lang.swift.decl.enumelement",
                     "key.length" : 6,
                     "key.name" : "notice",
                     "key.namelength" : 6,
-                    "key.nameoffset" : 2816,
-                    "key.offset" : 2816,
+                    "key.nameoffset" : 2804,
+                    "key.offset" : 2804,
                     "key.parsed_declaration" : "case notice",
                     "key.parsed_scope.end" : 104,
                     "key.parsed_scope.start" : 104,
@@ -1524,7 +1524,7 @@
                 "key.length" : 12,
                 "key.namelength" : 0,
                 "key.nameoffset" : 0,
-                "key.offset" : 2936,
+                "key.offset" : 2920,
                 "key.substructure" : [
                   {
                     "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -1537,16 +1537,16 @@
                     "key.doc.line" : 108,
                     "key.doc.name" : "warning",
                     "key.doc.type" : "Other",
-                    "key.doclength" : 102,
-                    "key.docoffset" : 2830,
+                    "key.doclength" : 100,
+                    "key.docoffset" : 2816,
                     "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Reporter.swift",
                     "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>warning<\/decl.name><\/decl.enumelement>",
                     "key.kind" : "source.lang.swift.decl.enumelement",
                     "key.length" : 7,
                     "key.name" : "warning",
                     "key.namelength" : 7,
-                    "key.nameoffset" : 2941,
-                    "key.offset" : 2941,
+                    "key.nameoffset" : 2925,
+                    "key.offset" : 2925,
                     "key.parsed_declaration" : "case warning",
                     "key.parsed_scope.end" : 108,
                     "key.parsed_scope.start" : 108,
@@ -1561,7 +1561,7 @@
                 "key.length" : 10,
                 "key.namelength" : 0,
                 "key.nameoffset" : 0,
-                "key.offset" : 2998,
+                "key.offset" : 2980,
                 "key.substructure" : [
                   {
                     "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -1575,15 +1575,15 @@
                     "key.doc.name" : "error",
                     "key.doc.type" : "Other",
                     "key.doclength" : 38,
-                    "key.docoffset" : 2956,
+                    "key.docoffset" : 2938,
                     "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Reporter.swift",
                     "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>error<\/decl.name><\/decl.enumelement>",
                     "key.kind" : "source.lang.swift.decl.enumelement",
                     "key.length" : 5,
                     "key.name" : "error",
                     "key.namelength" : 5,
-                    "key.nameoffset" : 3003,
-                    "key.offset" : 3003,
+                    "key.nameoffset" : 2985,
+                    "key.offset" : 2985,
                     "key.parsed_declaration" : "case error",
                     "key.parsed_scope.end" : 111,
                     "key.parsed_scope.start" : 111,
@@ -1598,7 +1598,7 @@
                 "key.length" : 13,
                 "key.namelength" : 0,
                 "key.nameoffset" : 0,
-                "key.offset" : 3360,
+                "key.offset" : 3330,
                 "key.substructure" : [
                   {
                     "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -1616,16 +1616,16 @@
                     "key.doc.line" : 119,
                     "key.doc.name" : "critical",
                     "key.doc.type" : "Other",
-                    "key.doclength" : 340,
-                    "key.docoffset" : 3016,
+                    "key.doclength" : 330,
+                    "key.docoffset" : 2996,
                     "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Reporter.swift",
                     "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>critical<\/decl.name><\/decl.enumelement>",
                     "key.kind" : "source.lang.swift.decl.enumelement",
                     "key.length" : 8,
                     "key.name" : "critical",
                     "key.namelength" : 8,
-                    "key.nameoffset" : 3365,
-                    "key.offset" : 3365,
+                    "key.nameoffset" : 3335,
+                    "key.offset" : 3335,
                     "key.parsed_declaration" : "case critical",
                     "key.parsed_scope.end" : 119,
                     "key.parsed_scope.start" : 119,
@@ -1651,11 +1651,11 @@
           {
             "key.attribute" : "source.decl.attribute.available",
             "key.length" : 26,
-            "key.offset" : 3381
+            "key.offset" : 3351
           }
         ],
         "key.bodylength" : 364,
-        "key.bodyoffset" : 3440,
+        "key.bodyoffset" : 3410,
         "key.doc.column" : 15,
         "key.doc.declaration" : "public enum Level : String, Codable, CaseIterable",
         "key.doc.discussion" : [
@@ -1674,8 +1674,8 @@
         "key.length" : 397,
         "key.name" : "Shell.Reporter.Level",
         "key.namelength" : 20,
-        "key.nameoffset" : 3418,
-        "key.offset" : 3408,
+        "key.nameoffset" : 3388,
+        "key.offset" : 3378,
         "key.parsed_declaration" : "extension Shell.Reporter.Level",
         "key.parsed_scope.end" : 145,
         "key.parsed_scope.start" : 124,
@@ -1687,19 +1687,19 @@
               {
                 "key.attribute" : "source.decl.attribute.internal",
                 "key.length" : 8,
-                "key.offset" : 3443
+                "key.offset" : 3413
               }
             ],
             "key.bodylength" : 319,
-            "key.bodyoffset" : 3483,
+            "key.bodyoffset" : 3453,
             "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Reporter.swift",
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>internal<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>naturalIntegralValue<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 351,
             "key.name" : "naturalIntegralValue",
             "key.namelength" : 20,
-            "key.nameoffset" : 3456,
-            "key.offset" : 3452,
+            "key.nameoffset" : 3426,
+            "key.offset" : 3422,
             "key.parsed_declaration" : "internal var naturalIntegralValue: Int",
             "key.parsed_scope.end" : 144,
             "key.parsed_scope.start" : 125,
@@ -1718,11 +1718,11 @@
           {
             "key.attribute" : "source.decl.attribute.available",
             "key.length" : 26,
-            "key.offset" : 3807
+            "key.offset" : 3777
           }
         ],
         "key.bodylength" : 125,
-        "key.bodyoffset" : 3878,
+        "key.bodyoffset" : 3848,
         "key.doc.column" : 15,
         "key.doc.declaration" : "public enum Level : String, Codable, CaseIterable",
         "key.doc.discussion" : [
@@ -1739,7 +1739,7 @@
           {
             "key.kind" : "source.lang.swift.structure.elem.typeref",
             "key.length" : 10,
-            "key.offset" : 3866
+            "key.offset" : 3836
           }
         ],
         "key.filepath" : "\/Users\/cavellebenjamin\/Development\/toolbox\/ShellKit\/Sources\/ShellKit\/Reporter.swift",
@@ -1753,8 +1753,8 @@
         "key.length" : 170,
         "key.name" : "Shell.Reporter.Level",
         "key.namelength" : 20,
-        "key.nameoffset" : 3844,
-        "key.offset" : 3834,
+        "key.nameoffset" : 3814,
+        "key.offset" : 3804,
         "key.parsed_declaration" : "extension Shell.Reporter.Level: Comparable",
         "key.parsed_scope.end" : 152,
         "key.parsed_scope.start" : 148,
@@ -1766,11 +1766,11 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 3881
+                "key.offset" : 3851
               }
             ],
             "key.bodylength" : 59,
-            "key.bodyoffset" : 3942,
+            "key.bodyoffset" : 3912,
             "key.doc.declaration" : "static func < (lhs: Self, rhs: Self) -> Bool",
             "key.doc.discussion" : [
               {
@@ -1807,8 +1807,8 @@
             "key.length" : 114,
             "key.name" : "<(_:_:)",
             "key.namelength" : 32,
-            "key.nameoffset" : 3900,
-            "key.offset" : 3888,
+            "key.nameoffset" : 3870,
+            "key.offset" : 3858,
             "key.overrides" : [
               {
                 "key.usr" : "s:SL1loiySbx_xtFZ"
