@@ -1,8 +1,7 @@
-summary: Fixed doc generation
+summary: Bump to 0.6.1
 
 added: []
-changed:
-  bin/gitlab.sh to bin/gitlab-wiki.sh in gitlab-ci file
+changed: []
 deprecated: []
 removed: []
 fixed: []
