@@ -71,7 +71,7 @@ api_docs:
     # - cp docs/index.html public/index.html
     # - cp Resources/logo.png public/Resources/logo.png
     - swift doc generate Sources --output docs
-    - bin/gitlab.sh docs "New Pages" 
+    - bin/gitlab-wiki.sh docs "API Pages" 
   # artifacts:
   #   paths:
   #   - public

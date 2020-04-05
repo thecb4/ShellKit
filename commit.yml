@@ -1,7 +1,8 @@
-summary: Fixed linux ci of skellkit with calm
+summary: Fixed doc generation
 
 added: []
-changed: []
+changed:
+  bin/gitlab.sh to bin/gitlab-wiki.sh in gitlab-ci file
 deprecated: []
 removed: []
 fixed: []
