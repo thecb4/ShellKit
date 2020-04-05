@@ -1,9 +1,9 @@
 title: ShellKit Changelog
 logs:
-- version: unreleased
-  date: 2020-04-05T14:47:16.610209941Z
+- version: 0.6.1
+  date: 2020-04-05T14:47:44.48981595Z
   commit:
-    summary: Bump to 0.6.1
+    summary: patch fix
     added: []
     changed: []
     deprecated: []
